@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    padding-bottom: 0px;
+}
+
+.page-header {
+    text-transform: uppercase;
+}
+
+.struck-80 {
+    font-size: 13px;
+    width: 80mm;
+}
+
+.struck-58 {
+    font-size: 13px;
+    width: 58mm;
+}
+
+.report {
+    font-size: 13px;
+}
+
+p {
+    padding-left: 1em;
+    margin: 2px;
+}
+
+hr {
+    color: #eee;
+}
+
+i {
+    text-align: center;
+}
+
+.full_name {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.hr-struck {
+    border-style: 3px dashed #eee;
+}
+
+.panel-body {
+    border: solid 1px #444343;
+    /*border-radius: 10px;*/
+}
+
+/* 
+Generic Styling, for Desktops/Laptops 
+*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+th {
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) {
+
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tr {
+        border: 1px solid #ccc;
+    }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    /*
+    Label the data
+    */
+    /*td:nth-of-type(1):before { content: "First Name"; }
+    td:nth-of-type(2):before { content: "Last Name"; }
+    td:nth-of-type(3):before { content: "Job Title"; }
+    td:nth-of-type(4):before { content: "Favorite Color"; }
+    td:nth-of-type(5):before { content: "Wars of Trek?"; }
+    td:nth-of-type(6):before { content: "Secret Alias"; }
+    td:nth-of-type(7):before { content: "Date of Birth"; }
+    td:nth-of-type(8):before { content: "Dream Vacation City"; }
+    td:nth-of-type(9):before { content: "GPA"; }
+    td:nth-of-type(10):before { content: "Arbitrary Data"; }*/
+}
