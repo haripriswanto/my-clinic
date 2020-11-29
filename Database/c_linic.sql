@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 10, 2020 at 06:24 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.2.33
+-- Waktu pembuatan: 30 Nov 2020 pada 00.43
+-- Versi server: 10.4.13-MariaDB
+-- Versi PHP: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apotek`
+-- Database: `c_linic`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `log_activity`
+-- Struktur dari tabel `log_activity`
 --
 
 CREATE TABLE `log_activity` (
@@ -40,20 +40,23 @@ CREATE TABLE `log_activity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `log_activity`
+-- Dumping data untuk tabel `log_activity`
 --
 
 INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('00073ab381ed2ce7379ba5f729d1afe4ad6df652', '2020-09-26 21:43:23', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('0019def2704ebe48340812322e7a546ac3c66aa7', '2020-06-12 06:38:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
+('002036ab941f0ff543d8832ef9aec213ad7b65db', '2020-10-20 16:10:59', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('002bede032bf5f39aef57aab2fdf95cf7a597bcd', '2020-09-23 06:05:11', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('003c9ebc183e3caddd79ee9e08e1038a45eb3cf9', '2020-09-23 06:36:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('003d7ed5c0a55d320c2d4928762f4fda202efd68', '2020-06-13 09:00:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('004a8715a9aa745b90f2d801618a6ef4d678b634', '2020-10-11 14:17:45', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('004d125e4326f926caa65c3cf6754cce4bfb5cb1', '2020-10-09 16:36:46', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('004f076ad4e01b0d722599e083ca18679970bb28', '2020-06-07 20:00:49', 'INSERT', 'Menambahkan Data Supplier id: 214424410202044 Nama: Supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0051d9fad93594c33a1976fcd9d5ed9962f97093', '2020-09-27 21:29:02', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('005d16659c2c77eb0e7181676e22380ca2768751', '2020-10-10 07:38:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('007d117539611a24cac36bfe222ae39bbe2e884f', '2020-06-17 22:54:23', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('00884c8224622563f71684f40809453e12d85009', '2020-11-29 23:24:42', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('0088902515968fbb7fe514d3cea7ab441c81df3c', '2020-10-07 17:52:35', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('00a2431eaf2209d017988dd4091243337d5b23fe', '2020-08-18 23:06:44', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('00b79bbbdfd4660057a7d1263f530e91c75c2d7e', '2020-06-04 23:15:32', 'ARCHIVE', 'Mengarsipkan Data Produk id: 8177857082728520771008500 Nama: tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -63,6 +66,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('00f1c8ac6efe5a0dafbd54ba26e16cb280bbffab', '2020-06-27 09:02:45', 'READ', 'Akses Menu System User', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('011712bab27866539ade2f4d012af4962f5062f6', '2020-08-15 08:44:45', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('0123dfc95b33acb4d33cedbe77b6bc866627c42f', '2020-06-04 23:16:49', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('0184b7c2b2fac4031b81128d89ee9b2359ea461c', '2020-10-12 07:17:43', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('018b9df83f9172a72a3e30f317d44376a1d89527', '2020-10-09 22:38:49', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('01a106a4b959f6cb0729eb57ec8b491b0d8d983b', '2020-06-02 23:49:50', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('01ae269d4304f9462a9c8e3f85d1651499ab62c8', '2020-06-03 07:17:31', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -74,12 +78,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('01f64e0b5627883e209da37a1c7e0d192deb716b', '2020-09-25 16:13:14', 'UPDATE', 'Merubah Password User : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('02001f455764fcf29dab5537df48d02f73d156e8', '2020-06-12 05:55:53', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('0203a1cfad7927963d6adcd2dbfa8868f1c1007e', '2020-06-04 23:54:36', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('02096b0390396cf447f6508ac75b167daddf75ab', '2020-10-12 07:11:27', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('02168b03aa42daebc764a89bd2b94b86f72bc1a6', '2020-09-27 20:00:31', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('02327215392366273f9f47b160111cf29e26a0a8', '2020-10-09 18:58:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('024ed922ba996b5fdb043bbad29d036e1ab19ab3', '2020-09-16 20:28:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('025a11964a1c69ea01c1f3d70522ef329e833f71', '2020-08-14 23:52:54', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('027d969e5506a19a132af7c1daa121f06e8ad8d3', '2020-06-25 21:02:49', 'UPDATE', 'Merubah Data Produk id: 7227211021111170220710220 Nama: Produk 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('0283304009a3d07e1e314abd0d7a3a5945b0b72f', '2020-10-09 22:05:37', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('029c85af81c503c07f022b85ae39fc9784bb00c2', '2020-10-16 20:57:57', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('02ba369b192aa4aa5ea1610e8cab16dd70171904', '2020-09-25 16:14:08', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('02c78ee68e41a085300caa5f9c2ee0351b962a35', '2020-06-20 06:55:48', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('03187ef166d12aa4a69b844f1f4d406ec71cc505', '2020-06-03 00:11:51', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -87,6 +93,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('033fa239c540f424e8b80647e8cb365dd4ec2d97', '2020-08-14 22:47:39', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('03429364fa4a60754afabe4753521207f198d548', '2020-10-07 16:56:45', 'INSERT', 'Menambahkan Data Sub Menu id : b5de6334cdd7b51a6d99a1423e3df5f852416610, Deskripsi : Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('034e66648218902f95e73e78ff60d52a0f1b6824', '2020-06-07 21:38:29', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('03598ab1b19b4bf6c8c466b677aa678fdff3e842', '2020-10-20 16:11:02', 'UPDATE', 'Merubah Data Dokter Id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('038207ea37128e2546177fe103a065d34d5709dc', '2020-10-11 16:54:43', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('03cd071a06e111d93198b55fe62bb9b58ef4f3c7', '2020-10-07 20:51:19', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('03d2f68606166d98426a95ea75cf03461db28c1a', '2020-10-09 17:29:30', 'UPDATE', 'Merubah Data Menu id : e54d9e469ed391499a2bc216fe5d2b7ae6ba7231, Nama : Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('03dd54c070bfd57cff4db7dfc91d5a5f382a6549', '2020-08-18 22:08:11', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
@@ -101,6 +109,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('049bc02ecd748da227cb1f7946949e7e9ec3b821', '2020-05-10 14:19:25', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('04bbd46199d2d9cd5bb4a5d34a728f38a5714336', '2020-10-09 22:07:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('04fc08f6c2e629d8fe337386fb0c1b58e2adff00', '2020-06-04 06:29:36', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('05072c9c0e889bab925e2a9a176cee748591faf7', '2020-10-16 21:02:05', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('055401344ad2db1b728b21335f2a4bdf82e844a5', '2020-06-04 22:08:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('058156fff3d9939d2e930131b88b22f90237d351', '2020-08-18 20:55:50', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('05a40b0ac80100c4c28986910682662c5a0619f7', '2020-06-05 07:11:56', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -109,6 +118,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('05d237acd4566d052d2f1b7e3240e6ae9f1f7e1e', '2020-08-17 21:42:54', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('05e2f6f8e1f49cde06c3d528d387694bfa82128c', '2020-10-09 20:59:33', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('05f6058a5c598de7503ec47827190aba0ec327b3', '2020-10-07 16:51:44', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('05fcd02132d08bbf7929338e4de30bd122a2e37e', '2020-11-29 23:25:12', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('062089116498b230aefcb454499accbdaf74417d', '2020-09-16 20:47:08', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674, Nama : menu Edit', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('0620ed4eafc20843a32f5ee388e0069879a4b26e', '2020-05-31 09:01:13', 'INSERT', 'Menambahkan Data Produk Tester 2', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0669e2ca2bad4c100c5a5cd8e4795a5f912f89a7', '2020-06-11 07:02:46', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -119,14 +129,19 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('06890c0e4907ea36154f34588e67655188298b5d', '2020-10-09 16:30:37', 'DELETE', 'Menghapus Data User id : 1b158c81da72ab8c5145ab720582167c093449ca, Nama : Nama', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('068cb75f9eba786be080ddc9dec2160d1cf4e073', '2020-08-15 18:52:35', 'DELETE', 'Menghapus Data User id : 947516cade7bd9e27eac447a4948d7f6b87d9c93, Nama : user Info', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('0693a0640ac54c79fb4e11bc752e3974550d98cb', '2020-06-05 07:10:33', 'ARCHIVE', 'Mengarsipkan Data Produk id: 4634324443030036343337312 Nama: 1234567890', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('06bf7d2b724d5ff15eac2d07d0748eb6adf9de7b', '2020-10-20 16:07:31', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('06d1ea80f3394a02264ae11d6a711569bdbe4fbd', '2020-08-15 19:43:51', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
+('06fde1a2d3522f55e16ab43f9d21edf3fe8b9f84', '2020-11-19 21:06:10', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('0725b51c1fc24c21a99b7db919573b37ddba0e00', '2020-06-04 23:39:36', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0727804cdd6d526a648f065212819c3d36ad34eb', '2020-10-09 16:36:56', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('07685c1fabd5815554e453cf1593acb3a7df4a1b', '2020-10-07 17:23:16', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('0778f644b3990ab232a33c2b27f6a5f4afc34c3a', '2020-10-20 16:32:09', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('0796ee32657e103cb2c0fe96a6a48a34a11711db', '2020-10-20 16:43:09', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('079d58aeff4b3a74792b646a3662a5172f4a5994', '2020-08-14 23:51:10', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('07aa49f208de44bbd4bde5d0f84fb86a1ce96b04', '2020-06-08 07:32:04', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('07c1462268bf024125f8884b282869a766ccda38', '2020-06-19 06:51:28', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('07c57089767efc7ceb93be988e0c324410d26d42', '2020-10-09 18:53:56', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('07dc340020d728bc6f43444bebcd6e9737b7f653', '2020-10-20 16:27:52', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('07e9118f7abb8ab7219b472aa347b88c7c4cd402', '2020-10-09 21:57:31', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('081bed8652803a473d70dddccbcac695f8962b81', '2020-06-11 07:14:44', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('0824bf5534f4020635ba312de130a56d72ef0e87', '2020-05-10 14:20:16', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
@@ -134,6 +149,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('08558183118784aed3591150486eda022a757ad9', '2020-06-07 20:08:54', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('087cf74f023c09a01ec10cbeb8ebdfdf8c1e5f2d', '2020-08-18 20:52:30', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('0885d9048cfca16b52785d917efcdf0215bc70c3', '2020-10-07 22:46:31', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('089aa3910ba4aa7d38e7433848a34899e2a7c92d', '2020-10-16 21:00:51', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('08b800470e6cece56d4f045d024429619f95cf59', '2020-09-19 08:23:25', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('08bb511ff23d441b16b79346e60ff030fd734724', '2020-10-09 17:29:52', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('08d1726e58165c74bd1b4765c03e4d2d2546f0cd', '2020-06-17 23:26:51', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200617.00046', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -143,6 +159,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('0904c533024a504c4436ddf64ce62d267490808e', '2020-05-13 21:03:01', 'INSERT', 'Menambahkan Data Cara Pakai 1 x 2 Tablet Setelah Makan', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.81.0.4044.138'),
 ('09062152c79c6a8f199762dc519a491f4e309623', '2020-09-26 13:34:51', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('091c343a59254e5a8197053fdd1572de7dafe359', '2020-08-15 00:33:19', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('091e0a5dd6c4e0f377cbeb198e0ddc79c25c99b5', '2020-11-19 21:13:32', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('092edbf1a2a7407689d5350cf83790bd58efbe11', '2020-10-20 16:35:21', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('0938675c580e81357d9be44cdf60a101adca79cd', '2020-06-07 21:41:51', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('09417306a020908d64ff1ed313c0ae1c5d0f33c3', '2020-06-06 16:38:11', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('095082c39fd1aacbb09af5622231cf9be98cdd1d', '2020-06-01 11:52:23', 'DELETE', 'Menghapus Data User id : 46772eac43a4471aaaf8338266e31cf4cd595d4b, Nama : Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -154,8 +172,10 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('099ccc3155639c246227066d01e6e1a5b515fe32', '2020-06-27 09:07:08', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('09c77cab044c73954d400ba7d45b7f341b449762', '2020-06-20 07:57:12', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('09d11ae8da348a6f89a1cd008386b355530e146f', '2020-06-14 10:40:45', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('09d63317f5dcc657e22918d88a8bdbc958532880', '2020-10-11 13:48:38', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('09da31526d6e5c8870b9fa2bb6e67d259167468e', '2020-10-09 22:03:47', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('09e37aa31fb3e9a5e254bb974216c482b3d71d42', '2020-10-07 17:00:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('0a0cfe3ac7f37d0a7506de8e1abe9acf249fb031', '2020-10-29 22:01:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('0a21fe5eedcb35e03d122d5eaf1098ae5a96b4c3', '2020-09-27 21:28:50', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('0a23a5478dccc01bc14269dd1e95620d9cdd6c61', '2020-10-07 21:16:14', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('0a55637e2c7b6cc15f2b35fd7c0001a56ed236b4', '2020-06-11 23:29:56', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200611.00035', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
@@ -165,12 +185,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('0a6ccda8ef7476318f21bcc0f89e5413d7629113', '2020-05-31 19:42:29', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0a732a7401a34d9a19fd70f937a1c32895669dfd', '2020-06-27 14:37:17', 'LOGIN', 'Login Dengan User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('0a8014f2d07b00f3c3c666c1396df7089a8e0b7f', '2020-09-27 21:18:36', 'INSERT', 'Menambahkan Data Sub Menu id : ea52c6c2d96e8ef85f879915a6fe4dbdf8c36d8d, Deskripsi : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('0a9e2a7e8f4dc575ba080feb4b77033ac614ae3a', '2020-10-16 20:50:51', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('0aaf4fcc4529ab71b0705067fe37c142d7f34ce8', '2020-06-08 06:00:27', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0ac5302082063aacf965aceb01ed082a8142c427', '2020-09-16 06:47:42', 'INSERT', 'Menambahkan Data Menu id : 6fe5513934c068a6268775afdd0195eb806d2b24, Deskripsi : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('0ac62e0c08e56520f710879a6bf17dab9abce527', '2020-06-03 06:39:49', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0ad2c278c2c4c9a32886c4a7d95e373b32c824a4', '2020-06-07 20:02:57', 'UPDATE', 'Merubah Data Supplier id: 214424410202044 Nama: Supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0adb5b9941cd970b7139792fb689ae4dd7409d44', '2020-06-19 20:32:39', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('0aeb944948cd1468f6b7e195bbdd033145c3320a', '2020-06-02 07:11:08', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('0af4578ebcfdec37f7d4c664897a634fd0326f59', '2020-10-20 16:52:17', 'LOGOUT', 'Logout Dengan User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('0af580bae7eb6fd28480037eb0ab69dfc11b6471', '2020-11-19 21:05:54', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('0b35b9827d8e9bef09992a987a2556fee69fc36b', '2020-06-11 21:10:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('0b60139357486da0255109bf0ef5250369e0a6f7', '2020-06-06 16:30:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0b87bf1bbdcdd3fe584e3145eb6aa1f4d29bbd42', '2020-05-31 21:34:19', 'INSERT', 'Menambahkan Data User Hari Priswanto', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -197,6 +220,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('0cf38eb57290b1d4c02b9068456403c8e088fbec', '2020-10-09 16:36:46', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('0cf7f1576d696bb737577738f6159bf1a60ed712', '2020-06-21 06:46:58', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('0cffbb8ee661a2b2cf39604a8e4b9e21d91e8b6f', '2020-06-13 17:14:24', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'user', 'Windows 8.1', 'Mozilla Firefox v.77.0'),
+('0d1bcddc004645c886bc17b2ab6cfa79a2d47855', '2020-10-20 16:11:13', 'UPDATE', 'Merubah Data Dokter Id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('0d5b3a56a92699295e18d008b5781a47e4206c0e', '2020-06-07 19:36:04', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0d75b15049b875299c9bd8110889adc8909f0767', '2020-06-05 07:24:21', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0d7679b44d88bf2ab825bbdfe49263fc5c0cadbf', '2020-06-05 06:30:27', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -215,12 +239,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('0e0f0c9bcdcb5045605788000b8558db01ccde7f', '2020-08-17 21:27:49', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('0e16c46f3b0fde0fcafc9510320f6d495e6f05e9', '2020-06-15 06:06:31', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('0e2cbbf120bc0cba97f0e07d7a2f4d3126c0b5d3', '2020-09-27 20:00:59', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('0e31b9cf3cb4b4cb2fa5c97b2c927e1abebe5e82', '2020-10-12 07:36:02', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('0e48bea1dfd0b326e94059df57e750e2ff629a42', '2020-06-16 20:37:49', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('0e48ff4e7c56c7b9c7d774d53bac90d57db34d11', '2020-10-11 14:14:40', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('0e758be95d6f8e50095a2679a4f056697886e944', '2020-05-31 13:03:50', 'DELETE', 'Menghapus Data Produk id: 0828140188880834894024553 Nama: Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0e8336570b7eed4e8f168170a2ca9c88ddd8381f', '2020-10-09 17:31:39', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('0eb3e1d0bb523bb87ab80fb5273915c9dc75a0fb', '2020-09-26 21:33:48', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('0eb71d322d46f6a3a24f9e427f26ca74a5cae05d', '2020-10-09 16:44:48', 'DELETE', 'Menghapus Data Menu id : 0abf6a5b711389d99eb0b5bb7492f625775f4578, Nama : Pendaftaran', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('0eca707470adf40130492be5548d2f90c0429dae', '2020-08-07 22:32:50', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('0eda6e7f1ddc58abbc0d2471ed35d4f850f743ac', '2020-10-16 20:58:20', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('0eda9c328e47b7b704ee14260fc8c334a3e5d2c2', '2020-06-01 13:52:33', 'DELETE', 'Menghapus Data Kategori id: 522303304002235 Deskripsi: Tester 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0edbe1bc0509a2cce949ad3a1850aad351d90b96', '2020-09-23 21:55:14', 'INSERT', 'Menambahkan Data Menu id : a15ff425b878ed8986abe7841fff41a7ff292abd, Deskripsi : Stok Opname', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('0edd4a66cb7d50eb310c0c54612ae4501eae5399', '2020-06-01 13:43:23', 'RESTORE', 'Restore Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -228,6 +255,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('0f06e078451efd73fa859fde537a9be5040bc34e', '2020-05-31 09:03:00', 'INSERT', 'Menambahkan Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('0f4708f384b1f4595147ab910dcc222f9168388e', '2020-10-07 20:16:44', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('0fa8d042c59a0121f4b53c8da400241c582cdacc', '2020-10-09 16:30:48', 'DELETE', 'Menghapus Data User id : 686d3524fc5b125dc0f833997ab7a425e55f5f8f, Nama : asdf', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('0fee2613b362f71c1fb80b2fae22d4e91b6684fd', '2020-10-11 13:48:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('0ff8027f95d88717343bd41da97eb6f819572643', '2020-06-18 08:28:02', 'UPDATE', 'Merubah Data User id : 2ae5781d967f9b8f0f35b7490276de43ab317f91, Nama : anna', 'A', '::1', 'harip', 'Windows 10', 'Google Chrome v.83.0.4103.106'),
 ('1028d506e1e37b637245a8b9573e9643546fc17f', '2020-06-04 19:43:42', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('1066a46e3ae67d24161510f9a62d8cad8b7e513a', '2020-06-21 07:07:17', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -253,8 +281,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('12322f84224e9678890e902a23b4917778e2c344', '2020-09-26 21:01:26', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('123991f4953bd8a3bc44afd5e7815b334d16221a', '2020-06-01 20:03:42', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('128fcbad7fd4e7b7f9431be714a01ced7b712dcf', '2020-05-31 09:04:19', 'RESTORE', 'Restore Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('12b1c2d6eb2f66a4d6e90837e339ce55773bdcf7', '2020-11-30 00:28:09', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('12f4c6068effb3aa02e08272699aa8b756eb0862', '2020-06-08 22:23:36', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('130aace96b5c15080d8d4908975dadcc86c7c74e', '2020-11-30 00:28:12', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('130fa6d9d58abb2eeeeb7ee848c077b74bdd0833', '2020-06-12 05:55:32', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('1330261c5f392c8ef71b398457f5d90fb4f6ffda', '2020-10-11 16:59:25', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('134835be32c5971315890d76c2b14f30ebe67914', '2020-09-18 21:30:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('1391314b7e03e8d5821814aa14bbb6e1eff956e1', '2020-10-07 21:38:59', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('1398a8e27f982cfcdd34cf73e9183621bc282ab7', '2020-08-16 20:20:59', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -276,6 +307,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('15a7fe73989fdbc7ad72a7006fca2eb57dae372d', '2020-06-02 07:08:30', 'INSERT', 'Menambahkan Data Dokter Dr. Hari Priswanto, S.Prog, s.Cod', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('15c216a9f43aa84c0e324f77b73b31094e79d7a2', '2020-06-18 00:02:15', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('15c27c483e91fab87511934db6df74a26e8e0f02', '2020-10-07 20:47:13', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('15d86eaf811506fcdbbc3029ece18e8a02166fd2', '2020-10-11 14:17:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('1607d6022500cf012e473f8da7fbc835459965b4', '2020-06-02 09:18:37', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('1630809043815802bf80f4726daa4d8a37cc9c58', '2020-08-15 21:50:25', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('1656d3c094a2fcd9218369c5606b10fd45ae4b2a', '2020-06-03 07:05:32', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -284,8 +316,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('168af8895c522aa178ae001a1d9f9cc589076505', '2020-08-14 23:50:37', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('16cdd6b179098ac3c2f3a3407b0fb99706e9ac6a', '2020-09-23 05:54:37', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('16d476dc16f17f50dba1dc0b8bee537fc8911c11', '2020-06-16 13:43:06', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
-('16da29b30bf6c52dd63ae3cee05b64e52570b945', '2020-06-05 07:20:00', 'STOCK OPNAME', 'Stock OPNAME tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('16da29b30bf6c52dd63ae3cee05b64e52570b945', '2020-06-05 07:20:00', 'STOCK OPNAME', 'Stock OPNAME tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('16e6325e914434095331c2d5b8d2b481f3d9e637', '2020-10-29 21:54:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('17044d7f385e15ffe581d8a52317a92459f9e090', '2020-09-26 13:42:52', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('171c7e61fd9561a9fdc8adb6af47e268b651f952', '2020-10-20 16:02:26', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('17254fe010bf1f905c826482da217a7ad1618f8a', '2020-09-26 21:12:11', 'INSERT', 'Menambahkan Data User id : 2e0dfcf1ecb2abb2b896c24f4f3edd9362c30457, Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('17693fc910b45f147f638b9d9a7ccf196b6e3c8e', '2020-08-14 22:43:57', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('17807253ed541aeb720ac17297aaee90850623f1', '2020-06-21 06:45:35', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -308,15 +343,16 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('189cc06edb6522d5788ff22cfc61852b376383bd', '2020-08-18 21:28:33', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('18be0e8e53c093a31cd699bb8719838f530f0154', '2020-06-08 19:56:37', 'CANCEL SELLING', 'Menghapus Trasnsaksi Penjualan Dengan No. Transaksi sell-200608.00025 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('18c69c94cdc947b02f4c41255d19acae969d06c7', '2020-06-01 11:33:01', 'DELETE', 'Menghapus Data User id : af7623bd0101b3cfbbe3b91e782b88763cb59419, Nama : Tester User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('18cf0689c4c9b92eb462d294cadae0ee9b4d71eb', '2020-10-12 17:14:11', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('18f66e5ba0941415d85619d96e0678ae06278bb7', '2020-05-31 21:39:02', 'INSERT', 'Menambahkan Data User Tester User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('18fddbe47aeef1abb6938f2ee60d3c3a2b2f91cd', '2020-06-21 09:07:01', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('19041cbee93d6e2d20b117234ccf6688b0b8453e', '2020-06-07 17:35:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('191019cf451e3574099b86e70bd02019a7d7469f', '2020-06-18 08:29:33', 'LOGOUT', 'Logout Dengan User : anna', 'A', '::1', 'anna', 'Windows 10', 'Google Chrome v.83.0.4103.106'),
+('1934498ddc28d559d3ebc2163ae4d0df467f0639', '2020-11-30 00:26:42', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('1936a8cecc3d9550238a206924c17816dd3c3932', '2020-06-07 19:40:24', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('19376b99a8ce9eda84420830c4e3ffc05ab7a5dc', '2020-08-15 00:34:19', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('1959a516f99c0bdeb1eddbf39255a5d251554726', '2020-05-31 22:21:58', 'UPDATE', 'Merubah Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('197a5bbb06fd87f9f4b0c603a49ceb57b9f2f137', '2020-06-17 23:00:29', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200617.00045', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('197a5bbb06fd87f9f4b0c603a49ceb57b9f2f137', '2020-06-17 23:00:29', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200617.00045', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('1987971291edd7c344d035a286ba6383e38fddb2', '2020-10-10 05:56:48', 'UPDATE', 'Merubah Data User id : bb2079f524623e781b2852a92f356ac73990e983, Nama : dokter', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('19937a2a72d24882ef600d456f987ed0f5589c41', '2020-06-08 20:07:18', 'CANCEL SELLING', 'Menghapus Trasnsaksi Penjualan Dengan No. Transaksi sell-200608.00022 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('19b1a767ca49e2ff9673e578c2a1f58bc89af858', '2020-10-09 16:45:11', 'UPDATE', 'Merubah Data Menu id : 60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b, Nama : Setting', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -325,12 +361,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('1a18bb855b8012f0c3345f54a26168a8b55d9ea5', '2020-06-19 06:55:15', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('1a2bbcd910a78cbace162900d19a7def3cf9d586', '2020-09-18 21:31:35', 'UPDATE', 'Merubah Data Menu id : 2e915394e39405cd3216ec8e5aaf5a6d2ec9c917, Nama : Kasir', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('1a384df13a60a58f5247398022b955f753db49b1', '2020-09-23 06:36:32', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('1a581604b9ce6d148a07e89fcdd764d1305a5792', '2020-11-20 19:39:22', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('1a5a6b7020dd28b3ce161006822ec2df16837022', '2020-10-07 17:24:11', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('1a5d565850fb058c9f5168175f1da60ca9664438', '2020-06-03 05:50:36', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.75.0.3770.143'),
 ('1a8a491877387d6782b82c717f9ca0cc732aa2bf', '2020-09-27 21:31:57', 'RESTORE', 'Restore Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('1aa1ea0872238e340c767c4d53a9404cde9f6a9b', '2020-06-15 21:08:24', 'DELETE', 'Menghapus Data Supplier id: 577444334644461 Nama: asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('1ae927bd7c9de299ef4cf4368f6d875bffd5ecfc', '2020-06-02 06:23:15', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('1afe810f4cdf46ade2658c70bd3e3eccb93ea3c4', '2020-10-09 21:54:46', 'UPDATE', 'Merubah Data Menu id : 52e6985df873d51c161bf54475bd9b644458d965, Nama : Kasir', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('1b3532bd40241bb1ac9524a7883a4a7a53923544', '2020-11-30 00:22:03', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('1b39694d69b819d6aa9e7e4bbbfcd7ec4b32def4', '2020-08-17 21:26:59', 'INSERT', 'Menambahkan Data Department id : 785854a8164d33b008f702a2dd5d8f4ab4849b45, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('1b47d4451d9b38cb7471f351974af9647bf59c50', '2020-10-09 22:00:42', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('1b506ff64e56a11602721fbb69ab6c7b1fcaa511', '2020-08-18 21:37:18', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -358,13 +396,18 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('1d94d6eaac486731399943f505ecefe50df415bd', '2020-09-27 20:26:35', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('1d9b2e53052ee366f6dbc4a504beead0a9bc49e5', '2020-10-09 16:36:56', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('1daa1ea64b019f07f3cb6719d5a1d7bf8c5b590d', '2020-06-10 07:36:12', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('1db1ccf35d7b9d57451ee6295256681853209255', '2020-10-20 16:49:18', 'LOGIN', 'Login Dengan User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('1dd8476620aa8813851dfaeebce9cd3ad8e58190', '2020-08-18 18:26:10', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('1de05b9df9b175090e444542dacb2a7121852677', '2020-09-19 09:01:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('1e0cf83c585f2d56635033dcdf892b1112ff4309', '2020-10-07 20:20:46', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('1e144d21880562d5354d70af8eb3cb55c58ab9d7', '2020-10-07 21:20:11', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('1e44eadf64864a867b94f7550cadc85b6efd5348', '2020-06-15 21:08:18', 'UPDATE', 'Merubah Data Supplier id: 577444334644461 Nama: asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('1e7d0fd4eb01033428cc01b5975a2b40ba55a385', '2020-10-25 22:14:07', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('1ea6acf6ab8d3718db3a02104287b31a4eb17392', '2020-10-07 17:01:10', 'DELETE', 'Menghapus Data Menu id : , Nama : ', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('1ebfc5bc97673c5cd75758dbfcaa5a78135a43c5', '2020-10-20 16:41:02', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('1ed7e3cc53e2b6385e26ac91fec1df3fa03f08e1', '2020-06-11 22:32:19', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('1edc96e2be2e2622d95334564d69909f6da16ab2', '2020-10-29 21:42:30', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('1ee2269654f9060e2eab7b44e800f0d427980fc2', '2020-10-12 07:26:38', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('1ee23a24a230a353ebf2ef94457851eee8c0ef3b', '2020-06-01 11:53:46', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('1ee7c5c3133a19e10349c8dffd6f2c4332fdd81d', '2020-06-06 14:49:03', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('1efc46fa8b4f388df283ad7d4144d5ed5816c790', '2020-10-07 17:41:25', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -379,6 +422,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('1fc79d7b3d2a064936a83ead6cbe6cd5d4023410', '2020-08-16 12:45:36', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('1fcb0953c0c4f98575348e49e61674f3941dc5e7', '2020-10-09 16:27:08', 'INSERT', 'Menambahkan Data Menu id : 0abf6a5b711389d99eb0b5bb7492f625775f4578, Deskripsi : Pendaftaran', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('1fe4515f157121602d71a6acd7ed95bad33da8b0', '2020-05-13 21:15:49', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
+('1feca5766b6215e0eb023b7e5451e16a8b3652c8', '2020-10-12 17:12:34', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('20065574d5ea28a4dd5b46e4ce31811f7dfe9ae8', '2020-10-20 16:07:28', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('2009c68fc218e95aae07f7496496db655698c514', '2020-06-11 20:39:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('200b170d99c7fb0305a06f5a16195e0056fb6f61', '2020-06-10 06:53:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('203fdad583bca62966f7483a28ee0708a78d2500', '2020-10-09 17:33:13', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -389,6 +434,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('208d604030fe83419c33b04ca9b7e31ea0811a15', '2020-10-09 22:01:31', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('20b76037495a85b9c6a6d6117f1aed73f6418eee', '2020-06-09 07:00:04', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('20b8cb4d7912ee1b25c8d4cffca69cf03a6f0c72', '2020-06-04 19:42:31', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('20b973d48033fe646bdbaf63b92baccbffdcd6d3', '2020-11-20 19:48:50', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('20bac9b1921892e01b356b1efaac911c663960c5', '2020-06-01 11:52:35', 'INSERT', 'Menambahkan Data User id : ff7de2b43d11faf84cc459d415aa3958c18d960e, Nama : Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('20cc8211be7dccba0db821cf06e98c24f04dd256', '2020-05-31 18:51:41', 'UPDATE', 'Merubah Data Profileadmin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2115761cb6729b7362f1d9e5f39610cf28882a10', '2020-09-16 20:45:54', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674e_menuDescription=menu Edit, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -396,6 +442,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('2144a3be9101aeafa6ba02657407305b1d05d52b', '2020-05-31 22:41:28', 'LOGOUT', 'Logout Dengan User ', 'A', '::1  -  Bilal', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('216f177070bfb6d496c68d309a7bad517fac33d4', '2020-06-01 13:59:04', 'DELETE', 'Menghapus Data Satuan id: 375788489438129 Deskripsi: tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('218315a7c504e825b9caeca3d9254c46c50543eb', '2020-06-03 07:18:30', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('21da3193ecb8ffd52ddc56694754d71f711f49e6', '2020-11-19 21:06:06', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('21e1a5145b7d29e407af6bb358246a7db8be0692', '2020-09-16 20:46:31', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('221d03d7f20f5af8eff4eef48f858375297976d1', '2020-10-07 17:41:37', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('2223ca0904b2fdef2de2aaba67d4ae06974d3a38', '2020-09-25 16:12:34', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -425,6 +472,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('246c9a95ac23f82947c3af7885306fc06cc0bd2d', '2020-06-11 20:39:30', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('247567271bd0a8c651427511d7db4ca6fae104b6', '2020-09-23 06:32:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('2499a7666c5a2e68ae1407f6eecee2587b7f2148', '2020-06-07 18:57:01', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('249bb599c504ec89a0b08458d510a628cbbd8801', '2020-10-20 16:11:19', 'DELETE', 'Menghapus Data Dokter Dr. Bilal', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('249ca32e60870befa63413198a625636568de9c4', '2020-10-09 16:31:32', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('24a3312468b09d4523602bf99fafbbca5ff68c3b', '2020-08-15 00:33:20', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('24aecff95082d1967d7a5d623ad215c2a24ad4df', '2020-05-31 06:43:13', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -443,6 +491,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('25b1f5ee070085274cf883d7898728c3d02d62fc', '2020-08-18 21:11:06', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('25c155196d73489dac88115cef0407bfeba553d4', '2020-06-27 12:48:00', 'LOGOUT', 'Logout Dengan User : anna', 'A', '::1', 'anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('25c4c9e1e4c2ef57f5783183a4bbf89ca6428683', '2020-06-14 07:58:58', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('25da4de8e25096aa05216af5ef62efe7ede7b177', '2020-10-20 07:38:51', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('263781f66d4e5abdfdc2325608596e1a0d7e921f', '2020-08-18 18:56:19', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('264508810c6068e07e38bc70f6b0683108aab0af', '2020-06-20 22:48:49', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('264f7111733b030f59eb4622805561674a620806', '2020-10-07 22:41:20', 'UPDATE', 'Merubah Data User id : e71936705199dd3ea09a10dded7c5a4837316b1a, Nama : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -461,6 +510,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('27ba7c1ee231faaf5f0b8f8a309184051a122cb1', '2020-10-09 17:25:06', 'UPDATE', 'Merubah Data Menu id : 6104a7e7ad22b936382efec15fe0a2ad4d30c5e5, Nama : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('27e0ec4034b8a88f746758a8e9f4e8307e9dc4d0', '2020-08-16 18:42:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('280baf4e8e47360ff3809c4c855838904ddc2c95', '2020-06-03 18:24:22', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('281789b8a79b538753ec0094f4d1b22d048c8009', '2020-11-15 07:09:31', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
+('2869652f1a2f302e7dcd0a144e0dd857bd157d11', '2020-10-20 16:30:22', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('287ebe119e4f0071ba0b776dc9b8e97f2f29d1e9', '2020-09-13 06:52:48', 'UPDATE', 'Merubah Profile User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('28805bea7757b69d9d6da4e60a82f06de7690ea3', '2020-09-27 21:16:10', 'INSERT', 'Menambahkan Data Menu id : e6cddfe8862e682a95f97cc8a36fed2158a5d64f, Deskripsi : Master', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('2887eb1fb7e65d8fe44934ea139bd74985fc1281', '2020-06-03 21:46:25', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -479,12 +530,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('2a0f37559717301aded662bf3ae0396d5287022f', '2020-08-15 23:04:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('2a44296de07e7a582a0adfcceb98cd8c8b0a4b74', '2020-06-16 14:03:41', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('2a6a9bcc1a031adc6c7527d53e4a0dd16e6486e7', '2020-06-27 11:47:09', 'READ', 'Akses Menu System User', 'A', '::1', 'anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
+('2a70d47a8412bee1de281f81883c542f389af322', '2020-11-29 22:40:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('2a7cfef449c74623944557d6299f5cf069b956e7', '2020-06-15 05:52:49', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('2a9cb6eef49d4eff770bc3ca859ba22084ba3d10', '2020-11-29 22:41:31', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('2ac152e609dacef9dee75895f389fc323dfa3cc5', '2020-08-15 18:52:32', 'DELETE', 'Menghapus Data User id : 2ae5781d967f9b8f0f35b7490276de43ab317f91, Nama : anna', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('2af1e6aa373f2d4c40d31531c62ceb2e13cc3050', '2020-10-09 21:06:10', 'INSERT', 'Menambahkan Data Sub Menu id : a58a9701d5543d725625bdd75d61829ca4bb2dd9, Deskripsi : Stock Opname Bulanan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('2b30c364016657eebf1de8bfd4dd0c394ce0946d', '2020-06-01 13:27:21', 'UPDATE', 'Merubah Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2b39ea6be6b854683920867fbfe1f0fa62acb6c6', '2020-06-13 06:05:27', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('2b4550388c84f13cfaa1bede391e20b09a0c7bd1', '2020-10-09 23:01:44', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('2b52ce184e84330c9365657aea53923e2ad1d12e', '2020-10-29 21:54:30', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('2b60b3c30b69d7e4c1c21f1129df400c36bda561', '2020-05-31 20:28:57', 'UPDATE', 'Merubah Data Produk id: 1fa52bac79fb4cf3dc647405b5d222b6a9513309 Nama: Acifar Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2b79e6a026ed85bfd5df5248ce3be2035ff5f6f4', '2020-06-08 19:40:49', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2b7c6f6373be9bd1285282945afe3e8474847dc6', '2020-06-07 19:37:02', 'INSERT', 'Menambahkan Data Produk id: 9697161110113729912642737 Nama: tester 12345', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -502,11 +556,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('2c5407774d7775ce55bf27587b9e2c59ae2fcd4a', '2020-10-07 17:12:05', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('2ca80d72cec208ea5b0859e7d48a447de0640329', '2020-09-27 21:30:07', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('2cc2d33ee875287ae3c4fcf3b41b659d1b9764fe', '2020-06-25 20:40:00', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('2ce17299f17f0ba48263f586eed4b986db52bc8e', '2020-10-12 07:34:43', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201012.00049', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('2d0d958f9aa49bbfad44478753a6ff698bd3f28a', '2020-10-09 16:26:23', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('2d3351866f84c369c1f89d3deafc082efdba3cc2', '2020-10-09 21:45:49', 'UPDATE', 'Merubah Data Role id : a4aa860568d8f21b0186474deabb08ddad702e86, Deskripsi : Admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('2d51c80a608d4d33871f7ac3bfde547ab83c1869', '2020-10-11 14:42:39', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('2d66de7fa61a4fe815b658325f6944582d176cb4', '2020-06-03 07:24:51', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2d9129dd6b78dab4e3d4a24ed9ce3221df6625ff', '2020-09-26 13:36:15', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('2db6bbc0bc0e2e18f9ede14049e1a373fb1615e2', '2020-06-20 22:50:34', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('2dca2988c8843014adff98a3cc44df55c26b9ad9', '2020-10-25 22:25:41', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('2dd59a3cda35517a8cd6e8ae9c863c23017c52e8', '2020-06-15 21:07:43', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('2df0fc834f473a89199de0717ac50a32a77a2d1c', '2020-09-25 18:49:49', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('2e1b7a9762a9555d338a2c3f7d0a71b2967af3fd', '2020-05-31 21:12:59', 'UPDATE', 'Merubah Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -516,24 +573,32 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('2ed84c4e0ea5d2c0198013fe31ce3489d92e020f', '2020-06-24 05:52:27', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('2ef0c7288929259fb8d1df90859f817743f30ea9', '2020-10-07 17:12:07', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('2efedebaead1998bff32066595dbf2205f632e3b', '2020-10-10 05:54:53', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('2f05d9e8f3090c9c1a9c7007b7094cbe8847ff89', '2020-11-29 22:41:15', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('2f08c0049e418705515dd5f1024e178260662991', '2020-08-15 18:53:05', 'UPDATE', 'Merubah Data User id : e71936705199dd3ea09a10dded7c5a4837316b1a, Nama : admin', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('2f11cb0da69203c102c975ea7f5df130263830e6', '2020-06-07 19:39:17', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('2f12def21c76a90de5e828b46f4352bb3b0bdfcf', '2020-09-26 19:06:45', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('2f20f1bf04f99ad39f2d461b7ea1879596661e39', '2020-09-26 21:12:04', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
+('2f2454acf6a5b657920eb328ab157786523fa998', '2020-10-12 07:48:42', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('2f6296a68066c77d10c7109c71f18e4d93c8033c', '2020-06-09 21:54:35', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('2f6a8aa7594049cafa9515c5f8d557b1e8a72f04', '2020-10-20 07:41:25', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('2f6bf5ac66836d65b36edea3a97483c4ae52121e', '2020-10-09 16:51:02', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('2f7c3558c40ae214c82b517e8e3da71bf98c349a', '2020-10-11 14:17:00', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('2f8008db444fd63788ecd2bd7fecb30da609e435', '2020-10-09 22:49:55', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('2f9ba06365b34313d568f5ed92130dd4252b0414', '2020-06-16 13:40:21', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('2fb8bdf5a8da9f9dbbbb0dbf4bee0a11979d296d', '2020-06-03 07:06:02', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('2fd061e78a9e3ca8f8b75d00eb3b85e7dcb30be6', '2020-06-06 16:30:16', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('2fd061e78a9e3ca8f8b75d00eb3b85e7dcb30be6', '2020-06-06 16:30:16', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('30108624a30fd192f1d3561d985de4f651dd43e1', '2020-09-18 07:07:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('305196392d9a8b18896cf14240de5bae70535f84', '2020-09-16 20:29:03', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('3051bb140b218c65505e71153fc6fea9b3b8655e', '2020-10-09 22:05:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('30549a45dce374aa6e6bef479eb564b21592fd7b', '2020-06-10 06:42:23', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('306d5ce9b8415ad685ffcb188037e8d7c70e5cbe', '2020-06-14 08:15:30', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('30755b0f5f34f67793cb468e06d5f266708185cd', '2020-05-31 15:57:10', 'DELETE', 'Menghapus Data Produk id: 0969016009088158686080980 Nama: Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('3091347f0f4ce06839830b31f63b1ce4b899cc7d', '2020-11-29 23:02:23', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('30a1aa87bd9d3ad75314be218daecded258ab304', '2020-11-29 22:41:43', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('30a9419bc6754cf02e895cfef50ec53306a29292', '2020-06-15 21:09:47', 'DELETE', 'Menghapus Data Customer asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('30c30e61f752b9cb298ab38ac06f9daedf044c1d', '2020-08-17 19:41:56', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('30c85d9f044fdab58afc4dd514d9c8d4c092e681', '2020-10-12 07:27:55', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('30ed6ded964844b0000c4b840d77a0e74cf49b1b', '2020-08-07 22:31:16', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('3103b728f6c64bf0f1bb23f2b4a99c82af3d638d', '2020-10-09 17:33:26', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('3113a61afa4467b312c7729c97bcbd551683adaf', '2020-06-01 10:17:22', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -561,6 +626,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('32f413101e6a286ff7b1ced83992ac42bb6ac3e0', '2020-10-09 16:59:15', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('32f5ab86cb2c8016ed1da489346960fc25f45301', '2020-06-07 07:54:40', 'STOCK OPNAME', 'Stock OPNAME Bisoprolol Fumarate', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('33233795bae53054f93fe7a261f7ebc52050844d', '2020-05-31 09:04:59', 'INSERT', 'Menambahkan Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('3356dde54d6e8842a68334b2b6c0fbc9e516dc19', '2020-10-29 21:54:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('33b66afc03c2c3d64c5bb5d3326b72ff94e2629c', '2020-10-07 20:20:50', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('33bd4c2f909a33d50ee7d5fd3caa260b5cab4ed3', '2020-06-01 11:32:02', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('33dde87dd84582230582c9fc288e436a48e1c90e', '2020-10-07 16:52:05', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -578,6 +644,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('34d69ef73263ee9098875f402b7bdf3b21d044c1', '2020-06-11 20:36:55', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('34daff4437558776ea2b47fedf2036d4b9648d09', '2020-06-25 21:11:29', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('34db308af108d9626f2effda63ff1fdefe33eb39', '2020-06-14 10:40:09', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('34f7a5a4ad9c304ad3a983c76a4809672310ab01', '2020-10-20 16:39:30', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('350870135450fdff93a400fa8cfc4036f5e085a8', '2020-06-14 07:45:03', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('35117bf41cd31f8fcb394fae298fbeffd7c18edd', '2020-06-05 19:35:08', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('351959f692fa36e1d8deb4f3dc096941cc75d765', '2020-09-27 21:27:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -585,15 +652,17 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('3541ceb49d669220577c050d52f2a19a629e026c', '2020-06-13 19:01:53', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200613.00011', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('354ec4fb8c91937775b9916e2e73e3941abfb76f', '2020-06-21 06:46:26', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('354f7c1c9ed7145e46fc7c4432e14861354810a6', '2020-10-07 22:55:43', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201007.00048', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('3559fd80e51ce70abf456963566bbcc3c22bee5c', '2020-10-29 21:51:04', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('3595792e1adcaf05c2bdbe53e5c2e13a0cd416f8', '2020-06-18 00:02:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('35c4f9c64c6eec9c56243ebe35a7af2e6ad65b17', '2020-08-17 20:32:18', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
-('35d7f12ab91c8b42d14cdcf965644ce8b588a30c', '2020-06-08 21:54:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('35d7f12ab91c8b42d14cdcf965644ce8b588a30c', '2020-06-08 21:54:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('35e89640ce524a018684eb4b3a37960adbb16e6a', '2020-10-09 23:05:14', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('36002e57f7f70b97c1663db7ea18c62dd46a2814', '2020-06-01 15:11:53', 'INSERT', 'Menambahkan Data Supplier id: 181814251519319 Nama: PT. Bilal Software', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('362b30d1b522ced1965a7ad11ea570c48938db1d', '2020-10-20 16:36:03', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('363daa0d6f03af7ed40304eb5d6230dead360e2a', '2020-08-18 21:38:11', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('3649230410255cac2406f8795c02fb80b6f7def8', '2020-06-01 11:09:11', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('369b1598be26fcf789816f91e7198c777a1b907f', '2020-06-08 19:40:44', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200608.00022', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('36a0c7d20952d284b3aec24b1cfe12df0187956e', '2020-10-16 20:56:58', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-201012.00019', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('36af1f167d554236708ca382544760748c8f659c', '2020-10-09 23:07:51', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('36cb0dc6ae117b7ca05e154e91ac5b140ea15a24', '2020-06-14 11:21:26', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('3705f137aeac8c3582d27c3c919e125295a7cc40', '2020-09-25 18:49:50', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
@@ -603,6 +672,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('3726988bc0c3c8183b0035bce3d1ad2a61a89aa8', '2020-10-07 22:56:05', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('372c3c148b7b6a37856af01140f77e4f2aea5bfe', '2020-06-11 23:07:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('3771b4320ddb69ddf773356480a2bd958901c51a', '2020-06-11 22:13:11', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
+('37888865afbd1cd3dfbd20dedc163ab14aea6b82', '2020-10-25 22:25:46', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('379854b589b3d97cff46e38dc428173e6924195e', '2020-06-09 06:53:06', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('37ac1e5f54ec70e0cd60b9d243acc98031081ee4', '2020-08-18 21:23:11', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
 ('37d0de0c7aacadcd52d41eb225b6dbcd33500471', '2020-06-02 18:47:59', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
@@ -610,9 +680,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('37e9f433a9e2b14e4b6065b909f9da67bf413f8b', '2020-06-15 21:08:08', 'UPDATE', 'Merubah Data Supplier id: 577444334644461 Nama: asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('37fca16119c0aec1e1384347ca8b78e915c38dc5', '2020-06-11 23:29:03', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('3808c6b16e96a523223eb1b938458aa2e7568061', '2020-06-13 06:11:55', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('38339ea45a129d31edaf2dbeac670b91b4093a99', '2020-11-07 05:50:06', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.183'),
 ('384ebd619dcd303e6b69840a836e9ed58e8e73bd', '2020-08-07 22:36:26', 'LOGOUT', 'Logout Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('385d0ff5e7647907b431c9f999d91c745582687b', '2020-06-08 18:33:53', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('38615e4ca98270fbdead7bd6352d4868ced52856', '2020-06-16 14:03:47', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('38a341c87d7449aed1537f812684a9f4b09d77e5', '2020-10-12 07:20:12', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('38cb7fea7b20131b6f80e6c07b5bb6d5eb7e4b4e', '2020-06-03 00:05:44', 'READ', 'Melihat Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('38d0c558035ac9914585dfec6cfc3e9fff1fc3b1', '2020-06-04 23:07:03', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('38e653395ecd1473a1b4f1a44800c7105fa59b78', '2020-06-01 15:53:48', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -624,6 +696,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('397f78dd28ba3f4da8d2719d9751a4a7b6c7c3b4', '2020-06-14 11:32:59', 'STOCK OPNAME', 'Stock OPNAME Acyclovir 400 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('39e64146937e61ff78fc65777a015e9fefe443a8', '2020-10-09 16:58:14', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('3a001f694456486314faa338546d088df194df1f', '2020-06-17 20:49:31', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('3a18a093514fe9f16fc1e2e0151952bd18d14717', '2020-10-29 21:54:34', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('3a1fc692dca24f8c72e6e0829912456e64c7e531', '2020-06-03 07:16:54', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3a27ead892c02a542fde343359da15b9b0013cf2', '2020-10-09 16:33:25', 'UPDATE', 'Merubah Data Menu id : 3b193d9c9b1f8e12d571cd3b4638e245d04e25dd, Nama : Laporan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('3a6386a61593051138e5b5934fa92df050802726', '2020-09-26 13:16:10', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -637,6 +710,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('3b18dbfa6fe274c6f596ff5d78bec5e8f3aa6c10', '2020-06-08 06:58:45', 'UPDATE', 'Merubah Data Produk id: 0bd078b4943033f267b5524b8e9975b8a1e793c7 Nama: Acyclovir 400 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3b1e6fdd324b1631f15de35db28a2132444c27f6', '2020-09-23 07:08:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('3b901d438936436c06503885043980f7b2675e39', '2020-09-19 08:21:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('3b90ad62dde123cf2f85c4a4b71cb7bc3da3d780', '2020-10-12 07:33:49', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('3b99f14e99f18e369efded0bbe1eef91567d0770', '2020-06-21 06:06:53', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('3ba363e8c775fd4c4f9e3c8a5b3dc14358a62c9c', '2020-06-06 15:52:56', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200606.00006', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3ba4ccd9659b2621dff562fca3e5a393c33beb28', '2020-09-26 21:33:45', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
@@ -650,6 +724,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('3cf8390858d0e3bbacda0369b91f1325f89ce911', '2020-09-19 08:13:41', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('3d1ba52975b6f8b0f2a93e9b635af66aca039cd1', '2020-09-26 13:14:50', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('3d24c4adc118546bceb348da7a7cf964729b5ed9', '2020-06-14 11:05:50', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('3d25ca3488b2eb2d8f36483edf4814bc0bda36da', '2020-10-29 21:49:21', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.111'),
 ('3d2af8803a95d07dd13ee6e3f7bbb2057c345d4e', '2020-06-02 17:21:57', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('3d45cc58cb67ea4ef87f8b3aa05033940b797d22', '2020-05-13 21:01:55', 'INSERT', 'Menambahkan Data Cara Pakai 3 x 4 Tablet Setelah Makan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('3d4aba1447e2ceb18812c420be516de2d6531cbf', '2020-09-19 19:52:45', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -664,32 +739,40 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('3dd024dc9bedf6510ee2ec3d3ef9d063a89f3f03', '2020-06-06 16:38:12', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3dda2e469295c3b5225f80be2344dd1351a4977c', '2020-06-03 00:00:45', 'READ', 'Melihat Data Penanggung Jawab', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3dfdfa03d3b31c2a0fe48b0903d9dafa66bd429c', '2020-10-09 17:35:06', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('3e0aca506f560401cc1548476ae6a302f56b8a04', '2020-10-16 21:04:30', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('3e0b2a8b922f127420855a8ada5c617217291b6a', '2020-05-10 14:34:54', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('3e11c08f9bcc206bc5dc933baec33f53abed8dc9', '2020-06-03 00:01:48', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('3e18db4f9369d231b254d6de6bc3befba3b49c21', '2020-11-15 07:09:37', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('3e314287df7b5ed794f9859b114283d9364b9ba9', '2020-06-19 06:44:04', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('3e6293081fba9f3c08242e81c1016749e3f12660', '2020-10-09 22:02:15', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('3e79e5fb5dd8f9c83062509dd1e4e4a36647a2ed', '2020-06-07 21:37:28', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3ea462cbd82a2c026b707e0a1ea4c55faeb704be', '2020-06-14 07:46:10', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('3ecc4816fe88c507fef1fdee9448c80982ee9aca', '2020-06-12 05:52:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('3ed63b51baa19c82c3609e9e276c7b1d98f48b17', '2020-06-11 07:14:03', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('3ef0e35da6e50ae4e787bfe9929d76b1fbc3a3b7', '2020-10-16 20:50:12', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('3f10af21b1d03b39cdbd00843dd79d62a76c6a51', '2020-10-09 17:09:32', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.75'),
 ('3f311bdb7b2a2c0e3a37dc584502808d1f4cb7de', '2020-06-11 22:40:29', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('3f3178ff673ddcec7f0bb97453284829d1ecdd98', '2020-06-07 07:50:14', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3f56131152b669a49d393a1743255b512d23aef2', '2020-09-16 07:28:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('3f57bc545da0752687bcbe5955f82255232e1258', '2020-10-16 21:09:17', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('3f6042c615c5afd9213f6290c07159b8dd1b4b11', '2020-06-01 13:42:12', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('3f744c0562ffc0ef3b06a35454c014a6ed7ff6d6', '2020-10-29 22:00:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('3f8caac9f4332562ea115f29901b4d6beccfc244', '2020-10-07 17:23:49', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('3fd37e9e591776a92654c33084821c224a19931a', '2020-06-07 07:54:57', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('3fde25b194d365a6bf49b1d9239f34857ad4f783', '2020-06-16 14:01:16', 'LOGOUT', 'Logout Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('3ffb4739c31855c01cd090b2689c97905fa631d4', '2020-08-14 21:35:31', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('3ffec1299df71b6893cab6ee8b9d20d8f531cdd7', '2020-10-11 15:37:21', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('402e856c5364b15c9a8c5f0f423fdb23757269c8', '2020-09-12 21:54:53', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('4032665f1408f6ec275d2c6e4312e74ec8b08284', '2020-09-26 21:43:02', 'UPDATE', 'Merubah Data Role id : a4aa860568d8f21b0186474deabb08ddad702e86, Deskripsi : Admins', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('406164c6fb6a58eac36b83a4861a5f7174c7046d', '2020-10-10 07:37:03', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('40672acb836503332ef0e65094aeb4313997f450', '2020-10-29 21:51:50', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('407eec495c0b68449a7b228de7a105c6115d7e50', '2020-06-03 00:05:17', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4092d2ccb89da5357631ece468183c8da773efd1', '2020-08-18 21:08:43', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('40b9cfd47b0e9eb2739344ad316e49b555df8424', '2020-06-13 06:16:54', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('40d01dd2c3c3ab391ab60b19cd08092406d309a7', '2020-09-25 18:47:20', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('4102c2ecd5a3d396920cea7812c8675853ec24cf', '2020-09-26 21:30:43', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('4138f3eeda8060d18f3bddaa32d92c6d54361c29', '2020-09-26 21:41:38', 'UPDATE', 'Merubah Data Role id : a4aa860568d8f21b0186474deabb08ddad702e86, Deskripsi : Admins', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('414ff2db278d1a7fef03214008d190c6a5219e75', '2020-10-12 07:44:34', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('4154c715c04a7d38918149a772042582a1d7cf8e', '2020-06-11 23:10:18', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('4164fbdcaaf2be95ce324175c4f61e98ab6378f5', '2020-10-09 22:49:35', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('418712d747ca09052bd58bcb475f1ff858ed2e26', '2020-10-07 17:05:41', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -710,6 +793,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('42fc9968d1523326a769be4fd471048d16b64625', '2020-10-09 21:56:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('42fe5edb537b58946fca43aceac2fb1cb15384ca', '2020-10-07 17:40:11', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('431d11064b576bee0ddadb904d62f271d56b3a8c', '2020-06-19 20:43:41', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('4320b0c6e856ad802b26e128e75cfc659841e2b7', '2020-10-12 07:11:00', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('43462dac39ba54602db333c167f97ab1697e15de', '2020-09-16 20:40:05', 'UPDATE', 'Merubah Data Menu id : 5d40343f0f5e5dc1f11e6bd763794b27423809cae_menuDescription=deskripsi menu, Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('4373fa327be85af421b8dcf1acb954d6050824c2', '2020-10-07 20:22:50', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('4384f898dad594c01ebed16e35b34ca61f26c379', '2020-06-17 12:26:49', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -738,6 +822,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('457a339683151e94172ef98e96f6899a7fcbc884', '2020-06-02 21:43:35', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4581e77b37ffdb5e04e37660ec3d6dd1954f34ad', '2020-06-05 20:15:10', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('45a20d42081514192f31916aa9f09fca87123f35', '2020-10-09 16:41:43', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('45c36c1303647dabcc02cca04b9cd051570b9599', '2020-11-19 21:05:41', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('45c7a5f23800d15a3d0c2cbc18f25e59d09ef890', '2020-06-06 15:54:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('45ddd135c2b3d5e40b9b4e3ed27e526b8216dabd', '2020-06-07 18:58:02', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('45ff944797a954495747248dc396ac292f5abc88', '2020-09-23 05:54:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -749,11 +834,13 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('4652f5b8c1fff2e9d30988b3855f0b3771790b42', '2020-05-31 20:31:43', 'UPDATE', 'Merubah Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('465f855906f60c5068c65d2a54b33628a0b937ef', '2020-06-01 13:58:44', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4663dad12c2ae22750cc0385d7d572d8f319a031', '2020-09-27 20:14:06', 'UPDATE', 'Merubah Data Menu id : 38c888a5d7305620e1eaf769cac3d0bb7d521ff1, Nama : Master', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('4678f5237928855c0611e8d61541745a158952bc', '2020-10-16 21:02:17', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('46aa55e44467cb7c69fac3517c6c27755e9a9f95', '2020-06-07 21:37:18', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('46aa5d8ea623f15129f812e38a77cef00f23c0f5', '2020-06-01 13:21:58', 'RESTORE', 'Restore Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('46bc4d0c224a7642e20c8245931dd531e5f0170d', '2020-06-05 07:23:46', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('46bfbeddbb619402f82188a8d958984003b4ea5a', '2020-06-08 20:14:14', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('46cc4b27a62f03fbc100af0d4195061f7d801607', '2020-06-11 07:14:55', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('46dc25edb511db480c9fbc6cc8758530afbc163b', '2020-10-25 22:25:15', 'LOGOUT', 'Logout Dengan User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('46f2474456eeec07c0f1c2efc92645e2d77c0320', '2020-06-06 16:15:18', 'CANCEL SELLING', 'Menghapus Trasnsaksi Penjualan Dengan No. Transaksi sell-200606.00010 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('473a1ba9927900c80cb107452455215eba050866', '2020-06-01 13:58:50', 'INSERT', 'Menambahkan Data Satuan id: 375788489438129 Deskripsi: tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('474a4c5b7ce4a21901b46c18a352591f667aaf7a', '2020-08-18 20:56:55', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -767,25 +854,32 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('4821ec973e21760de7f76ac555a589d21b40a7f7', '2020-10-09 22:01:51', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('48576bda0b334d6d2f92711022147a4270fea2ee', '2020-06-01 13:18:54', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4883d60af065b482ace9ac83b1f957648bd67b2b', '2020-06-27 09:07:16', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
+('4892182962825db41217062519bd336bd51a5c8c', '2020-10-16 20:58:13', 'STOCK OPNAME', 'Stock OPNAME Cecyl 200', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('489a67051ffb386c7b29ba87925b37748b0328f9', '2020-10-16 20:50:20', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('48c549f8164fd65a6fce8ef53919b7494fab6da3', '2020-06-13 18:38:58', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200613.00010', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4900d28ade756d51967b6180b569227fd9876deb', '2020-06-05 07:18:27', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('491fe38c74c7be24553253de3647c48281d36ff8', '2020-11-29 22:40:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('4926de7724372e74f9093b39adec66ca3fc0ca9f', '2020-05-31 20:31:51', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4948469cb0f6601405f4b8fc97b2076d3cba58ff', '2020-10-07 20:33:35', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
-('4959046c55a0679961172816ddccc8f30241e9a8', '2020-10-07 20:50:58', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('4959046c55a0679961172816ddccc8f30241e9a8', '2020-10-07 20:50:58', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('497dc588123cd61238403b17f721a4d9b809774c', '2020-08-18 22:13:07', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('49896d0629933e7c75a426b71ddf083c595e127e', '2020-10-07 16:50:36', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('498db5681290773bfa2cda4d31d8d099c7580ba3', '2020-06-11 07:12:13', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('49900ad1c837eeae573b8cc840d2e190f3f33ca4', '2020-06-16 14:01:23', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('49a550e687b3f4c61e5ede4fe0f5afeb6bfa52c1', '2020-10-09 21:56:44', 'UPDATE', 'Merubah Data Menu id : 52e6985df873d51c161bf54475bd9b644458d965, Nama : Kasir', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('49b156689695ca3ea49f34a15f16caad56df892a', '2020-11-29 23:09:32', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('49d02b4a35eaa776bdf1759b0a22ace31003c281', '2020-06-07 10:42:23', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('49d065bf1ab48839bdf9841c0164ab04f4c471c0', '2020-09-26 20:41:26', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('49d6012f1e21cccc14a8ef870d8fd0588345026d', '2020-06-01 13:27:05', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('49f7bdbc13de523f3dcb105f0dc9cdbbabb0e9b7', '2020-06-05 07:20:26', 'STOCK OPNAME', 'Stock OPNAME Linogra', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4a2ab78e83c83201d361ccf7cb3460a1c90d180e', '2020-06-05 06:23:06', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('4a7c0ad537e6998444e393a4187df85259a15268', '2020-10-29 21:57:20', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('4a7cdfb95cbd9946cea3f911bad6a79db6ccec0b', '2020-06-11 22:13:22', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4a898274b82af8a58fff3f814628ee2d198299d3', '2020-10-09 21:06:37', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('4a8dff4ec5eb061566876509192d8dbd3476ce33', '2020-06-14 09:49:49', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200613.00012', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4aa5a223f73bc1ebe7ff9db304ec3301ecb084ec', '2020-06-05 07:18:43', 'STOCK OPNAME', 'Stock OPNAME Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('4ac113dea505a4276a8819479005cc3f5a1fb85d', '2020-10-20 16:04:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('4ad6e632cb007e51f33ab772866261919e6420f4', '2020-08-15 00:37:28', 'LOGOUT', 'Logout Dengan User : ', 'A', '::1', '', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('4ad74f76d0f1dfb8b58ca0da90b286fe933d75a0', '2020-08-15 00:35:31', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('4af597ad69b5b84c935dfbe730a5007f3af6e2ba', '2020-05-31 20:29:55', 'RESTORE', 'Restore Data Produk id: 1fa52bac79fb4cf3dc647405b5d222b6a9513309 Nama: Acifar Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -803,25 +897,32 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('4b8aa205c5749199a6461781349448ef65b735cd', '2020-06-12 07:53:32', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4b8d030592533721ea74ace8ca320b43c67294be', '2020-06-11 06:54:17', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4bad5ec555848fa607dc22727bf78669691f922a', '2020-10-09 23:06:09', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('4bc46afb450987198bd2795e8d066d800ee216b5', '2020-11-29 23:18:36', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('4bc9df7ee3a412cf8b283b83cb3a520ef978eef2', '2020-06-19 06:46:17', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('4bccc0e9ec29250a6935d47a274aadbd590d0e6d', '2020-10-09 17:35:07', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('4bd219262fe57d78bd14d615d01009bbf73b6d92', '2020-06-27 09:02:36', 'LOGIN', 'Login Dengan User : Anna', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('4bd8748660776bb0a41311459ec7c9bda614658f', '2020-10-09 16:51:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('4be2e5d940d4ba4ff3500a9e83e76aa0913b17bc', '2020-10-20 07:41:33', 'DELETE', 'Menghapus Data Produk id: 2045500040602007504767205 Nama: asdf', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('4bebe125e30326795883cb9d8ce402647975e958', '2020-06-14 14:55:08', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4bec31333892c84814c7dd912bbff81fbc5f9329', '2020-06-02 17:20:10', 'UPDATE', 'Merubah Data User id : 2ae5781d967f9b8f0f35b7490276de43ab317f91, Nama : bilal', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('4c0240b47d480be4b0a9c9058d1dad1fdebaa242', '2020-06-07 10:39:40', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4c770dd53425c4836fa08e735dadb4821747b78f', '2020-08-18 18:48:25', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
+('4c81577f52890aea028707af5a9c7004bff0b521', '2020-10-12 07:35:40', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('4c88f83098aec9eb22c11a6ea34ef2f43d708706', '2020-10-09 22:07:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('4c92f47270e4d35f0149896b07b050778fcc1a4c', '2020-09-26 21:32:07', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('4ccad05faf556c75fba5d61044c0f6f0b9f6e773', '2020-06-09 07:00:46', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4ce59968c0fc0cf13b9392791081243b77600c89', '2020-10-09 16:41:09', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('4cfc5d7d0ff30ce13fba72efab53ca94b803e459', '2020-06-11 20:38:11', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4cfd80f4fba0bf48991d55a09ce5d2621614f162', '2020-09-23 05:54:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('4d0a975194bad3936712a5f269c584bf6034bf1b', '2020-10-12 17:24:47', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201012.00050', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('4d0df8934bd326da1fc6797ea9ec70e7833e3690', '2020-06-05 06:42:02', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4d1660204f72d2835c68f3a0d69a4144a859dec6', '2020-06-08 19:39:06', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('4d3971b95313f48feb62a518723279dcb58eb541', '2020-10-12 07:45:05', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('4d3e0a15139247fe8bffa2e2f1c19557b35cdd7f', '2020-08-18 22:20:27', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
+('4d47ec2046ce379dda435fedd969d5e86e0ebc15', '2020-10-12 07:27:18', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.121'),
 ('4d785ca5707a722e3dbc4103c9665b09942ca55d', '2020-06-14 08:21:50', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('4d87c060d98ae872d3f8b4838424204e4a903ac8', '2020-06-06 16:38:02', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('4da10904678ada6a20b01708055b6dadfc827ac6', '2020-11-15 07:09:50', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('4dc2b484425647b033e9ce9bad4d76e592f34bb9', '2020-09-23 21:51:28', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('4def6f512a815860cb92f18211d311d0ced9475f', '2020-06-19 20:32:42', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('4df32a510d46e2d4a9a3e0c69652d3a94ab42ed1', '2020-06-04 23:17:06', 'RESTORE', 'Restore Data Produk id: 4881484054550840245071224 Nama: tester 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -843,9 +944,13 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('4fb23b2bc5c395d6544ae31833a02146ca5f533f', '2020-06-03 07:13:43', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4fe4f0111df33fbdbc63f38dd27c32985a432ede', '2020-06-07 19:37:13', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('4fea0955e579d062ba441c04ec3b56bc19b8bc33', '2020-06-12 05:50:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('4feae17e0a2b17396d7f6017f1b8412265c7e1cf', '2020-10-20 16:11:23', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('4ff0772b2deb5485b1be47d22aa77c189b31186d', '2020-10-11 15:36:59', 'UPDATE', 'Merubah Data User id : bb2079f524623e781b2852a92f356ac73990e983, Nama : dokter', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('500ba02525ecf2abd5c92ce9a324154942778b3a', '2020-11-15 07:09:23', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-201016.00020', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('50269b710b6656b5a11d4f0e3bbf41c64d4d9c40', '2020-06-03 00:03:33', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('506dd33a021d95ffa1f6b6cd6d6764a28ca477a3', '2020-10-09 21:03:50', 'INSERT', 'Menambahkan Data Role id : f5b75de1241ca88d5cb4e84ed8daa8145670139c, Deskripsi : Gudang', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('507b5fa72a5b234be925dcd9cd3696172f1706ea', '2020-09-23 06:33:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('507cf4697469a7665ed1b6e9bd4a7c3715e4894e', '2020-10-11 15:35:41', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('5093486b7dab94341be3ed50377e49ddff70d5b5', '2020-06-02 18:45:12', 'INSERT', 'Menambahkan Data Produk id: 6461166114485623445664884 Nama: semen 3 Roda', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('50a78587a9fd6c466e19a3102a1295238bdfb982', '2020-10-09 18:53:54', 'UPDATE', 'Merubah Data Menu id : 07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c, Nama : Dadhboard', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('50dbab935e788b8aaaae59b1e5467923d5dba0e1', '2020-10-07 17:07:43', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -860,8 +965,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('51896290e666fc9f82bb893cd69d4d9f6b8f473b', '2020-06-13 08:40:40', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('518d1dc072b63cc4b9012263e863be1d114c8aa4', '2020-10-10 05:56:33', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('51a358d2cbc073e6bfbdd2ae983c1ca7fa91e242', '2020-06-11 18:59:43', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
-('51b90a54f65e175decc57cf988113dc4086ad858', '2020-06-08 22:06:42', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('51b90a54f65e175decc57cf988113dc4086ad858', '2020-06-08 22:06:42', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('51f0233373eb0e394b90fb40addb0ead8d096a9f', '2020-06-08 06:03:16', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('51ffab19a3dc380652b6d5c9af65e30fc3b13391', '2020-10-09 17:25:37', 'UPDATE', 'Merubah Data Menu id : 9b594a1eae491557939cd3a289d15dc936d04625, Nama : Pasien Baru', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('520f7db45dca44ab9fc15fb2fa84a07471d0f954', '2020-05-13 20:55:25', 'INSERT', 'Menambahkan Data Dokter Dr. Bilal', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
@@ -873,20 +977,28 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('528cdda8af101e0591017009e8b2f6537d25150e', '2020-06-06 22:11:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5298a87b418b946d7d07e6162a7ed61bd9125acb', '2020-05-10 23:19:55', 'INSERT', 'Menambahkan Data Customer Hari Priswanto [Transaksi]', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('52a7c3dd18c81e958521174a981df5b4e131c53e', '2020-08-16 12:50:36', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('52c6f61de1b0842421ef8fbb5a580486aed07b51', '2020-10-29 21:42:39', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('52c72e02a19e1d1c357a7fc6114eed892d351a7f', '2020-09-26 21:41:49', 'UPDATE', 'Merubah Data Role id : a4aa860568d8f21b0186474deabb08ddad702e86, Deskripsi : Admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('52daf6ad34ed7117e07c21dcae0437dc78e6d59b', '2020-05-31 19:25:55', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5317e88a4eddb4ad76cac78d8e93390b3e2ebb08', '2020-06-05 07:23:48', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('53403e2c11aaafdae4e5a2a2eafe1a83816ff20f', '2020-10-07 22:57:50', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('5343546ef18cd24a639458e75f3f352a8a717fc7', '2020-10-20 14:52:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('53475004931bf589f7944673e2ff4e260e7eee59', '2020-09-26 21:39:06', 'UPDATE', 'Merubah Data Role id : , Deskripsi : Admins', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('537adba24cf05695a5eceeb0b331e5542c9262f6', '2020-09-16 07:29:46', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('53b179b745d76087941d4dce0c4ef0734cceefb7', '2020-10-16 20:58:16', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('53c3260b7d2d67a32d6a9bce2ec19160d2624d8b', '2020-10-09 21:54:32', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('53fe2b020a02bd42bae5656d26426b3936af3896', '2020-06-11 23:05:06', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
+('5400da23f549e3a852630fed28fe17aa32ec996b', '2020-11-20 19:48:40', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('541efae808eb94b3afa95e269b415ec946df605f', '2020-06-06 14:28:56', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('54299e4910c3daab17b31c0b9d959abf73e67ebd', '2020-10-09 22:04:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5431a17330f6850952948eb88f17aa19cfd4c19b', '2020-10-09 23:01:38', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('5433587afb1f15d7cd5d5c7a182a43622bc15599', '2020-10-29 21:31:43', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('543626008ebfdf338918e27ead696fa7947141dd', '2020-06-13 09:00:40', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('543e34310c60adc5d48311a845964b9f5a17ee94', '2020-06-04 23:03:35', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('5442c4c16b7dca582148ee854ef77736a3167006', '2020-10-29 21:51:05', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('5446f5b1cbbffafa167358d30b91aff4fc3901dd', '2020-10-12 17:18:11', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('544866ce4b4d930a10d64a994073084876e048e5', '2020-06-03 00:06:19', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('544e09dd6439dd7bd3a390157c9ca34e0d0e7bb4', '2020-10-29 21:57:30', 'UPDATE', 'Merubah Data Menu id : e54d9e469ed391499a2bc216fe5d2b7ae6ba7231, Nama : Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('548a10dd9c89d6a00cfae5666e7971797750bf4a', '2020-06-11 06:54:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('54a23493f353a21f1b40dc7b5337c9f6f5506350', '2020-09-27 21:30:16', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('54c5d223393b05712ff693bdd34ad7fd6425e34d', '2020-06-12 06:38:21', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -894,6 +1006,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('54cfd1283d4569e248b5981be624e0b0ada6a5bd', '2020-06-09 20:43:35', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('54dfcca119db57db98c46dfae53b08a2bc337ec5', '2020-05-29 21:34:52', 'UPDATE', 'Merubah Password User', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('54e55fad48c32958b0d3bf57a0be1a301b925012', '2020-10-09 22:47:27', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('55029bea65eabb7be5159d4761041938f7cc6c4b', '2020-10-25 22:13:01', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('5521086d4e75d894bd89e6bfc22e7787f492d3ce', '2020-06-01 13:43:00', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('552a05ae21ee6cb3123cedcb825dd580b59b661a', '2020-10-07 22:49:16', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('55391a026dd097f481640cbaf0427580e3d09d0f', '2020-06-12 05:47:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -901,6 +1014,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('557d6ac7e2bbb735cb6f84592068dfbeff92cb9f', '2020-06-03 07:04:13', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('557e34a3614b302ad3ff0d99b2d97c96916f1132', '2020-06-01 13:00:20', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5586e7968c347157f0c438e7fe08c173e097af68', '2020-06-02 17:17:43', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
+('558bc6278d7724f3f6015f54b9cbb01d9e57ed11', '2020-10-20 16:02:39', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('559d02312e176bc1603f3d0cfcd702f9a9bed90b', '2020-10-07 17:21:51', 'UPDATE', 'Merubah Data Menu id : b5de6334cdd7b51a6d99a1423e3df5f852416610, Nama : Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('560b2d1eb6bfba79805fd04d724cf0f071863993', '2020-10-09 21:45:25', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5615d7f5c229f9382aa01554fd025ff5cc858739', '2020-06-11 07:02:07', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -912,16 +1026,21 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('5671e16abf81d0885a8683305cb599f28634ad23', '2020-08-18 21:13:05', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('567d7cc7d822064cfaa25d12e9c5ae4ad038942d', '2020-06-03 00:01:54', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('56a4c3cfb157892f7610e33549b97d1fcd9824a0', '2020-06-11 06:59:47', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('56cfc1fa4eaa02bd75475a82c5001243bca041eb', '2020-10-20 16:07:19', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('56e74ebae721975c20033d0c28d0539d6519a01e', '2020-06-07 21:48:03', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('56fab2a6a11cdaeffe85824af82b24fa400ad3f0', '2020-06-13 06:02:33', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200612.00009', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('5715159d109d02af83d8d5013c988b82ecf30fe0', '2020-09-27 20:01:08', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('571b989d8d9756b14c6b3414122642e9efa4a89c', '2020-06-07 21:33:22', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('5726a0177b49c3dcc6987fffee7f93220940e57b', '2020-11-29 22:41:42', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('5740e5818c397dfd480381876c6b88f0a73fa349', '2020-11-02 20:39:51', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('574593dad5b3d1cce4499f22a5bc38a6580cde26', '2020-06-03 07:19:32', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5755bc649f55c697f58b21ca40ef191a3ec655db', '2020-05-31 09:15:15', 'DELETE', 'Menghapus Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('57566f9821b15e35d8ae9d0c70e04f49d31d105c', '2020-11-30 06:34:09', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('5756e380a49cc7f29c31b96585d76b5553060abb', '2020-06-12 05:58:19', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('5771ee81167ff27bef836be721f82cfc4081447a', '2020-09-23 07:16:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('577606f1cfffb116b307fd412e9c0cb278be47ed', '2020-10-09 16:36:49', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('578c15aa7f8a4f908c6119c742a6a2ddfe807caa', '2020-10-09 22:05:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('578cedce56353f255262f020534802809d19b0b1', '2020-10-29 21:48:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.111'),
 ('57a11a8f23877db0b417a6fd268aa9f5c6a9c132', '2020-06-13 08:40:35', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('57a896f8dead249deb434f981c8683a4bc5a6a8f', '2020-06-08 20:15:56', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('57f8e80b1081a7a2e8a82d9e795fd64f271dd2fc', '2020-06-27 14:02:14', 'UPDATE', 'Merubah Profile User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
@@ -930,28 +1049,37 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('5818e0bcb22a262581c7af47cc66064bc7bd21a3', '2020-09-26 21:32:10', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('5856f33cfa6387d78478b28666dd06ae733f5260', '2020-06-20 06:56:01', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('5869a416cdde6aebdbb6ea6bd77fb72bb565a8c0', '2020-06-14 09:24:52', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('58a220dc5357dec2a78154a11c0ef08d24370c38', '2020-10-12 17:13:19', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('58ded1081b6f3cb2f4291781e1299f99bd143c27', '2020-06-19 06:38:07', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('58f469b50ad44fd721051829b0373e95ea5dded5', '2020-06-21 06:18:47', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('58fbc786eb1312d5bc3b0a3a9f8cf8bf4d127226', '2020-06-06 16:07:31', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('594538f2e85c0715e6dd40d92602f8869dcdf407', '2020-09-18 07:06:43', 'UPDATE', 'Merubah Data Menu id : 8778a6309f21a256f0cff4b13edd71b04ae84500, Nama : deskripsi baru', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('5964715e5bb733c7da524fc47a0812c936d14706', '2020-06-01 13:24:02', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5967e8bfe3c4251a981a5116a23caaf13ff6333f', '2020-06-01 15:57:35', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('59754480dc31c96a01bdac03d9c96ef4f8092342', '2020-10-11 15:36:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('59a147cedb9306779d3de9e1e621ea1cb19b3801', '2020-06-02 17:18:01', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('59f8cce89151474e6a2a52af9ee677cdb911c48b', '2020-06-02 07:09:15', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200602.00004', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5a13f7a6b55175f5fbddb0abc5cdb4d018da2e3a', '2020-10-09 17:09:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5a2a0a8bde7aa5ba893dc649c0e96fa6b277467a', '2020-06-07 17:39:32', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('5a310f5b0db1203b6c6443d84db73657ef724d4e', '2020-10-29 22:04:44', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('5a81613dc415a20adf1b744e2a0123e3f2484332', '2020-06-05 07:19:08', 'STOCK OPNAME', 'Stock OPNAME Salbutamol 4', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('5a8ffd651dc5bcf201fe7dfdcb3046490bf983dc', '2020-10-12 07:33:40', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('5a902e8fb5ce9b5ff42804b38ac469f31c8d5f01', '2020-06-21 06:45:50', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('5a97be0dcc8a23eda6218017d9dfb9e1e8823b3b', '2020-06-14 08:21:51', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('5a9c4bd36ed7f9a2a82ed1644ca7298952515ff6', '2020-11-29 22:39:21', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('5aa8ca4428c5f952b4ec1efee7ee1434f1f36cb0', '2020-06-12 05:57:29', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('5aad31548814b29c93e29dbd0b4e874976d6d63d', '2020-10-11 14:14:36', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('5ab3a0fea812a0f7c53ca60b76d440881176c965', '2020-06-13 09:01:02', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('5adcadd1c6f5be5373f0990478a5a274ec792838', '2020-06-02 18:42:54', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('5ae46017128d315c994c967857ca7b96a717d4c3', '2020-10-07 17:00:56', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('5b1af17d245a1fb758f4470d55b4c8c85f06990c', '2020-10-12 07:46:17', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('5b28861ce975f683a86c69d2bea1f47efa0aa3ee', '2020-06-11 23:06:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('5b3c2e6f9cb9802d058ec103fbd81241fcdef2ca', '2020-09-26 20:54:13', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('5b6f86760b21c0a33736299eadde2b499412b4d0', '2020-06-04 23:02:13', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('5ba760df1df8afdcf4211d6939127ec9995ae207', '2020-11-24 21:05:50', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('5bbbe5fc6806c656eec1abcad4ccf3d0609625eb', '2020-09-23 07:01:11', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('5be22568fa721f66c7c7f740d0caf282ca2533f8', '2020-08-15 18:48:08', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('5bff10df839df88012718f11044105180df1b7be', '2020-11-02 20:37:21', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('5c139a982e7eed4e752cb6fd9e2b3be0fa1893f9', '2020-10-09 16:30:31', 'DELETE', 'Menghapus Data User id : 0b709ac9b969b0fa7bcda8c4add7d2587b799f74, Nama : Coba', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5c273f2d1440132ffeb1b8a31eb9705348967390', '2020-10-07 17:43:54', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('5c4c5b5c5a9496bd22beb635f21790df499a0217', '2020-08-15 21:50:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -973,6 +1101,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('5e48b6d3775f887eaad4cfe3cc0f596303e271bd', '2020-05-31 22:39:37', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5e490368eb517b85c363bf8a87b2146ccf403b7d', '2020-05-30 13:43:42', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5e5ad36761655e1bc4955b153f2dc0a8d844f05e', '2020-06-21 06:45:52', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('5e6195acfae014b744fe5b173a1bf65b96b7bf88', '2020-10-29 21:46:52', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('5e762ae2e46a0902753b57c7a7c15c1e437955d9', '2020-08-14 22:50:01', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('5e7ed29655ae9da92c2180c3b53a3ee3a9754bc6', '2020-09-27 19:58:04', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('5e91dfffd923fd9f8eb19a0c6c511457306dcd08', '2020-09-26 21:32:08', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
@@ -986,9 +1115,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('5f4b1132e9308f1963f3a368f326cc94c89f53a6', '2020-10-09 22:08:33', 'UPDATE', 'Merubah Data Menu id : b5de6334cdd7b51a6d99a1423e3df5f852416610, Nama : Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5f54540d197a232e3508bed83c66cf913449b0b8', '2020-10-09 17:33:10', 'INSERT', 'Menambahkan Data Sub Menu id : 1c01c7515ebf24aaf4e64177719a530177105c58, Deskripsi : Laporan Stok', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('5f7046dedaca7068422e7839580e270ba420b10a', '2020-06-11 07:35:03', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('5f78e6c4e972fa28d76863587aba10ba641b31d6', '2020-10-29 21:53:13', 'UPDATE', 'Merubah Data Menu id : 2b937d3c539f1eecbfe718e09573edd0af4ca9a6, Nama : Pendaftaran', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('5fc6da8efd8739790f772419170b8cce5f4d9c00', '2020-06-06 22:08:35', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('5fe4b71eee8e66a9b789919964f8b25c21546c37', '2020-09-27 21:28:23', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('5feeaa1dde93d873c51fc54d0a4182b2c8c33c0d', '2020-06-11 07:14:42', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200611.00032', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('5ff1006c68a5f0484d92ac973f64568319857fb8', '2020-10-20 16:43:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('5ff5ccbadb08e2899cdea13593dd07f92f373f6b', '2020-06-12 08:01:49', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('600a76000081ef5dac330c2aea710dda2b5a5067', '2020-06-07 21:48:12', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('603471081bd422f9e753c62c10673563df4fe230', '2020-06-14 11:05:58', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -998,13 +1129,17 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('60b7df4ac53d13b01ff86d6a2647340bfdc69ae7', '2020-09-25 18:48:41', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('61350901e12a98b989ccb1f8628d3031f93b8d4b', '2020-08-17 21:44:18', 'INSERT', 'Menambahkan Data Department id : 5d0ea24f8a9a628356c1022b91c4f3aa19edb8d5, Nama : Departments', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('6135c90d78cc990b711e3d2227521d3f77a73fb7', '2020-09-26 13:05:41', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('613831eeb05403522fa595ec2ef289dcf8124ef8', '2020-10-16 21:00:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('613cb0c2a78fd8970f36c19150cc08386336c012', '2020-05-13 21:26:50', 'STOCK OPNAME', 'Stock OPNAME Hufabion ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('61547580779efb06c2251693ce220debec4d1c94', '2020-06-21 07:07:04', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('615fc0bbd16d1fc12ecdff66053ba6b44d87054f', '2020-06-11 07:19:09', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('616168bcf440296fa3a8ebff718bd6c027d1a47f', '2020-06-15 21:51:05', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('6184d77c4e19f5112f6d051a82903e8a9acec93b', '2020-06-03 00:07:36', 'READ', 'Melihat Data Penanggung Jawab', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('61d0dbf76035c4c85a200a92685b8b409a512ee2', '2020-10-07 22:45:44', 'INSERT', 'Menambahkan Data Menu id : 52e6985df873d51c161bf54475bd9b644458d965, Deskripsi : Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('61c5bdca9e131905503678ed9a0ed763d48fa7b7', '2020-10-20 16:07:35', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('61d0dbf76035c4c85a200a92685b8b409a512ee2', '2020-10-07 22:45:44', 'INSERT', 'Menambahkan Data Menu id : 52e6985df873d51c161bf54475bd9b644458d965, Deskripsi : Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('61d8b6702709fdcf8550ecb76bbc863232a65dba', '2020-06-02 21:44:41', 'INSERT', 'Menambahkan Data Supplier id: 261041141224241 Nama: Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('61da8799b152625ebc24a7c0d3406680b2d566e9', '2020-10-20 16:02:50', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201020.00054', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('61fe9a327327c8ea38e6a6bedbf6da4a774bb8f1', '2020-09-25 16:13:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('622f292dfe3e9e8eeb91fd0b0aa58cf2ed13ddaf', '2020-06-08 07:28:34', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('623bf1d061c7fe1dae612cbd5a67a94868504254', '2020-10-09 16:32:34', 'INSERT', 'Menambahkan Data Menu id : 3b193d9c9b1f8e12d571cd3b4638e245d04e25dd, Deskripsi : Laporan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1026,6 +1161,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('63792be8e7bf7bdb3a0df60a758fa0bc6894588d', '2020-05-31 09:03:47', 'ARCHIVE', 'Mengarsipkan Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('638ecbe15ba8251f4f25ecaaf1dac4c4f06971b9', '2020-06-10 07:37:45', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('63a181ea2631f9105cc023ed5d1af4af38885c03', '2020-05-31 22:19:27', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('63cdc90e5c929fa7b83f1f8fd1ff1e754ad2f1d9', '2020-10-29 21:51:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('63d8f869bd35b6ed6509a49eb218ade7c787c079', '2020-06-08 06:57:15', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('63d92979240112a9c08864f253b76ee3f896edf3', '2020-06-05 07:23:50', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('63db970cf95cf2b977d988c69b695e60f28acdce', '2020-06-04 07:17:40', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1035,11 +1171,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('6415d3e15aba4995b6c391d8389a1c91d321a0cd', '2020-10-07 17:22:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('646b005704c96751a26a99e844c18329b39d65fd', '2020-09-27 20:24:04', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('646cfa9f8394e2351ccc8d5ca791012c728e8aa7', '2020-06-13 18:35:05', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('646e4e3870d44483b01b449c89bd341b7d53030e', '2020-10-29 21:53:01', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('648393e5fc4aa30a631dcc816316427707b9d10f', '2020-06-04 20:31:50', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('6483cecc677c530659faa75a502e44138b1d004c', '2020-06-02 17:21:04', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('649f7c3bdbea4300eb11a51ef945e19079010ba6', '2020-06-17 22:24:14', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200617.00044', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('64a54e9e01b81465c8482c207919057793016397', '2020-10-09 17:35:10', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('64b2b4cb12b07a7a629f6f607fe4811cb7c3fb9b', '2020-10-29 21:46:12', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('64d592fda328405828f4d59519e245a063948705', '2020-06-13 19:01:28', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('64dadb694e7f12d0466dcaf4bea65278b82ed5d0', '2020-10-25 22:14:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('6506be4abcc0e2277f5d68af6456a2a9729072a5', '2020-11-29 22:40:23', 'INSERT', 'Menambahkan Data Menu id : 937dc5dafb8945ea921e119137869f2c40c0775e, Deskripsi : Registrasi', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('651337b19c608595e51a228e1687f88ad0b30b68', '2020-08-18 20:53:30', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('65520dc954dd87f71257e45571d876914253d950', '2020-09-16 06:24:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('659a4484cfa2d7972dc58267b47c5f3daa46a0a0', '2020-06-12 05:54:34', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -1051,8 +1191,10 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('65e8b979e5d2badffbcb232a14480958822007e8', '2020-09-23 07:00:14', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('65f27e21dc824761ec4dca0cb29c0a2dbaea29eb', '2020-08-15 23:05:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('6613b0d136ac4d6202498153e301254c4eec14db', '2020-06-01 11:32:31', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('6616f4efa42f8257cc1e9c8e7829f9736ab9b613', '2020-10-29 21:47:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('662230e3a19ad752026b29f97ce53ce0fa27343d', '2020-10-09 23:01:48', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('663b62108d31010b58332015c651cc046f16a7c3', '2020-08-17 21:27:28', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('663ce9f53ce37e5f77f640e1446fc31b0f9fdf62', '2020-10-12 06:53:12', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('66417154d26ddf2b2705cb60857cbd099e227015', '2020-05-31 07:17:40', 'INSERT', 'Menambahkan Data Produk tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('6674ed9d724a87311a6faa9f6edee21dcf30ea38', '2020-06-15 20:32:52', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('6687085686cf5fb9db04c58f80cb840f5c46057c', '2020-10-09 22:01:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1073,9 +1215,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('67859cc59cf979a655a1e1830238a16c25d61a21', '2020-06-08 06:57:24', 'ARCHIVE', 'Mengarsipkan Data Produk id: 36c444f9263f0876d323affea6242d65a8ae0cc8 Nama: Hufabion', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('678e8bf7745f01de9d7e5ffde7a7e17e70f66ff3', '2020-09-16 06:54:19', 'INSERT', 'Menambahkan Data Menu id : 8778a6309f21a256f0cff4b13edd71b04ae84500, Deskripsi : deskripsi baru', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('67b7aa3a4f83556ad5b1420326a9fa6228112995', '2020-09-19 19:51:15', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('67e98a12d0431c0cd1d78107885b03335dd94450', '2020-11-29 23:09:42', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('68060e194c04a1ac5f083a0d574fecd30a46f06e', '2020-10-09 18:53:43', 'INSERT', 'Menambahkan Data Menu id : 07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c, Deskripsi : Dadhboard', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('680b01e9bd627b02c1ee2c7a1ffd093ec1414a87', '2020-10-09 16:33:40', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('680c8fcad627f593efeafede9b1ad3904417002f', '2020-06-07 21:15:58', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('6880243b1897f80e5901ba6fbb8db2416367312e', '2020-10-29 21:50:02', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('688c232a27db33415ddc09b8ae40ace810765104', '2020-05-31 15:58:41', 'INSERT', 'Menambahkan Data Produk id: 8418131553511815185431381 Nama: tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('68e08c44943e593e06962c80d24f0f59aaa22cc2', '2020-08-18 22:23:41', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('69046573ae860ea79e1fa7e5ea5f6e9cf753c9bb', '2020-10-09 20:49:19', 'UPDATE', 'Merubah Data Menu id : 07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c, Nama : Owner', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1084,14 +1228,18 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('694e49904a204cda9589734f787f165c0ae6dd03', '2020-09-18 07:06:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('6953404db7a3062a0bab73f9e0c6d2c077ecfe69', '2020-06-13 18:51:45', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('697bec2747343207e67c4cebab7d67f611882866', '2020-10-09 17:28:42', 'UPDATE', 'Merubah Data Menu id : 2b937d3c539f1eecbfe718e09573edd0af4ca9a6, Nama : Pendaftaran', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('698ab15f690c2e8f8f96c0b506e046bf1068aafa', '2020-10-12 07:33:45', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('69a01a26fe88bda6619a92663134af3a126d1837', '2020-06-19 20:32:41', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('69c37ab68db71ea1ea01bc8e12c624ae9dc5308f', '2020-05-31 09:02:35', 'DELETE', 'Menghapus Data Produk Tester 1', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('69e78287f456228f427f44eaa16705c6695f8d3f', '2020-10-07 22:48:15', 'UPDATE', 'Merubah Data Menu id : 9a2312007c42fa50b6123080d04c8e296b3c093e, Nama : Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('69e79ad97d4d7e3c0c47b14d064bdf4f93686fdd', '2020-08-14 23:50:39', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('69f0cc206355ac87649100173fca42c0460aaceb', '2020-11-29 22:37:56', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('69f2f3fde785797f555a09ccbed655f937ab470f', '2020-05-31 20:03:41', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('69f36e52cd492150e79e3b4547ec6e5bc517a87d', '2020-06-04 23:15:45', 'ARCHIVE', 'Mengarsipkan Data Produk id: 4881484054550840245071224 Nama: tester 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('6a023f5ce459121b255d80f44425abebdb0ba7a0', '2020-10-20 16:29:35', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('6a1000bd2881baf21e8edd4a42a70a3944626ff5', '2020-06-09 20:43:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('6a1554d6200587cc76289330dc3a5bde9b11d6d3', '2020-06-03 00:12:34', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('6a1719c9d75a7716595b21f693b78190a290877a', '2020-11-24 21:05:42', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('6a421193dc333711aa8e36fac3f05e9c203c4821', '2020-06-01 13:43:05', 'UPDATE', 'Merubah Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('6a5b8fbb23a9a2e4b1cac53369bde7d99666982d', '2020-08-18 22:18:36', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('6a6624a14426710d4165cdc1f390f44b6d65473b', '2020-10-09 16:40:15', 'UPDATE', 'Merubah Password User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1132,8 +1280,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('6dae7af96e189cd53486dd9d3ba55137187925e6', '2020-09-27 20:53:09', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('6dc749ba96425dea1cce38d386800138967aefb3', '2020-09-26 21:41:55', 'UPDATE', 'Merubah Data Role id : d0a991aa178b5cd98aa930da07fa9d3c892e8d70, Deskripsi : System Admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('6ddaea80d2d94f53c34389d76348ddf6633b1f13', '2020-06-05 07:09:16', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('6de4928fced05cfc9d53a8705ac7a50d437ce7c1', '2020-09-23 07:03:08', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('6de4928fced05cfc9d53a8705ac7a50d437ce7c1', '2020-09-23 07:03:08', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('6de74d1a5ca5a144c78a726bc84353fa76a870ff', '2020-09-15 09:02:48', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('6dede07f3827498d47c34c004dc2fbcde0f64314', '2020-09-27 21:17:40', 'INSERT', 'Menambahkan Data Sub Menu id : a86af66f5adec7f42c83a912f96fb223fb5c9451, Deskripsi : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('6e014cafd1fe712af2c252afe72d61b0f798d357', '2020-08-17 21:28:45', 'INSERT', 'Menambahkan Data Department id : 7fd5f7c58e41c8c00e07e4495d3643562039b8e1, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1156,12 +1303,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('6fe7be827dcd0899f59f1c65dc1fdc378a6410a0', '2020-06-12 09:38:29', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('6ff09b1c194bdf19123482f5455cd0ed2ce5e2f7', '2020-06-07 21:40:32', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7010ad3567faeebca19b7252c9c51e4da55ce398', '2020-10-09 17:23:58', 'UPDATE', 'Merubah Data Menu id : 9b594a1eae491557939cd3a289d15dc936d04625, Nama : Daftar', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('702a9b2aab12ce81960db4b88386e935fb3fdfcf', '2020-10-12 07:12:57', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('703bd91f877e13cc3e8d13090ebbba72184bcec6', '2020-09-16 20:45:37', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674e_menuDescription=menu Edit, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('704d0cd15fc3408f2feced6ef1083d328fa4f237', '2020-06-03 07:18:58', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7063ea27eb558e31f8046a86f712eb8093aa3459', '2020-05-31 15:54:52', 'INSERT', 'Menambahkan Data Produk id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('706e12d0aa91f86feab2de65511920ebcc4d9cff', '2020-10-09 18:56:21', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('707b50d0f4901548c2085e5e750f007acb86dada', '2020-06-01 11:22:22', 'DELETE', 'Menghapus Data User : ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7091cbbc3a4185c03173aac474190d39a574c058', '2020-10-09 21:57:01', 'UPDATE', 'Merubah Data Menu id : 2b937d3c539f1eecbfe718e09573edd0af4ca9a6, Nama : Pendaftaran', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('70ac7f93e3a7ffd4c0a4a381b6616bd8f29bc0db', '2020-11-02 20:38:58', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('70ad3c59b8e3ca18fd0b7695c56d2fd277f9131a', '2020-06-12 05:50:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('70c1bac39827592d23ee52c0bb5cc69f40bc82db', '2020-06-08 20:15:40', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200608.00026', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('70d1ee7417b923166db0cccf5be3a525d29f8abd', '2020-06-05 19:34:51', 'INSERT', 'Menambahkan Data Produk id: 9331364654656511119346139 Nama: Nama Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1169,6 +1318,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('70fac2d5e94184408acce9762c2217fa3254c674', '2020-06-14 14:54:02', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('70fdea48bb64670f5879dff35792f991a2ef8192', '2020-10-10 05:56:37', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('70fec70c37c606d874d38ee20f0addb322e50842', '2020-08-18 22:41:54', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
+('710de77b47f8fc83d86f6756dd16495c0afdfd19', '2020-10-20 16:32:12', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('71514ea0a232cf8aace4be32f929671470a89328', '2020-05-31 22:07:13', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('71598116f3a1de2d0f5d9c7086b725efcde563c2', '2020-08-16 12:51:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('7181ae9303b57ca26fae6b6c8960d8fa4e84c045', '2020-10-09 20:59:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1187,6 +1337,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('72e07b2dea4f4732b01afa3472020a82f8bc96e2', '2020-05-31 21:13:09', 'UPDATE', 'Merubah Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('72eb0e4ac80f89919f4b1e75e65c33d45c58f6e3', '2020-05-31 20:43:17', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('730d104864f79fd587d287bf76b7bb1c674a496f', '2020-10-07 17:11:03', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('730dfd6d5c194d26d88b353fca7396c335695976', '2020-11-30 00:29:44', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('7313aa8e124a7eca73059f2ad9f087fe940a3e7f', '2020-08-15 08:44:41', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('73240bc07ee2aade8d3e5c341f85a0c5b88502ad', '2020-09-23 07:09:25', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('733ae172ae6fd8a1b30fab4549addef611291110', '2020-10-07 17:24:10', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -1195,8 +1346,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('736ee786f64cb5e5a74362af0a13e02b69d97269', '2020-06-01 13:21:35', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('737bfef3621525e605feea146b42404155030cce', '2020-10-09 22:10:16', 'INSERT', 'Menambahkan Data Sub Menu id : dd276d17ec831ba2e3f71116d9c87ab1a9080205, Deskripsi : Customer', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('7384d86012c1272ead1650e15351488ea032e7ca', '2020-09-27 21:28:26', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('73a70c744504a169771011cca6ef7180f3f37607', '2020-11-30 00:22:39', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('73e2fa244a295712f4f53c6b6398975a807d088b', '2020-11-15 07:09:02', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('73e7a8ff55c70e912ec4d4f7f96dbe514cfc80dd', '2020-10-07 22:43:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('7404044419c87ee464df9be54f8c87d7c7473e92', '2020-06-14 11:17:42', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('748bb33f25ea0b3b54b83e7edaf51ea8f80c39ad', '2020-10-12 07:26:45', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('74a45353e8a61317ad7e70a429fb6387e93c8531', '2020-10-12 07:42:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('74c5e4f398eb4bccdc5b5568b00105f30fb0c7a5', '2020-10-07 23:04:48', 'DELETE', 'Menghapus Data Produk id: 0bd078b4943033f267b5524b8e9975b8a1e793c7 Nama: Acyclovir 400', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('74e10e460bf933d8167da055a56f84ef205017ff', '2020-10-09 20:59:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('7538bd8eafb7f1c6dde6b3569aae79c98b610118', '2020-10-07 22:45:14', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -1219,12 +1374,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('767a5d665d1c8e5361438a56461f540dce60478d', '2020-10-07 20:40:38', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('7688623103fbe868430d33459dd6e990849ff58e', '2020-06-13 18:33:36', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('769844a43438ff9f149ce22fad1bce27cd4dbad6', '2020-06-11 21:46:49', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('76a14b4f2cdc3322e7cd99324480c41923dde1e8', '2020-10-20 16:40:04', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('76ddcede9eeb8bc9dcbf6bbbda983493fba46f41', '2020-06-17 06:27:31', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('76e4c28c4d4ada3cba7d3b381b41d786ba862ad3', '2020-06-18 00:02:28', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('76ec0d8a8fa60e970e6d6c393d01a92d69bd9211', '2020-08-18 21:58:05', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('76ec1c0b7bcb7d566b8dc945ac5c35df56f35eac', '2020-09-26 21:01:57', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('76ef69d662f454ca6a71b3a4bffd872c63578625', '2020-11-30 00:28:25', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('76f0379eb1a3b84594ffd351f420f93252e484e4', '2020-06-01 13:59:23', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('76f9e5a9714cfc292d070feb80d370e0d90602b0', '2020-06-25 21:07:32', 'UPDATE', 'Merubah Data Produk id: 7227211021111170220710220 Nama: Produk 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('76fe1e6a5b8ff0f7dc16d3e572a289ce6ea8f98a', '2020-11-20 19:47:15', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('770d7199931d4f86e59f2f8265d5666b0da8e051', '2020-06-05 06:30:15', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('77264fad09cc84083c751e3494d5965dbc4a40a6', '2020-09-25 18:49:38', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('772b25e7935b1b1c21f5014056614f3ce78b6d56', '2020-09-23 06:26:47', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1232,9 +1390,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7740f33eedea7693271c5bc3c404f3c54e72e4be', '2020-10-07 17:20:26', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('776162726d4452eb6358f4a3d28499da3270c75e', '2020-05-31 21:13:55', 'UPDATE', 'Merubah Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('777ecc0ed8592c110c31811376380d612ece3998', '2020-06-01 11:18:36', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('7786be370ba36ae7621db6efa2c7c3470fddc12f', '2020-10-12 07:08:39', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.121'),
 ('778eea6fa7b84a9733dbcfbd93e130dddf6efa69', '2020-06-11 20:41:54', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('7797efaae8832ed52fce758402ae7be85bdae4c4', '2020-06-06 16:38:08', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('779c9a7a9618b8d02749d9a0f0ccaafb08e33fa5', '2020-06-14 10:31:52', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('77a01a2b35bdb1d9727caedb41e31eefb25e0ec2', '2020-11-15 07:09:57', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
+('77a5f9295dce5db765a7f1cdb2ca77adbb7be463', '2020-11-29 22:36:44', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('77ad8a339a581d3b1d51a67368720150aaf7f76d', '2020-06-02 23:06:54', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.75.0.3770.143'),
 ('77eb71f820bbc46a2dc8ba71af3d688f8e977e7d', '2020-06-15 20:46:13', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('781c9a7d305e96a8d994c007b5eeaae553fe913a', '2020-09-15 09:02:34', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -1247,7 +1408,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('78b04f08442498b5b68a6ed4b8aa2ccc7793d278', '2020-06-04 23:16:58', 'RESTORE', 'Restore Data Produk id: 1506540040000013401056003 Nama: tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('78b41f467a9ce33b6951408dc1d0a54964358f92', '2020-06-05 07:16:18', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('78bd12466e1328fd5ac6f90ab16c6d294e9423e9', '2020-10-09 19:50:06', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
-('78c406af9b13bd9ca8f8f278d6ffcda71a8df282', '2020-06-09 07:05:13', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('78c406af9b13bd9ca8f8f278d6ffcda71a8df282', '2020-06-09 07:05:13', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('78d67559893d69d9b8d44b250a75a6b12949fe3a', '2020-08-18 20:59:13', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('791353fd2e2f3f66dc85dd0691ca78b875630ac6', '2020-06-03 00:05:37', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('79192baeb07d9a325fbad92f466973234f8f789d', '2020-10-09 16:43:37', 'UPDATE', 'Merubah Data Menu id : e6cddfe8862e682a95f97cc8a36fed2158a5d64f, Nama : Master', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1258,6 +1420,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('79a2877413c12c43ebc8d3d6558a417d5b699b55', '2020-06-04 23:15:16', 'UPDATE', 'Merubah Data Produk id: 8044900085883800383883088 Nama: Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('79ad1997d1f9ec78349db4d6a6a14b6eeb11d25f', '2020-05-31 21:04:02', 'UPDATE', 'Merubah Data User System Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('79b0df742ac3e424f3ada93f6252fafe865edf71', '2020-10-07 22:49:26', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('79c316f47b76aa4aa43c7314f4472589182cb041', '2020-11-20 19:47:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('79c48748a5e96470de8156462c5cacb0cb80551d', '2020-09-19 19:54:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('79da1ce7c815e6f5c7495e6f5250903a2e00b141', '2020-06-20 06:32:15', 'UPDATE', 'Merubah Profile User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('79efb7cd51bde99e5e8eb186fab103e4f9db7035', '2020-10-07 22:46:44', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -1270,13 +1433,18 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7a87d2682a80d1bf7dd9e9f4bf657861e3a08c94', '2020-08-15 23:06:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('7aa0e59878a364d64014025217e04360cd52c43c', '2020-10-09 23:02:20', 'DELETE', 'Menghapus Data Dokter Dr. Harry Priswanto', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('7aa1f3e796a5bd7d518eb874fe28cc5f92d00aa8', '2020-10-09 21:41:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('7aaacc0ca1b277b9b56231fd241ecb80df1cc881', '2020-10-20 14:52:43', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('7ac71e49fae4655638cc2edf15d7ae825e4d298e', '2020-09-23 06:29:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('7aea57a87991bafc5b26807eebf78efc2b32ea1c', '2020-11-29 22:48:30', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('7b0dd0d4913efb9b26fbf9a75732a05f6092a496', '2020-08-18 21:02:08', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('7b1fb76186b23443b6618ebc77cb337becc1ed4b', '2020-10-29 21:37:55', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('7b2a8a44bacf52b1ae7b0c7c560a471ddabc3e78', '2020-06-17 23:42:04', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('7b45b6ef2215d0d776ee3d1f301131fb8fa9bc14', '2020-06-12 06:18:27', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
+('7b520f77adaa4c0041502776f218d1f307a657e8', '2020-10-12 17:14:06', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-201012.00018', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('7b5c179a45b0798e00cd189d2e5d39233e6e920c', '2020-05-31 15:59:57', 'DELETE', 'Menghapus Data Produk id: 8418131553511815185431381 Nama: tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7b613fb3ea2713c905acc21b214f57b9997f0fcd', '2020-06-08 06:08:17', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7b7fdd43e51f49c4adf767f94a6c6a53aa08870a', '2020-09-25 16:12:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('7ba4161265b67f64a63d659f54f0344e96d35c17', '2020-10-11 14:42:35', 'UPDATE', 'Merubah Data Menu id : a58a9701d5543d725625bdd75d61829ca4bb2dd9, Nama : Stock Opname Bulanan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('7ba46909b0371f5fa9cdc7c916f48bdb568c7cee', '2020-09-26 21:20:28', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('7bd1f556f3c560c4bec0c7beaa354c201cb843ee', '2020-08-17 21:29:09', 'INSERT', 'Menambahkan Data Department id : b152147485d11c3bb0ab7e7802728bfb6de6c483, Nama : department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('7bd7f08c5410928e7de9757c4becc45d2c853ea6', '2020-09-16 20:18:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -1293,6 +1461,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7c624f588b66a59e9c53ff0c61379f551f261f9a', '2020-09-23 06:33:42', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('7c7404b1969d6ed866ffee6db122df5aeb471bd5', '2020-09-26 21:38:54', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('7c8c01e636254af40674710788d30af7b214576a', '2020-09-16 07:31:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('7cb403fd5d6ba68bd57beb627f8dd0cb8fce0305', '2020-10-29 21:33:58', 'UPDATE', 'Merubah Data Role id : a4aa860568d8f21b0186474deabb08ddad702e86, Deskripsi : Admins', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('7cc73464bb597463d16e2c2dc7a97a6966bc359f', '2020-09-19 08:30:14', 'DELETE', 'Menghapus Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674, Nama : menu Edit', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('7cce07e811d08bb056f7e3efee8f1424741a09d1', '2020-10-07 17:20:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('7cdfbe4040c5c29e4af5bcd89daec4d91832aee8', '2020-06-09 21:54:17', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1300,6 +1469,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7d3dbd9f70a5052394a7f609d7ca7d588b7e101d', '2020-06-11 21:13:21', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('7d40c52d3be7c960659c4e74c42133610ecf095d', '2020-09-24 19:33:49', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('7d69f1ad3426d83702a9ad766ef11cd74f6028a2', '2020-06-15 21:09:23', 'UPDATE', 'Merubah Data Customer id: 494090601200711 Nama: asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('7d7a6cd70f6993886d8f41aaa334db04a2245b6c', '2020-11-24 21:04:01', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('7d83bfc83547a762ef96db579cbfeff77913624b', '2020-10-09 17:35:50', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('7db39ee4a712d40343ff36ed6b7d5ce4f01d7276', '2020-06-11 07:18:42', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('7db5c0c82ee763d4819faf48635e7fbae4a42440', '2020-05-13 20:40:44', 'INSERT', 'Menambahkan Data Customer Bilal [Transaksi]', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.81.0.4044.138'),
@@ -1312,6 +1482,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7e258d55889fe5383812e9b513bfc05667ffc172', '2020-06-10 07:38:35', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7e3f486f34ef46d1be6149d32cde7abe6f194a39', '2020-06-27 13:59:31', 'LOGIN', 'Login Dengan User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('7e82b0d9793e5671b17d71edb7aef19e2ba01a3c', '2020-06-01 15:16:47', 'INSERT', 'Menambahkan Data Supplier id: 516452555555566 Nama: PT. Bilal Software', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('7e8ba24ea3040da9b9c0b704dc3e467aa354e915', '2020-10-20 16:02:10', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('7e9ce2b1ebddd5321a85a768d0415360cef05ad7', '2020-10-07 20:17:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('7ea186fef4dfb92dd034a4e9e874b7d46ca586d5', '2020-06-07 21:36:20', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('7eb1faf30d8b0d175e1d03c2c2ca3ce338a60e8a', '2020-06-02 17:22:03', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
@@ -1322,6 +1493,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('7f00578d118740a99311f63104321498ec632c63', '2020-06-19 21:25:37', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('7f01fa55a635cae03e6a8086e91494d847058dda', '2020-09-18 21:35:56', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('7f1dc616fbe8e9cbff6d7ffe2f583b8f41ac1510', '2020-06-03 00:06:20', 'READ', 'Melihat Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('7f71e2d3025420c75bee0b96a92dd51ca77f3a74', '2020-10-20 16:02:37', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('7f831aeaba497fce63a557ee58cc73d124e20858', '2020-06-01 11:38:48', 'UPDATE', 'Merubah Data User id : 46772eac43a4471aaaf8338266e31cf4cd595d4b, Nama : admin', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('7f948e0860fae96095a1dd227e061733b15dcdff', '2020-10-09 16:36:57', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('7fb475972858e4e59a99fc1a49bf7b53d7883a50', '2020-09-27 20:22:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1331,6 +1503,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('803a8a20ac6dcf477fe71e51ec71fa8476df6121', '2020-08-15 19:44:28', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
 ('8062cdb8517e1fa14eb189f53e26551bf247e28c', '2020-05-13 21:16:24', 'INSERT', 'Menambahkan Data Cara Pakai 1 x 3 Tablet', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('8074df01526c45fa3d0e0daff7548afd346b893b', '2020-05-31 20:42:14', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('8099c1862535ddfcd799c0139c36795aa25ec0fe', '2020-11-29 23:01:36', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('80a947ab333de57a98cca7e9879acd9dff27226f', '2020-10-07 23:04:42', 'RESTORE', 'Restore Data Produk id: 1fa52bac79fb4cf3dc647405b5d222b6a9513309 Nama: Acifar Cream', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('80abca6da50dff5b299fad79866ca5648f992882', '2020-06-02 14:29:38', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200601.00003', 'A', '::1', 'user', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('80b041ad4588285f20f352f1b9f86fedc8ae67da', '2020-06-14 11:32:17', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -1351,9 +1524,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('8259bc220e97487bef4f0c81227a5702eb1c6bbe', '2020-06-06 22:09:07', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('828514d67baba3c1897fbf1c72337beb8fc049e2', '2020-05-31 12:58:08', 'ARCHIVE', 'Mengarsipkan Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('828fb46d8e6c35739a337b94cc94b8b0466dee6f', '2020-10-09 16:30:34', 'DELETE', 'Menghapus Data User id : 14e395204c05caf7822083ad37fa207df2f76433, Nama : sdf', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('82acce4e286488cb653f0875b62161f0614c2f56', '2020-10-11 14:28:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('82ad9a80c44febe13cf228036f44c10a9eea81cf', '2020-11-30 00:28:11', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('82b965ea70c45ecdf97512ff7d6cf7c00fad3214', '2020-06-08 18:36:40', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('82f4720ef3242f90dd103b9697febaae465474ff', '2020-06-04 18:24:12', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('82f7f87878058b4a4d34a8d4d534145590f820a6', '2020-06-15 20:03:37', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('8311a4ee5e7a32155557481ae5cfd04e9f9c76b1', '2020-10-20 14:53:16', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('8323109449810a12746dd495a9340fd94d405244', '2020-10-09 20:55:07', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('8327f6c0683a0e9cc1645ab01773b1ab9a139bd1', '2020-10-09 17:28:44', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('832d3f3240e17e858907d74160ccb907b233cd63', '2020-09-25 16:13:20', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1362,9 +1538,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('835e2d01a4f4eb505bd1100904a80579e2846e5f', '2020-05-31 18:32:02', 'UPDATE', 'Merubah Password admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('838880b2b4ab5ce0d0ae75b510b5667302099424', '2020-09-24 19:35:47', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('83a0d276e67cdcef70cdb7e95a29a895205d8585', '2020-06-11 07:18:58', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('83b20a0b6ee57426737e7ac902086983f41a4696', '2020-11-29 23:18:41', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('83b510a589c211505279243c2c069161ef66c9ac', '2020-09-26 13:09:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('83c66ffd5b8399666d5884d27761f38292c7dfc9', '2020-10-09 16:40:46', 'LOGOUT', 'Logout Dengan User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('83f9ab5651b52eb0de812ffda23ab06cd52d9428', '2020-06-07 21:35:04', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('840142701162ac9dc81bb570ec43153ed017aa66', '2020-10-11 14:17:25', 'UPDATE', 'Merubah Data Menu id : 2db89696c0e19c6880973c24a555a1760508b18e, Nama : Gudang', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('84277cdeeea437cf8b9dbba0a4b61cdd99aba108', '2020-10-09 16:30:36', 'DELETE', 'Menghapus Data User id : 16e514dfc64ffd576f09a6ce7078bb3db18ac536, Nama : Bilal', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('842ce86aa4d1884bd250afa70b7b395868137502', '2020-06-13 17:14:19', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Mozilla Firefox v.77.0'),
 ('8437327c95968ff499adff01b1084cbc3d693c55', '2020-06-01 13:22:06', 'ARCHIVE', 'Mengarsipkan Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1376,11 +1554,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('851af42d6388a03f49f427ad71e7f79a2fa3928d', '2020-06-02 09:10:10', 'UPDATE', 'Merubah Profile User : harip', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('853e237771afde363cf32f3c28ea868769cb21d6', '2020-08-14 22:44:58', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('8552d52ba127930534a68139b2e41c2893b650fd', '2020-10-09 16:36:57', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('85594b0b78f72972afe344f1c562b9ee70606f43', '2020-10-29 21:57:42', 'UPDATE', 'Merubah Data Menu id : e54d9e469ed391499a2bc216fe5d2b7ae6ba7231, Nama : Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('857e8ae533146e3a75a4bedb8ceb4bfde594aacb', '2020-10-07 23:06:25', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('8599975f90206b26d04cb7fc806e53da83f9e4a2', '2020-06-03 00:03:40', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('859edf9cd027aaba1458bf61a8d16bb54c6221fd', '2020-06-07 20:05:50', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('85b19ed5ac52f0e92cd973721d5f644c71b49491', '2020-08-18 22:50:45', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('86040d211fa79ee19b45ea5162dc4379f853faf1', '2020-06-01 13:59:39', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('8608fef2a5559bf19796e3cf8c5fc9578828998a', '2020-10-12 17:17:59', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('860ca31fe26fef011219081091b72dbab5b74897', '2020-10-29 21:51:51', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('860e1b849e31568d8c659399d236e5b982728a6c', '2020-06-11 07:17:02', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('86314b2a97ce5659375874625d429b05f9673409', '2020-09-19 08:49:38', 'UPDATE', 'Merubah Data Menu id : 60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b, Nama : Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('866463c8fc3a2dbd4f2e3661e571557fa2cabd77', '2020-09-27 20:26:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1390,6 +1571,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('86c0a715ac76b20cbe80edfc6daef00db1564b6e', '2020-06-10 07:36:08', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('86cd2dc1680fd25a19fd6cd54e4ec2ebf6cdd8fa', '2020-05-31 20:24:33', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('86ee4dc013afa676cd9591f2db7e48feb3fa54d5', '2020-10-07 17:23:35', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('86f14ad9556fd632cceaf939bfbf5b8fc98eecc1', '2020-11-24 21:05:12', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201124.00057', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('871e79b458e1ba8fe97a1f8bd9344ca165ad38a3', '2020-10-09 21:04:57', 'INSERT', 'Menambahkan Data Menu id : b99905a00b0239959e8f18bc7960240f69a71fcd, Deskripsi : Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('871fabd8c426a524f026825c85c15cccb68fba98', '2020-06-14 10:39:54', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('8720303aa21b98c2e4da3228a1bec478d95402d0', '2020-06-03 06:06:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1404,14 +1586,17 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('883c1b721c58207e02601fb5e3a9bd7bd8f1070d', '2020-09-15 11:49:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('8874113009c496ea3f4fb192fc08a01cdc84b451', '2020-05-31 15:53:02', 'INSERT', 'Menambahkan Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('887a5515da16a044558a4b5431280ed661fe6dd1', '2020-10-09 22:06:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('8881e856103f6a03243d815db213ea8ae590e2a1', '2020-11-30 00:22:02', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('889b7f649858e46786d56263f1b53071b6fe1a70', '2020-09-23 06:52:08', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
-('88a230507864e1d4181c5695c421344ed990c037', '2020-09-26 21:31:58', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('88a230507864e1d4181c5695c421344ed990c037', '2020-09-26 21:31:58', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('88ab9edf8bff4b763ee6cb2df11ed0c447bef966', '2020-06-06 16:49:58', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('88d5a065d32f1216add71bea90ab1c41746e6e85', '2020-10-20 16:33:05', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('890ffd70339e13e7b2a2d85a8f3c76a014d7822b', '2020-06-01 13:52:56', 'DELETE', 'Menghapus Data Kategori id: 284984384839913 Deskripsi: Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('891dff7b882bd0773355d9523da729e950a0e3e1', '2020-06-07 10:40:35', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8925e28a4dbddb01c658d8e1ad4864a480858212', '2020-06-15 20:00:21', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('89267a534822f9b65f2d8d93f964d7d1eea98c63', '2020-10-12 07:04:48', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('893b71564eb1354df12a821a7d172f7a9bc5bcf4', '2020-06-16 06:59:39', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('89759cc06c12ac53f8b52778f24be634c5100aca', '2020-10-11 14:14:11', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('898c451751d45200b272bb07e44d2d34df855c4b', '2020-06-01 11:14:26', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('89aae42a095f16f36ddc9df195119712518d3b92', '2020-06-02 14:08:20', 'UPDATE', 'Merubah Profile User : user', 'A', '::1', 'user', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('89d9016b8e1b634df774c6fecc051fb2dc5b0fd0', '2020-09-26 21:01:46', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1427,28 +1612,36 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('8a6a0490bf239ef51bfc0ac9703ad8f3ae20472b', '2020-10-07 17:24:17', 'UPDATE', 'Merubah Data Menu id : 6104a7e7ad22b936382efec15fe0a2ad4d30c5e5, Nama : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('8a7b6f9b02738437093f67092a6ff9008f08ebf2', '2020-06-04 23:17:40', 'STOCK OPNAME', 'Stock OPNAME Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8a7c2cede6363c6959756ec9d30825709e42f99b', '2020-06-25 21:09:19', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('8ae459120923a7f47e70c3b7f93eac6e13f3e46b', '2020-11-30 00:29:09', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('8af67d60909d51674c4eace1723e4c9329db285f', '2020-10-29 21:52:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('8b025247f915aa051d8be9a225554e23322e17a3', '2020-10-09 21:56:39', 'UPDATE', 'Merubah Data Menu id : 2db89696c0e19c6880973c24a555a1760508b18e, Nama : Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('8b1150ca616feaf465113946fcb555aa52d0d832', '2020-06-08 19:55:15', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200608.00025', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8b171dc95dd42c584e177e218d381992d1bc97dc', '2020-08-15 00:39:19', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('8b3967fe00a04a6471dfaa4cf691c232ac356489', '2020-06-05 06:26:33', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8b39c1be9e870ed87849938e751602e0836771ef', '2020-06-07 10:12:25', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('8b3caa1ddcf681032118aad84c171890b084f804', '2020-10-11 14:16:18', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('8b6cb36c18bc138c901432d49a97fbe9eb5f61aa', '2020-09-27 21:19:39', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('8b8185987996797369024ad162f9a1b6fe59eae8', '2020-06-01 11:05:17', 'UPDATE', 'Merubah Profile User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8b85546e4327d21dc22af8e8f71a91e5407f5a3b', '2020-06-06 18:57:22', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('8b8ec8ed53d159c3326a3f70cafcb7fbebd4b23a', '2020-10-29 21:32:05', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('8baafbc6f36170fe58cf955ff1043c38963abb95', '2020-10-09 16:28:10', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('8bbcbeb5af3bcb42b93e28c6e56de38d355e2afc', '2020-06-03 20:33:56', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8bd014cf959fdc534b44620b5b3697c3a5d58655', '2020-09-27 21:02:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('8bef064b71cc18d5b2f72def57cd342c391ff72a', '2020-10-07 22:53:52', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('8c023e9df1ca95e3ef534bdb411c73b8b9de3380', '2020-11-30 00:27:33', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('8c16a45d5463bfad646647cb744bcfa5d02fa054', '2020-05-10 23:15:50', 'INSERT', 'Menambahkan Data Customer Hari Priswanto [Transaksi]', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('8c2c4265307fc7f68dd99992b8694b4c0ca4a55b', '2020-10-07 23:01:50', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('8c48978160c5309c1a804fbf51a4e040c83e912e', '2020-10-11 14:42:05', 'UPDATE', 'Merubah Data Menu id : 6b7b60a4cf730a1e162eb2de9f6a1125ff0feb7c, Nama : Dashboard', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('8c83bbe732decea5d381fc4f381c2fffaecc3e78', '2020-09-16 20:57:11', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('8c9262292285d44f86e9985bbcd2daa9f855a716', '2020-09-19 08:50:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('8c95eddaedb2e917e84720d629d40bb54fdbffd0', '2020-06-01 11:52:40', 'DELETE', 'Menghapus Data User id : ff7de2b43d11faf84cc459d415aa3958c18d960e, Nama : Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('8ca10b5c387509aab1a85252317bec45965cb323', '2020-10-11 15:37:18', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('8ca9820242e37b0bef9c0cf7b92c4c13c887b8c7', '2020-09-18 07:07:21', 'UPDATE', 'Merubah Data Menu id : 5d40343f0f5e5dc1f11e6bd763794b27423809ca, Nama : deskripsi', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('8cc9376e8c4eafe42a29b8d939a8c3690f8a256e', '2020-05-31 20:31:36', 'UPDATE', 'Merubah Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8d0df02c5e9821c7c5d3689f33216c09e8219352', '2020-09-26 21:29:41', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('8d1fd1bee5084870a7823435f5ecf3f47983e9a7', '2020-08-15 19:06:42', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
 ('8d29e0eb793dd5c28dd63464c56d664a1837bab4', '2020-06-13 05:56:22', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('8d7d94cf5f84616ffdeeb33a10a66f8be7720cc6', '2020-10-20 07:38:16', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('8db1290b45a6fce2314f60d4fb36edce2b5e9383', '2020-06-06 16:26:43', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('8e07e96725c0e5f911c51274089a4b2a0edf9e15', '2020-10-10 10:14:20', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('8e1abf0ca2fa4a46b5b072db9d943c4563e29f0a', '2020-06-05 06:15:58', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1469,11 +1662,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('902e0ba27f00d4bdd956b82480d91a65f55ff01a', '2020-09-23 06:09:43', 'UPDATE', 'Merubah Data User id : e71936705199dd3ea09a10dded7c5a4837316b1a, Nama : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('904b309cd7cc909dcb5e6a9c3618e2b488516f0e', '2020-05-31 18:17:33', 'UPDATE', 'Merubah Data User Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('905a24b288f974e8cbe12fd70a24c08a1f144443', '2020-10-07 21:08:53', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('909aeb782901ae4e78b307a1b5e7c29c80c76a69', '2020-10-12 07:45:14', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('90a19853640ee84a158d79d8958d78aa1ed16a66', '2020-06-11 07:18:40', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('90d353980c215799b910c124ff0a298939aac88e', '2020-06-04 19:47:19', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('90de37e84aa354471091c1338a7122843de6435b', '2020-06-13 17:41:40', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('90e344d6cba4bf4418cb7f51cc67249ba861d65e', '2020-10-11 14:16:54', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('90fdcb02f6280adc2892c3f4078812dd1129360c', '2020-06-08 19:39:12', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('911ef0180e18545365c9e0524c8f4c2b27302d85', '2020-05-29 21:34:03', 'UPDATE', 'Merubah Data User User', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
+('9122987826d52e6d3557696c3f3f7c700fa3fb41', '2020-11-15 06:50:00', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('91320ad5730d09ca956a4ef8bb48c44d8a94777a', '2020-06-17 06:02:11', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('91418ba0eab77001d818cdf999bd5b9791229ade', '2020-06-03 00:14:27', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9145fd80576b56aaaf91acafba229a9a25623d31', '2020-09-27 20:08:17', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1484,8 +1680,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('91a549d4a4d55f622baaec4a7103a449d4a572e9', '2020-08-17 19:45:09', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('91b001b1e33112a198f370adf03578346d36510b', '2020-09-19 19:56:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('91b4ed3671f890f9f2144e2269e08d68bb45ad1a', '2020-06-08 06:00:16', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('91bafea50d96fc2c2a0fa9946ccbca9341c70e39', '2020-06-04 18:50:39', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('91bafea50d96fc2c2a0fa9946ccbca9341c70e39', '2020-06-04 18:50:39', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('91cab0042336209215414c4e1db2790490532410', '2020-11-30 00:22:00', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('91ce359a3685693238354ac1ada109c9f344a25f', '2020-10-20 14:52:44', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('9205c584ee190203b390fbcae38625be1f300f28', '2020-06-03 20:37:50', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('920840f7f45f7d2b165900b27973712b4bcde11c', '2020-10-11 14:42:15', 'UPDATE', 'Merubah Data Menu id : 6b7b60a4cf730a1e162eb2de9f6a1125ff0feb7c, Nama : Dashboard', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('9226cd3c265289ebbdb0628745f307dfc84a5b4f', '2020-06-06 16:38:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9227b125e251d1ee39b85718962cb2ad420096f6', '2020-10-07 22:38:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('923b271575bd03b7a281a48fc261169786413fa0', '2020-06-06 16:07:42', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
@@ -1497,6 +1697,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('92fbf202379a253d5aaa1684005a6598bc567692', '2020-06-21 09:06:51', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('92fd3ca643683a4e4d038da2995957d357133b97', '2020-09-27 21:15:45', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('92fda6c45fbd2cb77b1ce88fa59efddd071190a7', '2020-10-09 22:07:24', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('9305ce5a4c34a3241ddb405e381c4a023b6665de', '2020-11-20 19:47:18', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('931712afe8820d310ab33c854fafa31d1b62e6a1', '2020-06-05 07:13:03', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9344b17ad8fa617e304b0bf3fdaddf44bae49208', '2020-06-11 22:53:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
 ('9345c4ac51de2158c0c28ff9a7b1307587ca9bc0', '2020-08-18 21:10:19', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1505,6 +1706,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('937ac3e1d45ddffded5025fd603f8d630ab22122', '2020-06-04 19:44:28', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('937e3e76bf5cfb05a386d32e315436ee84b30661', '2020-06-11 20:39:54', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('938a630bbae83fb57e791324ccb22cf1f0905d3e', '2020-09-26 21:44:06', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('9398a1fa5c11cec608349146d06d6789a491d99a', '2020-10-29 21:51:13', 'DELETE', 'Menghapus Data Menu id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('939997b52a2d2e80d49d7b601120829f0276435b', '2020-10-09 23:07:28', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('93c192af0d595fadb908875f4cf1e8ffe2ba89dc', '2020-09-27 20:26:50', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('93c35d57320d8da310546fe025978f202c0502f4', '2020-06-07 10:43:50', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1560,6 +1762,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('979932d23a7adc4286c6af92b2320b7d4aa8ddbe', '2020-10-09 16:31:02', 'DELETE', 'Menghapus Data User id : a02c20c3a41c8cc8aa11a8856450d7dc4fc6654e, Nama : Nama', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('97b36a6bd94f0d37257429048d0e4183d5d66f07', '2020-09-25 18:50:52', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('97beeda34c4c0cefb2d737d36cb81cecefb21e9f', '2020-09-19 08:14:28', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('97c7c6c0098f5a3d1d482070a0f7e40e77ea08aa', '2020-11-30 00:23:12', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('97cc111bb34d7269d9ea9b1f84fcd8d18b5a6511', '2020-09-18 21:31:28', 'UPDATE', 'Merubah Data Menu id : 8778a6309f21a256f0cff4b13edd71b04ae84500, Nama : deskripsi baru', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('97dc233f8b85af56b5951b16fd7ec2252c7e4e4f', '2020-10-09 16:36:56', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('97e09a072f18d32a3c0eb60c8bdda2149b2cf511', '2020-08-18 23:06:48', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
@@ -1577,12 +1780,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('98b914e8f4954b00310fcb752e775419a2b9a155', '2020-10-09 23:02:42', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('98d673af09b60521f8e8a7a799ee95716dc7c7a7', '2020-06-02 17:22:14', 'UPDATE', 'Merubah Data User id : 947516cade7bd9e27eac447a4948d7f6b87d9c93, Nama : user', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('98dcc0f70aa61caed9b4f78327578dd4838e36b2', '2020-06-01 16:06:15', 'UPDATE', 'Merubah Profile User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('98e00b847f38da8ba6bd4980a4cd0e27885e4b38', '2020-11-30 00:27:59', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('98f9667db1c0daadf8324d98edfdbe6a4a6ba213', '2020-06-04 23:15:10', 'UPDATE', 'Merubah Data Produk id: 8044900085883800383883088 Nama: Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('990d8f68107d4d9208173ffba3d1e23dc0c9b3df', '2020-09-26 21:32:09', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('992348d04a2c37a0abb03bf81ca87a44ec78c278', '2020-06-13 19:01:58', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('992b52b19f6bc05cff99af91c362c03b15cd0e33', '2020-08-16 17:21:25', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('993c358f638f018129b28379137f67140cca821a', '2020-06-05 06:36:45', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('9943e75c0d1f1e49669654f0076d18de179e9b20', '2020-08-14 21:41:39', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('994fd83311ad03bfdb0bde67636ebb748afa6c44', '2020-10-25 22:25:23', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('995a464a5b06b159acc392a3c2b61bf1a4a31110', '2020-06-13 06:16:30', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('99684a0a1ae9b4396c4ef7b165259a818c62d8c1', '2020-09-27 21:29:13', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('99877a9059f8606884fe780c0c0e96970fc923f8', '2020-08-18 20:59:34', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1609,9 +1814,11 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('9b8b60d560ed1860df10d79887bf4b4c29e0325e', '2020-06-01 11:19:46', 'DELETE', 'Menghapus Data User Tester User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9b9ade7555b1a6a9faa173868949dae092c19352', '2020-10-07 17:00:46', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('9ba0bf1d24ed573c7c77cfab213fcf5fca395676', '2020-06-01 15:17:48', 'DELETE', 'Menghapus Data Supplier id: 516452555555566 Nama: PT. Bilal Software', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('9ba1e3b80fc441092bb5012910fa41310f7b8c6a', '2020-11-24 21:04:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('9ba874df38f77f4baa113b009ea190b6d8ad71b3', '2020-09-19 08:13:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('9bb8d61775d6778863547342d8af9b3220cb16cd', '2020-09-16 06:50:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('9bc555306fc0d14f95296214f23fa6054ffc7ea8', '2020-10-07 23:03:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('9bd0880205da22399fb1cd9c976ed29a7164a354', '2020-11-15 07:10:03', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.198'),
 ('9c579ace8ffdfe441c35ebd41c7f31c802d7414b', '2020-06-06 16:12:26', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9c5906cfac078e231b4b0e45a10ec38dc69ac057', '2020-09-16 20:39:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('9c5c0068253556781355f780baa65fbfd5a35399', '2020-10-09 16:35:58', 'LOGIN', 'Login Dengan User : owner', 'A', '::1', 'owner', 'Linux', 'Google Chrome v.86.0.4240.75'),
@@ -1628,6 +1835,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('9db5bd1f38f2a6ccc4031e47a2fe397d14667448', '2020-06-08 20:07:14', 'CANCEL SELLING', 'Menghapus Trasnsaksi Penjualan Dengan No. Transaksi sell-200608.00022 ', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9db8986b8064bea859679bed7aa70398bb817db5', '2020-10-07 21:15:47', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('9db8c8d8cf1a17d45b8a661ea16cac641e3c37e1', '2020-10-07 20:54:20', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('9dbf007507dab034ae5e64c9f6c96dfb94a01dec', '2020-10-12 07:44:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('9ddd5f63422339f982b4ecc1e8c1094a2cb623a0', '2020-06-11 07:05:40', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200611.00031', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('9de6ffc0d519733c25fd200decaf358333d59020', '2020-10-09 17:33:58', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('9e04d03128da726af41b92e87ba9e8575c2f4416', '2020-10-09 16:31:45', 'INSERT', 'Menambahkan Data Role id : f2267be68639bd7770a1581fb56da721be026ea8, Deskripsi : Owner', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1640,6 +1848,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('9e952447e3eb9360a6495ddc0adcf64eaa7d05a6', '2020-06-11 22:36:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
 ('9ea5a053cfe99c8d908170c1252d089af5f2d740', '2020-10-07 22:43:04', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('9ec90c6ac2d33cc7af57bb462cf5dced0164c900', '2020-06-17 22:18:58', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('9ececf50fee6401c509b6a0a7f3f5ded30391ad4', '2020-10-20 16:02:10', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('9f061ed6b9161bb4866c723786e38c201dc5168f', '2020-06-02 07:06:35', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('9f071ad41e9a1bf96af35bc781316ca001aa5906', '2020-09-26 21:31:59', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('9f1b23ab29cf318f53e797387d76495e694c7db9', '2020-09-15 09:02:28', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -1654,9 +1863,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a035327091bb8d68eae07317a44e24bd66f74a02', '2020-06-07 16:32:56', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a0505204a9ac4328f828156598ca98993b46ec0e', '2020-10-07 17:45:47', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('a0544d89fad1e2e4796c5a78c80dcf724c364007', '2020-06-04 19:44:07', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('a06be2308074e5e8cf09f64f88f49631954b8c4d', '2020-10-12 07:36:10', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('a07c07a69db0395b5c51993dbc4c06078444dbbe', '2020-06-07 10:35:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('a082e20878d34b45c4d5506363abd03eb304dbb0', '2020-10-20 14:52:45', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a08c1e5da2bfb8ece98590924f34c1b3c8c2bee9', '2020-06-13 08:06:35', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a092cf9e180fe5bb8d1bab7f393754cc5c42431f', '2020-10-07 23:04:26', 'UPDATE', 'Merubah Data Produk id: 4634324443030036343337312 Nama: 1234567890', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('a0a10b9d65a387a1d12cbe2ea3fe9d931b351e9f', '2020-10-16 20:50:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a0afe1143de09ed9463678badf53cf0352b014f7', '2020-09-27 20:26:37', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('a0c08265cea58db10cd755c1d8a4cc793f3e2c5f', '2020-06-07 19:03:48', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200607.00015', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a0f354bfd98182cc4bf7eaf744e602bf81540f6d', '2020-06-11 22:15:06', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -1666,27 +1878,33 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a1464a594439003297cc0de3ce6c40dfcf0ea2e6', '2020-06-17 20:50:29', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200617.00042', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('a157142137ba4a8263a79326d0bb2e8f601b7633', '2020-06-11 22:11:21', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
 ('a162fb6fc565b9214aa897546557a5962217c95e', '2020-06-01 11:38:35', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('a16412ce8b88de9181dff3795e5512c9c196d6d9', '2020-11-29 23:29:09', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('a1693ddf320c5c223fe8993f433f3ca91b83a900', '2020-10-07 17:16:53', 'UPDATE', 'Merubah Data Menu id : fe28d98fadc7023dff255135cd9708df9d347fac, Nama : Tambah Data', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('a17bb8db4a689c848dd13e0cdd88e51f927a48ec', '2020-06-04 23:47:53', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a19d6fa6ef446232b04c90e852905766f52640e0', '2020-06-02 23:50:00', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a1d354a57657bf551cf39eb68c2396d10bbb9381', '2020-06-13 17:42:12', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a1fcd78705a7c2828cde8f751130b5fb41e4ec11', '2020-06-06 16:15:50', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('a2324117bed5fce8fcd6dc50e98f57d4cbc5e70c', '2020-11-20 19:47:11', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('a246ca7282641331ad38458dde9dcce83fc3dd70', '2020-09-26 13:16:07', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('a2641a09c6e76ee2f13cb846e4749a2e37a4706b', '2020-10-29 21:49:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.111'),
 ('a295cc948b2e9bc5a667b9438eaa5e193e43e722', '2020-10-09 22:47:46', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a29c923d95ba2f2108c5f8a8dae5d4d17bd6deb3', '2020-06-15 06:14:10', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('a2a985b6b6367803c3223ba5f335b4c918748eb9', '2020-11-02 20:37:17', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('a300b2c743f9501b52910a09b966967501247ead', '2020-06-06 16:38:07', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a332f96b9f1a50390a5782620353a99ee6e5479f', '2020-06-21 07:09:12', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('a338efb2e8563bd63f386da1c8d8b276aeba2998', '2020-06-12 05:56:15', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a33acd6bd53b1f3453150304e92b5d46e3f4caeb', '2020-06-18 00:03:29', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
-('a3422380585582b78270551deaf17f82ca318fb4', '2020-10-07 20:49:39', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('a3422380585582b78270551deaf17f82ca318fb4', '2020-10-07 20:49:39', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('a34f502ca28c0f568ba02cb287aca0571cb27122', '2020-10-09 16:33:33', 'UPDATE', 'Merubah Data Menu id : 3b193d9c9b1f8e12d571cd3b4638e245d04e25dd, Nama : Laporan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a388601f2248e8024efd49c0ad896f8ab2749612', '2020-09-23 06:11:19', 'INSERT', 'Menambahkan Data User id : 68584ec9477175ceb9a5ca379ce6c52c07132b08, Nama : User Kasir', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('a388e3ebc8f3d830455b4568cf96ce8f4388edba', '2020-06-20 06:43:31', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('a38b9ae0009bbaaa50db3c04608e3c91d42aa0da', '2020-10-09 22:11:20', 'UPDATE', 'Merubah Data Menu id : 558d06368b288daefd75c0bb1bce9359fc2e0c88, Nama : Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a3b878d3858d8427310536d7f099fa3af72f5cb7', '2020-06-11 06:56:11', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('a3d81f526d72ac5649b3e6b239ad376c58b08891', '2020-10-16 21:05:46', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('a3ed8325f777538106bc16cbb3e45181865392b3', '2020-10-20 07:44:51', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a3f13ddeaffa1e9885cfe2bbf3bc4ba9b6a305a5', '2020-06-11 21:48:43', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a40de1a692c16dfab8f948e3e6c7a4ac10137c74', '2020-09-27 21:26:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('a436aff390ac36692b11853476bea4fe4227725e', '2020-10-16 21:02:16', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a436c5c90fb6ca64bb52a4333b3215aa0e84690e', '2020-06-01 13:26:59', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a44f0e564da69858b4e1b57a3c9071e9a2641df1', '2020-06-04 22:59:56', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a457e9545dafc83e5c3658f4e52260505bb44206', '2020-09-27 20:00:26', 'INSERT', 'Menambahkan Data Menu id : 38c888a5d7305620e1eaf769cac3d0bb7d521ff1, Deskripsi : Master', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -1695,10 +1913,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a47c97fb9b3848a36dc34debcabef7d0ad08fd5f', '2020-09-16 07:32:17', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('a47e11a1556989a8686ed976e4a8239db8a63760', '2020-10-09 17:25:12', 'UPDATE', 'Merubah Data Menu id : d752fd6ba1174c7c41657ea32c40c2b1657e2d61, Nama : Review Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a48ea1017b7c1968e3e89532badd0225705078fe', '2020-06-19 06:45:38', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('a4965b4bf8cd5bfaeeda1b50b6cf72f79e366b44', '2020-10-29 21:54:23', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('a4a1544076af88a5b8619f1e09df045866f7a53a', '2020-06-07 19:05:40', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a4b273d07666dee2398946cc2a11fac41bdfad58', '2020-10-09 21:56:25', 'UPDATE', 'Merubah Data Menu id : e6cddfe8862e682a95f97cc8a36fed2158a5d64f, Nama : Master', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a4e8d0bd225a0a0e52fa86fda06ed6d1b222172e', '2020-08-18 18:47:57', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('a4ef40b410e1d006fd45ea11b6e1a3bf57244d62', '2020-06-01 20:36:54', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('a50aa98b42b7b45999102a2fba7af17f43d0723a', '2020-10-29 21:53:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('a51db0a818296484b965c9a2f8e927b4dc8b7d6e', '2020-06-19 20:32:48', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('a51e55ef1e5e860e8a285e75b241d051497e25a2', '2020-10-07 16:50:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('a530a4bd9410b77c275b9e02777bf15144149228', '2020-06-02 07:10:58', 'LOGOUT', 'Logout Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1706,9 +1926,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a591217fc062ddcac819ae6d474ce41e21967c81', '2020-06-06 16:49:48', 'LOGOUT', 'Logout Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a5b45006d2446e3a3908aa43f2ae87e24d5764d0', '2020-06-14 11:31:51', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a5d0c74ae0b34fb7111ce09935f449ee126097d7', '2020-07-03 19:40:19', 'LOGOUT', 'Logout Dengan User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
+('a5d3417b12b460225012163ac57aa0d7b5588057', '2020-10-25 22:26:17', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('a6083d0c49c3ebe04ef46b7887f5a8553da4d657', '2020-08-07 22:36:05', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('a6358a793f13145d856187c3b066d8a1fdce2049', '2020-11-02 20:40:01', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('a6539d7145f5f0571c75e73bbb23773b46a3db24', '2020-10-09 23:01:40', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a6577278bae60735cf3088f0d4a635c6ddc4d7c1', '2020-10-09 17:35:08', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('a6869fcc06277e1dcfad18b616e1dd68ebac10c8', '2020-10-20 14:52:38', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a6a9ac5d47a2a541f10d329fbfae4c881863d42e', '2020-06-07 21:39:36', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a6ab0007bf341b97dad54f1748a15bf42366d754', '2020-09-23 06:32:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('a6adead7dd645f361bd1cce76c7cf7907f9eaf25', '2020-10-09 21:11:00', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.75'),
@@ -1721,6 +1944,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a76b44dc61ed51fdbeea733829508004a6eb33ee', '2020-06-02 07:13:17', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('a76d96f7efc55c5f76ade0343279ed11a8903091', '2020-09-19 08:49:31', 'DELETE', 'Menghapus Data Menu id : 2e915394e39405cd3216ec8e5aaf5a6d2ec9c917, Nama : Kasir', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('a787c4dae41b01c12b6af27ff3093dcf8f61e01e', '2020-09-27 21:22:55', 'INSERT', 'Menambahkan Data Sub Menu id : 558d06368b288daefd75c0bb1bce9359fc2e0c88, Deskripsi : Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('a78932e2f52ae9c6e19e2b36654029f8714b73fe', '2020-10-16 20:57:04', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('a7b3d1d225e03b66d5c6e3eea4d2fe3f1cf76363', '2020-06-11 06:54:52', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('a7baacc682d7c85216878fad534b1cc551a6c79a', '2020-08-18 18:51:28', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.84.0.4147.105'),
 ('a7d87ebe4869a49b888d8585dcca013d8c7bf3fd', '2020-06-11 21:27:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
@@ -1729,7 +1953,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('a80044654d5bab4bbf1d41c66bcef3279e7d718b', '2020-08-14 23:51:38', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('a80335d15fd1ca601bb534580f1c795692235c26', '2020-10-09 21:05:23', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a8047b9d55597f4d1a1dbf63251cd27a512e19db', '2020-10-09 23:02:26', 'DELETE', 'Menghapus Data Dokter Dr. Hari', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
-('a81b5e37535775d436594db2d950aed561e26f56', '2020-06-14 09:48:56', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('a81b5e37535775d436594db2d950aed561e26f56', '2020-06-14 09:48:56', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('a88b95634c50061305535b61c1e0b88854cab3ba', '2020-10-09 22:06:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('a88ddb7a88dbbe785fd8c5b5d6612e5aa98b2365', '2020-08-18 21:23:58', 'INSERT', 'Menambahkan Data Department id : 276f7d895c78d355b2713a1eb4963edeac3468e0, Nama : Departmentsa', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('a8936dd58eaf547c899324a339265bcd957a9fc2', '2020-10-09 22:10:45', 'INSERT', 'Menambahkan Data Sub Menu id : b7ee482b18b5cb63ea9e39fa17d4978bc0d8543b, Deskripsi : Dokter', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -1743,6 +1968,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('aa3d7058b5a14af79712f2f759e6dcaba97476d2', '2020-06-01 11:53:27', 'READ', 'Melihat Master Data User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('aa566b4deb0b626d8ffc566bbd451c07b1426aba', '2020-06-02 23:59:51', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('aa643aff6c5f2d0b964fea60cd5c295bca87f6ef', '2020-09-25 18:47:16', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('aa70c82f1b854104bd435376147aadb2bdf3dac3', '2020-10-29 21:46:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('aab8ff2eba55b8267b45f33822050b96f8cc2eab', '2020-10-07 22:42:59', 'UPDATE', 'Merubah Data User id : e71936705199dd3ea09a10dded7c5a4837316b1a, Nama : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('aac1cb455bed0f39c5876523563946245ab5aac6', '2020-08-17 21:28:30', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('aac684cf7ae3999d5c556287137deee27d06c04e', '2020-08-15 08:48:03', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1754,10 +1980,13 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ab53e2e3444d329201671041bb844309fd188315', '2020-10-09 22:07:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ab5b0e77ae77d0e222ad1e78c298287a785d66f9', '2020-06-25 20:40:21', 'STOCK OPNAME', 'Stock OPNAME Brainact', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('ab6c6896e5206392f9002c7670bb48cf56fe21c6', '2020-06-10 06:43:15', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('ab8c43aee8550b4a22c17280ac067576d1ccc588', '2020-10-12 07:17:27', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('ab8cca9cfb851df714b19c6458730fc4b7358cb7', '2020-06-04 22:10:52', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('abaeafb2940675b2234becbee58149651472131e', '2020-08-18 21:23:19', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('abbf683cae4be40ffbeaad327396ddce23248af0', '2020-08-17 21:21:19', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('abd6a2cce3605e0e4c1889ddd0891aaf6d7746bf', '2020-09-12 06:39:27', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('abddb2816a394b115b62a4c81ba9b1021f2579e5', '2020-10-20 16:28:30', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('abde5323258c2c3b86310542b9ae2c39db1309e7', '2020-11-29 22:41:34', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('abf92cb49ddbe83814f30b165c9365bc6c2685c3', '2020-09-16 06:58:37', 'INSERT', 'Menambahkan Data Menu id : 2cc14b32f570a930ca99a3a41ba9a41f40c81c97, Deskripsi : asdf', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('ac0b06802a56d97c0a942538616de1bd7bdf2156', '2020-09-23 20:07:32', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('ac636faf0979449239a347238c577b26b54f222f', '2020-05-31 19:46:40', 'UPDATE', 'Merubah Data Produk id: 0bd078b4943033f267b5524b8e9975b8a1e793c7 Nama: Acyclovir 400 ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1768,6 +1997,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('acdea4b49cd6f5b3a6d3b7fd0f5629f8d4369bb8', '2020-10-09 21:05:09', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ace5908bd7dd3abe21c2ec07007518da6812c25d', '2020-06-07 21:36:25', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('acf9cec1dcb8080ba8b3582f473bb9b12121fed4', '2020-06-03 18:29:34', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('ad0531d12bce4adcc396b4c8c5270526a0a9299f', '2020-10-20 16:30:59', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('ad1a159ed39263e56ce8e6a2f1096cd67227b288', '2020-06-01 13:59:15', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ad25037b31578b099f83af529018aefe6ba63604', '2020-10-09 22:07:15', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ad2eec5c4dccf96ebb87efa2f9f709ca5d91a2fa', '2020-08-14 22:47:57', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1781,25 +2011,34 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ad7900d78da751bd9a249d36a1d9361cc6e3df70', '2020-06-12 05:51:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('ad8bfafdecbc490f18b976d920d92f3846779ff1', '2020-10-07 17:51:30', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('ada7480c0638212e55040ec4f64a3d9d4b9e5f20', '2020-08-16 18:42:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('adc26a8c0aa5a63d7660511177f4d82b77db680e', '2020-10-12 07:43:36', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('adf16824443d9eee9e81519380e1928bfbb83294', '2020-06-27 14:05:11', 'UPDATE', 'Merubah Profile User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('adfa33ba2a792f35861e2b5475add7bbd7c66f49', '2020-08-15 08:48:09', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('ae19ec0e2697bde9f1b97a218bea3058e7466d38', '2020-09-26 21:38:57', 'UPDATE', 'Merubah Data Role id : , Deskripsi : Dokter', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('ae1ab58cdc98b843a75de2805aeee27a6d663bed', '2020-10-09 22:09:34', 'INSERT', 'Menambahkan Data Sub Menu id : 9816f2104440b86ea27c861ea38427885764ed7a, Deskripsi : Supplier', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ae28b6ca7afe315033b65269fb2b5b28ba5fd82c', '2020-06-01 11:04:39', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ae4e9ef60b54b239681365f73ca5939e713aeded', '2020-10-09 17:22:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('aec52dfb6d1a65151f5744d84a8db653dd40908d', '2020-10-29 21:33:36', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('aee62ea8502b5a2466befb82f47da9e6bee9c470', '2020-09-16 20:46:29', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674e_menuDescription=menu Edit, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('aee7c3ac150e5ea28789287cf1cd9e8c35e9ee75', '2020-10-07 17:20:51', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('af3daba906e3577887316eb653dd20db12939c16', '2020-10-29 21:47:36', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('af5c5b8b8aba66a86677d86a4e73c2dfbbf790bf', '2020-10-12 17:12:31', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('af6cad47cca331ce98e45359244d0004e471ff4b', '2020-06-01 13:19:20', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('af855130659b7593d929fb3e3a517d1918caa9cd', '2020-06-05 07:24:12', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('af9f15455d49601eaa10b97f8ca2c867db4725b7', '2020-06-07 21:36:22', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('afb4d15707177a511ac1c12bbd56f565cf6f9735', '2020-10-09 16:37:13', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('afb6de7cebd043f2bc8aeb3456c475af6fdaad95', '2020-08-18 19:00:56', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('afc67d9250d43b77afb42231590c2634ed1fbe26', '2020-10-12 17:12:27', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('afd3104c329c372d5d29723b2d13d7a04ab1e6ab', '2020-10-09 17:35:21', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('afe16dd53aa2ed01291c2817ea332315643a1b50', '2020-06-11 07:11:59', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('affa444351fd0299702129e5c1db2862f3f2752c', '2020-10-07 17:52:08', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b024d71bc78ec9fcaf1fc87e035788b1b71a73ed', '2020-06-04 20:33:43', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('b024fb40d4cfc05c81bff91f208bd148dd51a629', '2020-11-19 21:10:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('b02b637f19a34e17f9dab3c23e204293352d6e90', '2020-10-20 16:07:29', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b03b2eb852f385ac97229a41f22a0c8a015c3d9d', '2020-10-07 17:22:57', 'INSERT', 'Menambahkan Data Sub Menu id : d752fd6ba1174c7c41657ea32c40c2b1657e2d61, Deskripsi : Review Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('b0447909d81eb1dd99c11836d5902721fdc52838', '2020-10-12 07:12:04', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('b05761e65c25dd3421daf98e05ef1fe952a88bf3', '2020-10-09 18:54:03', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('b09357a19896029e261d215b2dc0f14f6b2e74fa', '2020-10-16 21:03:16', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201016.00052', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b0ba0f28562f6de926309f66bad46c2f8536628a', '2020-09-23 06:40:27', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('b0caffb78436fd6bcb8fd9db4430eac5b850b3a4', '2020-06-07 19:03:56', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b0d58cc02969740c9360341c80ccbf175fa2fb9a', '2020-10-07 17:19:06', 'UPDATE', 'Merubah Data Menu id : b5de6334cdd7b51a6d99a1423e3df5f852416610, Nama : Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -1808,9 +2047,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('b1525959f252a2c7d805fbcaac0299822bb7dde4', '2020-06-11 06:59:50', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('b17089ee0335be7e6cc6a255044be90d58f85446', '2020-10-07 20:21:26', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b17e3308d6466554cb985833ea3bd7b894b857a4', '2020-09-26 13:16:14', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('b19288399d5354e88553703ec7824a48b7534462', '2020-10-12 07:38:56', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('b197ad25b2327e4068cefb7006c007b78b075755', '2020-06-07 21:44:32', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b1a0d20b5394e1030ea3ace79998152bb3dc46eb', '2020-06-08 19:56:25', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('b1ac81ae32209569a2b144913964b713b8e591fa', '2020-10-12 17:14:22', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('b1dd89f7a39ddc6933f84b92922c1a9dc161ee9c', '2020-09-16 06:23:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('b1ea6f6bfc11ed0afee9b7e5f85f9166bbdfd133', '2020-11-20 19:47:29', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('b1f06ae76442bef175d545dd422a6ae529db2ff9', '2020-06-04 23:02:23', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b2062cd1847cabf7a38ee7de21adfc2e5fabe6a0', '2020-06-11 23:09:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('b218edf7c16c7b828c4ad2abe4e073e4932ba2a1', '2020-05-31 18:20:33', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1823,12 +2065,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('b2d4d240fa79344d8e8863779f52905674bfeac0', '2020-10-09 22:39:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('b2e98626314b1632351ae7a396a09f78fe64ce5a', '2020-08-18 20:42:42', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('b2f39b170b791346fce865751bb076067aaf9d21', '2020-09-23 07:16:31', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('b2fd95d916ca26799efe30e724e0cdc0e1d42cdc', '2020-11-30 00:22:01', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('b33ad9795ee119e98c127b52e4207c9b16b0d0c2', '2020-06-08 18:36:02', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b34c4e64dbe5452c3e840b44c5f2de7dbd8a9f58', '2020-09-18 21:33:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('b34e3518fdd47f802b7e82ee8761415213cdccaa', '2020-05-31 18:50:17', 'UPDATE', 'Merubah Data User Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b3b0ef8cbf46ba68421820889a9f53460470178a', '2020-10-07 17:53:41', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b3dae43e57d533093788fb864f77e34fe7117bbc', '2020-06-07 08:31:35', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b3efaa40ae023f2b5f9a9c353769c787c423e2ed', '2020-10-09 16:51:25', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('b4202630f9ab004a1099e37f1176c3031801862d', '2020-10-20 16:26:37', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b427ce258af37ba7bef03e6d8cafce438cacf584', '2020-06-13 06:16:20', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('b4288ce4a3502451ff5799c013753af700a77586', '2020-06-11 20:37:04', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('b42a77bb74253e9683a3a8c5f18308d774baed70', '2020-06-05 19:29:25', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1836,6 +2080,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('b45c75e0fb347dfc4bfd5abf2fc18ad46e3ccfb2', '2020-06-03 07:02:38', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b47166a2ae538214e6d4fe7aee9f4757e5cf7975', '2020-06-03 00:09:59', 'READ', 'Melihat Data Penanggung Jawab', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b47e8366ecb3215f5dca285c20b537fab123f644', '2020-08-18 18:59:08', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('b4847490060b83beec1a81b6c2cf71d2fc180927', '2020-10-20 16:07:15', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b48d57be40c9af7f915c3dac92311c0e94c56873', '2020-05-31 22:30:23', 'UPDATE', 'Merubah Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b498ae30ba83e0794800321c9f8ea449c6cf6a4a', '2020-10-07 16:55:05', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b4b5314a40690f6c3cacc481d07ebcaa9729d3ed', '2020-06-02 14:07:07', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
@@ -1857,20 +2102,27 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('b7455970dbfa9f01fd6157d756da9347b87f6ddc', '2020-10-09 22:05:34', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('b749edaab2e8ade316474fc3bb88ff2099278db0', '2020-06-05 07:20:09', 'STOCK OPNAME', 'Stock OPNAME tester 2', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b749f29e867666ea45659999ccb628a10ea7dd78', '2020-09-25 16:13:24', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('b76175efa53d761af06af8175222f8ee53c6abee', '2020-10-16 21:08:19', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b76a809dec84ef8b215e612a0ee38bb15b5dbc51', '2020-06-02 14:06:28', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('b76e0bb95ad8c91c2464429d15d0099e3dba00c9', '2020-06-06 22:06:55', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b76f84a8ac23866f2cdbe4c7655630477be408be', '2020-10-07 22:48:38', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('b7795be5b7b6596c20c247482aa4bafa0eb99ad0', '2020-11-30 00:23:45', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('b77bf7f926dbcefcdbd956dad24fff20cd0cdf63', '2020-06-02 14:04:17', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('b78462274013709275fa5215be2b533ca2fe2811', '2020-06-13 06:03:39', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('b789d56a5e334b319d9e6428b483634e0f995795', '2020-06-03 06:09:32', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('b79911e1da6963ba658a6eb6ce1d740d977cfbfc', '2020-10-25 22:14:38', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('b7bb3b899688d08408343fb5119a108c3441c493', '2020-11-29 23:13:46', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('b7bbc74bcd3b0b8e1db41578e9ffb668274ffa8b', '2020-06-11 23:18:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('b7bd230077044b286e296ea07d46bb7f52b68d69', '2020-09-26 21:32:10', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
+('b7d38df760351bfd6299b9ad2e008a394ffd5533', '2020-10-12 17:18:27', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('b7e840a60fb435d1dbd258a6611fab08a2af52a5', '2020-10-07 22:41:30', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b7ffac6ea5199822ac2a2f662136cd7522c9903f', '2020-06-06 22:09:13', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b83cdb382212ba3b114e32d288afa609257eb73e', '2020-06-05 06:25:13', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('b859a8006983d409be03f987960e4b6abf19a9f0', '2020-05-29 21:05:55', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Linux', 'Google Chrome v.75.0.3770.143'),
+('b88d2d522a587bd6d53d08a25edc975c207b6b95', '2020-10-20 16:11:07', 'UPDATE', 'Merubah Data Dokter Id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('b8991da0b14150933f732385aab9702e28beb360', '2020-06-01 11:16:36', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b89b775189ebf26ff58ee3e3475618a7f4ab3185', '2020-09-23 05:52:21', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('b8b998784935380dd026cca882c9bfdbe36c4291', '2020-11-30 00:23:47', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('b8bc8200f651630abf057f2a0fee437236ca7ec8', '2020-06-07 07:35:55', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b8d2430d790bbfda925ab880c0d9d84fd5d2538a', '2020-09-16 20:21:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('b8ddf8dd3028682d6a320540f7eb94da5938d03a', '2020-06-06 16:12:43', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200606.00009', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1883,6 +2135,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('b9ae572670a95de162eff08ba60a2ccbebc0de5b', '2020-06-27 11:43:42', 'LOGIN', 'Login Dengan User : anna', 'A', '::1', 'anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('b9b3f0ff51f31066515dc62ee760cb6acdb766d5', '2020-06-08 19:40:51', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('b9c6560e4d8a5c669e52a6802a8a22eb5b490a16', '2020-10-09 23:01:42', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('b9d38e141ae6c96d9f79e4b1d848032561652cec', '2020-10-29 21:50:53', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('b9d6c8175dd47df50037550c979b9eb24ea35a7c', '2020-10-07 20:55:29', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('b9e428157b933e9d7a5cf8f8cc6229b025985eaa', '2020-06-13 05:57:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('b9f44e275fa4ef8d10b12ffe813e30482a53b188', '2020-08-18 20:43:36', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1895,13 +2148,16 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ba76032a46c40ecd0aadd44832487a7c0ce95ed3', '2020-05-31 21:12:25', 'INSERT', 'Menambahkan Data User tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ba9134a3a432afbaac3ce101f38a48d5dd96aaa5', '2020-06-11 00:13:48', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('ba948b376a3d3cfb7e206aea718a4f025fadc701', '2020-06-18 08:29:39', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 10', 'Google Chrome v.83.0.4103.106'),
+('baa25c69fd8f3224fbec31b478df19c313f82411', '2020-10-29 22:02:04', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('baa6b3bb6ec99d56d7f55186effe70f399fbe725', '2020-05-30 13:43:49', 'LOGIN', 'Login Dengan User User Info', 'A', '::1  - BILAL', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('bac4c7f46304a961613c89620d276725098882ad', '2020-06-17 23:00:10', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('baf0e4ab0263ab273fdc431e3b64876a11881750', '2020-06-01 13:45:30', 'INSERT', 'Menambahkan Data Kategori Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('bafb138d4524ece753530fda8e04c63747670801', '2020-06-12 06:28:13', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200612.00037', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
 ('baffc326d895ea3a145035878eef2594537482e7', '2020-09-23 06:10:56', 'DELETE', 'Menghapus Data User id : 678de479ce1340fb7fc7a52c72967c6550e5a3b4, Nama : User Kasir', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('bb0336058bb3e3510ee9fb27e73b58f98f980dac', '2020-10-20 16:30:57', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('bb6429daec8d198ef0d5e1ef9214baf10a2772e8', '2020-06-01 13:21:32', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('bb7f584e1672fca0255e9cbd82b63874d5ebff22', '2020-06-14 09:54:14', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('bbc37d556f5b36f7d8a692cef0b59d8b85fb0f56', '2020-10-12 07:09:09', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('bbe7cc70860d6a1f983fe294e296d4f1148f3c09', '2020-06-11 21:29:16', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('bbf743a68c7421e740ffbef13fb3ce5245ded06b', '2020-07-18 08:14:30', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.89'),
 ('bc0ebcec2cc2eace7d136d30233714d437619907', '2020-06-11 22:09:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -1942,7 +2198,9 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('bf76e7bc60a4fa00de2aecb03e11726bb8b46740', '2020-08-14 23:51:42', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('bf7a45296bfcc6029303416824c6b9013c903cf6', '2020-06-20 06:44:12', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('bf83a5c21e1422d59f1e1512a535aad50da4ab5c', '2020-06-02 17:20:38', 'READ', 'Melihat Setting Data User', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
+('bf9c25e453a16055fa3b86be7b296286dc816f98', '2020-10-12 07:33:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('bfa79b6339dbecd3555a3858036af3eb7b88021d', '2020-06-06 14:16:53', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('bfac0fc5a8ae5654a421328bd3f331400f06bc21', '2020-10-25 22:26:06', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('bfb2a341c70a9b7285b5604581b9662c6d940662', '2020-06-02 07:04:29', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('bfc2a9bee7bea1cd51e4735ef8acd5b787295a16', '2020-06-11 07:18:19', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('bfc538a346b0a7149c8c64f04427e33050068679', '2020-09-16 06:49:06', 'INSERT', 'Menambahkan Data Menu id : 0577b12426383c32d1311a11266fc0be81f5b969, Deskripsi : Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -1951,9 +2209,9 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('bfe4555761bb7077f189f53d1a268c557bc5b853', '2020-06-13 18:55:24', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('bfe6e559bb4f38c0d70cf6ee2decec3b7b00daf8', '2020-06-03 00:06:24', 'READ', 'Melihat Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('bffbc28d5946bef4053ba98caa90f2dfa30877fa', '2020-09-26 13:37:38', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
+('c005e74b260763697ad590f462c75fcbd8e6cd0c', '2020-11-29 23:25:09', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('c00b3d272feaf3ca21922abed02e0cfd64148d9d', '2020-05-31 22:41:36', 'LOGIN', 'Login Dengan User ', 'A', '::1  - BILAL', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('c00d637ab732e98d64ab2fdc43adfdbe1b19d9fd', '2020-06-07 21:40:24', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('c00d637ab732e98d64ab2fdc43adfdbe1b19d9fd', '2020-06-07 21:40:24', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c032ebdcd929e8d8a2f08eed03f9470519fb2ea3', '2020-06-03 00:06:23', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c04eca43419f5793fc069535955d970b6a3330c7', '2020-06-27 09:49:47', 'LOGOUT', 'Logout Dengan User : Anna', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('c0885dae837c3abe548681a7e93e848ea1c5224a', '2020-08-15 00:33:35', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -1964,13 +2222,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c0e75a02de0a46627062534f2ebfde387f4fe4cf', '2020-10-07 17:23:47', 'UPDATE', 'Merubah Data Menu id : 6104a7e7ad22b936382efec15fe0a2ad4d30c5e5, Nama : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('c0f338e461a694dabdae5c6e35fa1c5a30a547e9', '2020-10-09 16:34:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('c0f79abbefeab7b5f785ce7d7a501a1c9bfbbd2a', '2020-06-11 20:28:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('c0ffda186264b812176d5bfeb016eb1214b0e407', '2020-10-16 21:05:43', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201016.00053', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('c10e2dd8f055a935b9487fb553dcadc8af4a9d0a', '2020-08-18 21:13:24', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('c131f32e249b81ef97499c3ad344ddaa6ca331a3', '2020-05-31 22:40:36', 'LOGIN', 'Login Dengan User ', 'A', '::1  - BILAL', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c16a356b2e4256acd076f413c12ec43da7c94902', '2020-08-15 13:46:27', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('c17a25ae1dcce6c155382a2ea1558a6d0531bf3a', '2020-06-12 07:58:14', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('c17ae238fb375ac0ab3e8d67b567be7c2c7941b1', '2020-06-05 07:23:49', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c17d8ad92855c629c9591eac1341cef945886dab', '2020-06-08 22:14:39', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
-('c18e8b9ddfc75bb31e4b86494ff3b5a647277a03', '2020-06-05 07:23:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('c18e8b9ddfc75bb31e4b86494ff3b5a647277a03', '2020-06-05 07:23:40', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('c19f7eb9c4f25ba6c8c09ab9d49d2d6c4d13cbcf', '2020-06-07 10:42:18', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c1a76355f4b5ffd631077bc1a6fa3dc20aa79047', '2020-10-09 17:30:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('c1c3d26956f6337676655d0a58f111c95533ea66', '2020-06-05 19:34:02', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -1996,6 +2256,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c34e40c49f4600d998c849ba444f8dc2727267d8', '2020-09-19 08:49:46', 'UPDATE', 'Merubah Data Menu id : 60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b, Nama : Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c35d35c71532d54bcd22bddb55081f2af6422b7a', '2020-10-09 22:04:56', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('c35eadd0580a4ee39fa314e216688778ea3ba147', '2020-10-09 20:46:55', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('c371f44a5da918ab803fe7977d7c4548371c2ec8', '2020-11-30 00:21:58', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('c38115c28004a6c5141c88ae8a50dbfec8fcd0ce', '2020-09-27 20:06:51', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c38527cc65b254d645713c1912882c3089073430', '2020-06-01 07:10:59', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c389d2acf676c956efad5fb56994beaeaef568b6', '2020-05-31 21:49:34', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2009,6 +2270,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c4117eee8da32e891305ada234c1610683de9c4f', '2020-06-03 20:39:04', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c41e6935345daca1eee13d44cb4510678a72cb54', '2020-09-23 06:01:40', 'INSERT', 'Menambahkan Data User id : 678de479ce1340fb7fc7a52c72967c6550e5a3b4, Nama : Nama', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c42f2f39110df0fae0db9ac27a77bb258904d616', '2020-08-18 21:38:34', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('c48d7cb893ca4c5207f1298db5b4ec11087780eb', '2020-10-29 21:42:46', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('c49fed1d632c94dbc478392de69eb8a46568775f', '2020-09-27 21:28:41', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c4a835ff002c54e3457214ecce620789bc99f6d5', '2020-08-17 21:29:22', 'INSERT', 'Menambahkan Data Department id : 636ebc7bcdecd9a2a0ce70bcf482edbd3f4eb464, Nama : department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('c4bbe72da4c8697b5b3b9bc94c7a9ce1a3644f86', '2020-06-01 15:14:54', 'DELETE', 'Menghapus Data Supplier PT. Bilal Software', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2016,6 +2278,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c4d9145c194231df01ea6ac0bc7733af0b9626d5', '2020-08-16 18:42:03', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('c522ff83453dfd64a1b10812d2bbeecf8c86a407', '2020-06-02 18:37:05', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Google Chrome v.83.0.4103.61'),
 ('c5664b752161e4f5b678841f36198547d13bea4c', '2020-10-09 22:11:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('c575ce00f69081509f657d759bf47f4763a35090', '2020-11-29 22:48:24', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('c58e57196f3f5508e1ab5324754a2fc58bd20b39', '2020-10-20 16:07:37', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('c5cdae446e5b62f55b7d793d94ca2806606bbb16', '2020-06-05 06:24:15', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c5d5aabe12ecf893dcbb7ac9d7649566cc73725b', '2020-06-04 23:32:04', 'STOCK OPNAME', 'Stock OPNAME tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('c5ebef8bebf36cb7df4fe8b0f60994ac200e8df0', '2020-05-31 09:34:21', 'INSERT', 'Menambahkan Data Produk Tester', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2036,6 +2300,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c7509f0d627adcfecacb58c18c05533a04d9980f', '2020-09-16 07:44:49', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('c7799c4fb82dc32be338d1453cd18f8f4b872f20', '2020-10-09 21:04:02', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('c784847ad2208cfd5ca30a124dee35fa3a83355a', '2020-09-16 07:42:42', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('c7902558578485a09c5bd064d759a48927a0294f', '2020-10-20 16:07:52', 'UPDATE', 'Merubah Data Dokter Id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('c79d5a1fd5bdde3561a664382d0b4d38152114af', '2020-08-17 21:37:17', 'INSERT', 'Menambahkan Data Department id : 159dddbe44a3588a37149cd41c136702f748bf88, Nama : Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('c7c4c14a460d4a6ad8ce9830373e871a6c7d5546', '2020-06-08 22:05:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('c7e954d908003d9593fdbf2ba70c2b09a76a99b5', '2020-10-09 22:04:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2045,6 +2310,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('c844712dcff3c4d3d0d4d95deefbd28542fd3ef0', '2020-09-27 20:20:45', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c84787c93c89ce30d78fd3b143dbf81038a3513d', '2020-09-18 19:16:33', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c869557bd931bb4173ade96155e0f8cddab8f965', '2020-06-13 06:16:39', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('c87522bc017b2433be9e17f2aa63135a0449770e', '2020-10-12 07:26:45', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('c87ed340186afca353cda364d8b920b0f40f192b', '2020-05-13 22:45:16', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('c8ce3cffcf9afe567f5943468b50ca7bb9fb1f06', '2020-09-26 13:05:55', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('c9028fcf3a952703fd1379808e70582de11b71c5', '2020-06-19 22:38:57', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -2063,12 +2329,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ca415a893268d543507adca9497a1f2ec0b84a43', '2020-10-07 22:56:36', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('ca42aa3c7e1477918968be272656a2cf12748ac5', '2020-06-08 19:38:54', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ca5a2e56576b4e924a9116bd4d15d93ad33e9464', '2020-10-09 21:08:58', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('ca6725bfe9cb667d93464501b28c50fcfce4ae9c', '2020-10-16 20:59:42', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('ca6c0d34973d62b43ed92043ddccbb7e8d9ba0e9', '2020-10-09 22:07:09', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ca85fd82b5a711eca90774c5edf885948c204b54', '2020-06-01 10:54:26', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ca8f0f0b5e3a0b9a6a349fd95b80489d39a62afe', '2020-06-19 06:44:12', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('ca9d1541eddb6c915557084dc5b911ffa530c45c', '2020-10-09 22:11:54', 'UPDATE', 'Merubah Data Menu id : 01c15b0e3f117179384c1ee43c7b4acf1c28350a, Nama : Satuan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ca9f0b23227ad54205ba5b238c96cd136c60fc84', '2020-10-09 17:31:33', 'INSERT', 'Menambahkan Data Sub Menu id : d8af8273752870f54799a0999b93292ca5786328, Deskripsi : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('caa4d30ec6b289bd6cdb979b36f46885ee479a98', '2020-10-07 17:23:26', 'UPDATE', 'Merubah Data Menu id : 6104a7e7ad22b936382efec15fe0a2ad4d30c5e5, Nama : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('caac16a662feee9b0d0e4c2918dc55a8301990f5', '2020-10-16 20:59:37', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201016.00051', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('cae4189514e3716488c889b8485b0002442c457b', '2020-10-12 17:18:41', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('cb04e30949f5259da9dfe2035c0156ad862be0c7', '2020-06-19 06:47:20', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('cb161774c47eb555b444c6df7ff874f127e16446', '2020-10-09 21:56:28', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('cb4086b6c780200b56bbc67821b7575dc1fd04d7', '2020-08-07 22:36:02', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -2078,33 +2347,42 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('cb977584eade6e08a1aff3c72ad8f39f18cfcdb2', '2020-06-04 22:53:48', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cb9783fe934e49170260449eb4a513d0feebbdbc', '2020-09-19 08:29:46', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('cbb13b89ea12797cdcb1ffa1d79feab6fa994381', '2020-10-07 17:47:44', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('cbba3802e1508c722f33da017146606b17b258a1', '2020-11-20 19:47:39', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('cbc935b3ec921ffda2420b7c7e3b84acd564bdbe', '2020-06-01 07:09:07', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cc02c5b39b4d5206e598c02ed567f82af1ae8392', '2020-06-01 11:13:38', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cc1847300a86ca0a9b859b7ba80eec0e7bf91413', '2020-05-31 20:29:41', 'ARCHIVE', 'Mengarsipkan Data Produk id: 1fa52bac79fb4cf3dc647405b5d222b6a9513309 Nama: Acifar Cream', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cc2cf46b9339ed44d739ad8c757838abccb491f8', '2020-06-20 06:30:07', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('cc4a6073eded88424b7504c8a068b2507074f8ca', '2020-10-07 23:04:40', 'RESTORE', 'Restore Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('cc4acbbdef003a3ad72ed2622d4aeeb831349467', '2020-11-30 00:23:41', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('cc6490d96f78c9946b75d3915f0d4237222b7b55', '2020-10-10 11:23:43', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('cc6f35bc673addea3de3f793fb9426258999f353', '2020-10-29 21:37:48', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('cc73b4794258e72e7c2dbf38b2776fcbec263aac', '2020-10-09 22:15:02', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('cc74dc4467fa71868bc165c8c51ab469474eecc8', '2020-09-16 20:40:17', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('cc826706a775f1ef61ef8ae64ff3eb17e9aaffdf', '2020-09-27 20:24:16', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('cc9d9955b7754a51d7ad349e3f13b60e3cb5dad7', '2020-11-29 22:36:54', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('ccaf3441acb79ec8547abb79db57071d56c1a26d', '2020-06-07 07:36:03', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ccb491cfb3732d444ef0ff6e0c842f16d9f1c432', '2020-10-09 21:09:51', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ccbae903025f8b813a4fd7327702b76f259d89e4', '2020-06-07 21:33:43', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('ccc7c53a47dd1e007c5d0925d6f3ec6512a13eb7', '2020-10-11 16:59:17', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('cccb5fcd2d229338d68a7866dd605e42529b67c0', '2020-10-07 22:41:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('cd00dfc6a21a028e5410feb490cc55de84c6d754', '2020-05-31 21:11:51', 'INSERT', 'Menambahkan Data User Harip', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cd125a02d42f88a035f3aee9964509d998b5de69', '2020-06-08 06:09:03', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cd2d37726551ba59b2fb38e303bcc641794e92e4', '2020-08-17 21:48:06', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('cd3ac4357784d8bd75158e2a504d6e4b30cee634', '2020-10-09 22:01:13', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('cd6be9516789a2831e003f56ad361cbfcd80e06e', '2020-10-12 07:08:13', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('cda50df1c21dc0eb412e1a1e00628ee500471de0', '2020-06-14 08:44:15', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('cdd1d8347a39b9494bb23b46432a14f812171ed3', '2020-10-09 22:03:16', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('cdd87c5992abea62a66cda6d9eaf27100aacd03e', '2020-06-08 18:36:01', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('cde3fc426d07b637494345c6713b6e0f3613358d', '2020-06-07 07:55:04', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('cde5abc659fa581c1cfe6756a01664232545464f', '2020-10-20 16:26:26', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('cdfd2878c4163b6bac58272424339f98615af540', '2020-10-09 16:51:34', 'UPDATE', 'Merubah Data Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Nama : Log Aktifitas', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ce043411678864afe8c57a9d915280344228a1a5', '2020-06-01 11:10:06', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ce06c414953084b4e42fffd9d688779ba5af1f5f', '2020-10-09 16:24:41', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ce65d1ed7b398a748a20fae376824ef272bdefe4', '2020-09-27 21:29:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('ce68fd5a49ee6fd33ecd8c6ff623f152b34a9969', '2020-10-09 16:26:26', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('ce72e968c1d3d18bbc8f7ceff00d5da45de1ae65', '2020-10-20 16:11:11', 'UPDATE', 'Merubah Data Dokter Id:  Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('ce8d5fb9333643415d93b2e16d904818706eeb65', '2020-06-04 23:15:04', 'UPDATE', 'Merubah Data Produk id: 8044900085883800383883088 Nama: Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('cead2f170b111f29b7bf8f4b340cd5987668ca37', '2020-10-12 07:27:24', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('cec42752bf0d54144686459cf052ceda1ad62fe0', '2020-09-16 20:43:25', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674e_menuDescription=menu Edit, Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('ceebd8ca17dbfbb547461e3117e23ab0050ebfa3', '2020-09-12 06:35:00', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('cef19fd1a6214753d900067a930a246f8bec1dfd', '2020-10-09 20:46:19', 'LOGOUT', 'Logout Dengan User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2122,11 +2400,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('cfcd85ba0884a6d52fb83307f3f5bec09810bbc4', '2020-08-18 22:22:24', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('cffd635073caffe9fae229bbc436df3ab55015dc', '2020-08-16 12:50:33', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('d035245cc5657df5f59588c6fea7b80d8398684e', '2020-10-09 16:48:00', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('d055a225be0fe124f64775b6a59991195d7af638', '2020-11-29 23:02:59', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('d0666abc03517a1252caefa2296c6e6d693755fd', '2020-10-29 21:31:47', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('d07b104d7d252189ae1b734ddbdf25bf89804b37', '2020-05-31 22:07:57', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d0848c1374f419b415306d42d67305113f9d5ded', '2020-10-09 21:11:15', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.75'),
 ('d0ad60c06209090f4760bcf73a58f6a9b8ed0ebe', '2020-06-11 23:09:31', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('d0b0f055fc5639209cccb19f013fbb57efc2bef8', '2020-06-03 00:03:26', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d0b5f2c8026e9e48502d88c6641e1fa46cf6e296', '2020-10-07 16:59:39', 'INSERT', 'Menambahkan Data Menu id : 2db89696c0e19c6880973c24a555a1760508b18e, Deskripsi : Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('d0cdda94580ba59493aad38b34d6dd6930ebfea9', '2020-10-12 07:08:01', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.121'),
 ('d0d190dda382eec383220efd87610e4791342cdb', '2020-10-07 17:38:53', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('d0db7f650a48dc5a5ddc6d113eeb5161b3c0c378', '2020-09-27 20:01:57', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('d0e22d9c7904c000887fdd7c2a152426cf212bd7', '2020-10-09 16:30:40', 'DELETE', 'Menghapus Data User id : 27398fe684c6fcfb6d42e15a9b2384afe608b64c, Nama : asdf', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2136,18 +2417,22 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('d1394595c2caab7d175c0a05ed5bef9723476039', '2020-06-01 11:32:37', 'UPDATE', 'Merubah Data User id : af7623bd0101b3cfbbe3b91e782b88763cb59419, Nama : tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d1514588d0df215921d3aa8ae250ac098012e718', '2020-09-16 20:42:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.83'),
 ('d15b2b5c54d877224afe96a1dd45e5dc6c69428d', '2020-06-01 16:05:27', 'UPDATE', 'Merubah Password User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('d17befcc27bcc0149ccac2929c69012e6e4d8fef', '2020-11-30 00:09:34', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('d1b29e63751ef127b3b337efc66ea9b9fa6d90f1', '2020-08-14 22:48:28', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('d1b63ae527a8fffe10052a931a5d172e289fea95', '2020-10-10 07:37:56', 'READ', 'Akses Menu Master Satuan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d1bbe0e4c1ebd84491cb03457245905600d79f36', '2020-06-01 13:21:53', 'ARCHIVE', 'Mengarsipkan Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d1eb91734c311a88e2b9f266d24d7c6ac1fdba5a', '2020-05-31 21:03:37', 'UPDATE', 'Merubah Data User System Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d1fed19474dc93ff424c90133190721ca7b6200a', '2020-06-07 19:38:02', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('d20a6df3717b58e502995e2e0133611bc0572b78', '2020-11-29 22:37:59', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('d27dc34efbaf40f8b718f37f90128e03ec1a88e4', '2020-08-15 18:48:46', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('d280854e073547a937bd23c4be74f70ce312b516', '2020-10-20 14:52:49', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('d2b722151dc6bf38d4d46dd7224e81fe90f6a387', '2020-06-12 07:57:54', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('d2bb9d1d2012eb89d64695f7f4f78af4b6ce496f', '2020-09-26 13:37:54', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('d2f1ee4a11e670b2d5b019b41d5e7ebee987e78b', '2020-05-13 20:53:55', 'INSERT', 'Menambahkan Data Dokter Dr. Hari', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('d2f95e7be7fec6f25b63cb1a166baf9ed584dd4f', '2020-05-10 23:13:37', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('d30b13aab7fd05a4fb6e077973d4f666cdb10b2c', '2020-05-31 21:03:56', 'UPDATE', 'Merubah Data User System Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d3136668e2b64bda9ff6c5d1fdd004fc58b4c05d', '2020-06-06 16:08:05', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('d33abde4a4239ac15a027c4fc9c179d21935d828', '2020-10-20 16:03:53', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('d35f066a1c554f512c5d1aa2d6674b07f09ecac3', '2020-09-27 21:29:06', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('d36e449ca1276fa00ff69aa5f5d2ccb4a194bbbf', '2020-08-18 22:08:28', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('d3aea727d3d837e9e41994f14ac59e3b3be0ef08', '2020-06-08 20:13:26', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2158,6 +2443,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('d4177b6b6387cd2710403a03daca2cb830bd8adc', '2020-09-16 06:52:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('d42a16ee64247bf34b50b98f45ce7594a41e0ede', '2020-10-09 17:22:17', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.75'),
 ('d44df38db4cdea6d1af036e9f68aa678155feea3', '2020-10-09 21:12:26', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('d4691b166ad8128bf804326e4f78bca6e481123c', '2020-10-20 07:40:06', 'INSERT', 'Menambahkan Data Produk id: 2045500040602007504767205 Nama: asdf', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('d4a08b43afb45847f93fa9750cb2166bde503d34', '2020-10-29 21:54:36', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('d4a9bae7ab0a2cede151d75f42c2b250f258715a', '2020-06-03 07:14:09', 'INSERT', 'Menambahkan Data Produk id: 4881484054550840245071224 Nama: tester 1', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d4dbd96494cbeb07becc4e62f457136d489864a1', '2020-06-02 14:35:18', 'LOGOUT', 'Logout Dengan User : user', 'A', '::1', 'user', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('d4fc687063691c04884a0ad0ff4e8c9751c40821', '2020-08-14 21:41:48', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
@@ -2165,14 +2452,18 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('d51e6226514c4fb92a35722011b32be636484ee8', '2020-09-26 18:50:12', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('d5387134bbc9a84b43ee436bce7914735e26afb9', '2020-10-09 20:47:37', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d56852d3efef4e4496ecf56daa99c356c422e57f', '2020-10-07 20:47:08', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('d585d894e1374a1d6df5d555cb89194c1a89210b', '2020-10-29 21:56:17', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('d58658129f77936f67a90daf3ed9273d513850cb', '2020-06-01 11:36:35', 'INSERT', 'Menambahkan Data User id : 46772eac43a4471aaaf8338266e31cf4cd595d4b, Nama : Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d59edbb9fa9892ba58ecf6ccae339c197a922d95', '2020-06-03 00:01:55', 'READ', 'Melihat Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d5a81b962019fbf8ea3d42cbca8ceea38ff21394', '2020-10-07 22:45:48', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('d5c64d29c39f03c3df16043584d20f729d8fd835', '2020-06-01 11:06:16', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d5d3f0ab84c47f8f9f5f4f21469ef219d7a14f70', '2020-06-15 21:08:41', 'DELETE', 'Menghapus Data Supplier id: 411346585120885 Nama: fda', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('d60ffb02d8b1e510cc554a5e3a5aa390909ee340', '2020-10-12 07:35:25', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('d622977a03404081291a9a08fe2f6f91436e1dc1', '2020-06-07 10:43:53', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('d644071ec079ef0d4716cd94dedfde4d14aed1d6', '2020-10-12 17:13:22', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('d655f597d45d147f33615b4080376c4e17412236', '2020-06-07 21:38:52', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d66d1066a06af52b24daea7aee6a549c74f4392d', '2020-09-26 21:32:10', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
+('d68df6eaa625a6f8a119a8a68984a189c61527eb', '2020-11-19 21:06:08', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('d6bd9b3a18fdbc782f9f6fb6d44316f9668fac65', '2020-10-09 22:06:52', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d6c06526b96acd8ca02e7ede084b763827515d01', '2020-10-09 16:33:42', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d6c649ea324e0ebe239ec417db4e4b323820b91a', '2020-05-30 10:35:57', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2187,9 +2478,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('d79e67391f9fb650ab27cc2c2583817a5c8f092c', '2020-09-16 07:31:06', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('d7a6d1b1d5935fba4d95855b130d64e168f776fb', '2020-09-19 19:54:12', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('d7ae51d24102777b188df6be4b2fa6dfe69ccc53', '2020-10-07 22:41:06', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('d7bc523c5fd57e22095b4ad70177311a716d6626', '2020-10-25 22:19:10', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('d7cabf6b2ce1a98e3bcfc1c03f9be2b2ad576c42', '2020-10-20 16:32:25', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('d7d99660d99161ab04eb34ed81cce2eae9bc828d', '2020-10-09 22:49:58', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d7dfb3f4fbbfa62e10bc9e3abe36ae5534205a7e', '2020-05-31 22:19:36', 'UPDATE', 'Merubah Data User Tester User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d7e891676edc40a8fd3b705acc9115fb4b88f467', '2020-06-11 20:28:32', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('d8008d23b14e2845ba62da4e1bbc3421ceb3d9cd', '2020-11-30 06:43:24', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('d8120655dd2f887f6915b543f4bb8f3d06a748b4', '2020-10-09 22:14:53', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d828fbb97849d5769a9f317e353fe86860a065ef', '2020-06-05 07:17:45', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('d832981598d1edc2a2c119c6727037946c300c40', '2020-10-07 22:21:52', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
@@ -2203,11 +2497,15 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('d8f01c994d48b9ced2560b048921d760b7af1b3a', '2020-10-07 17:48:21', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('d8f7be9bc57d37eb5a3c91d844b8d31eccb1e9c3', '2020-06-19 06:51:45', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('d901849880319323d379e72b79a7e36ff3125d1f', '2020-06-05 06:32:16', 'INSERT', 'Menambahkan Data Produk id: 2255066256111165123610246 Nama: Tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('d90ffd72c2d883849b8eb77bd9669f441b125df4', '2020-10-12 17:13:42', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-201010.00017', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('d91f39b47fe1531346f4892d2541c58c8f702bd8', '2020-10-09 22:05:32', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('d9286c1f02bf940de869341f0b4c76fe50ecdedd', '2020-06-11 06:06:15', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('d9332c6e77f1584e2d7489448022e8b1458d1697', '2020-10-12 07:44:38', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('d939a8332b8f8b13e0bb9ca40a7c0e81707f121d', '2020-10-07 22:47:17', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('d9488aef94a596951460a8df06370e748e26019d', '2020-08-17 21:27:55', 'INSERT', 'Menambahkan Data Department id : 67544aaea1af6ca4ab29fbf63593379343a92ec5, Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
-('d9b990301761d44c46409a7d00cdfea31489307b', '2020-08-15 21:50:19', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('d9b990301761d44c46409a7d00cdfea31489307b', '2020-08-15 21:50:19', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('d9ba4c330c74270db339517b56cdd2424fe1db4e', '2020-10-20 16:40:59', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('d9d15674bcb25cf49f33c7376b224a5be49cbf50', '2020-09-16 20:46:47', 'UPDATE', 'Merubah Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674, Nama : menu Edit', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('d9e93e0abd28a0a50308ae23ce6504af0d91212b', '2020-05-29 21:57:54', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('d9f1e7bf55d819a500df620debd4f1251afb26cf', '2020-06-11 07:13:58', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -2217,6 +2515,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('da0c48eedcee0b9ea36fbe8b6a8ab69d677d7b57', '2020-06-10 06:04:22', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('da36269242784b153e64baffdfaf80d32c667984', '2020-06-15 20:36:55', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('da378af7f1f74b0d918658b571a000cb6262e9ff', '2020-06-07 21:47:38', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('da406e283212c7fcb1731deb6313e0c43dfc414a', '2020-10-11 13:48:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('da6c111f5feb5495888d30f652ce0bd0aa1369b5', '2020-10-09 16:41:18', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('da705fea32798750dcf132527c2e2df6ba2748a3', '2020-09-26 13:34:30', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('da74c622d88a7ad8e3b95e6cbd086603f81c6d25', '2020-09-26 21:42:00', 'UPDATE', 'Merubah Data Role id : 7356ad8ff16a306de349be7e6d8cc8a039a59a42, Deskripsi : Dokters', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -2226,18 +2525,22 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('dab4c8c7d25ba29536c27cc6729012e0d7a1cb1f', '2020-06-07 21:14:26', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('dac0f670461bbe12753e32b7feccfe4d43cdde18', '2020-05-31 21:15:22', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('dac72bc6ec76d470731dee080c0de4a86d1ad2f3', '2020-05-29 21:35:22', 'INSERT', 'Menambahkan Data Customer Hari Priswanto [Transaksi]', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
-('dac7ee8846b2da8080e881baf796e077c578e9d2', '2020-10-09 22:48:10', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('dac7ee8846b2da8080e881baf796e077c578e9d2', '2020-10-09 22:48:10', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('dae98af90b1fce6b69fe3d2bcab30b31c5767170', '2020-06-01 08:57:05', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('db099e041b6633b07cc3a1b5dcb144e126c6a25f', '2020-09-23 07:16:35', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('db1beeb5ede9701c936628a1133103dbcb75fc8b', '2020-10-11 14:27:20', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('db1ed6ce186e89e9a1a872d5d86caafe1b206113', '2020-09-19 08:49:26', 'DELETE', 'Menghapus Data Menu id : 1d4f67e49d65f425cfac35bf03db43a12fc3ce87, Nama : Deskripsi', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('db1f970707aefb509bfedea07ada643d2d12c36e', '2020-06-11 22:16:12', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('db24218dd572e4daba6d4610f604be7d7c0a503b', '2020-09-16 06:40:56', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
+('db6ac1f915ca244b3c9ebb0cbe6f14f98986a84e', '2020-10-12 07:11:57', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('db6bff251da30410cec55c35e4892cbe45ff4e96', '2020-10-07 22:46:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('dbf5b3ebe130baa81b50b5134a4b70734b0eb9f1', '2020-06-05 07:23:51', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('dc064cd3b4ad73deafb0835e2bbde718169820e8', '2020-06-19 06:53:36', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('dc1415499981a28351a3009982cbf26961b4dcde', '2020-10-25 22:25:34', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('dc1c4d6fdc22eb60e275cf89b83adf5f5157464b', '2020-06-16 13:43:51', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('dc2b3ddf58c65bc8b90347df823d9e7d804340cc', '2020-10-16 21:08:10', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('dc4eea01ee278aec828c494c5255a7adc7aec057', '2020-06-01 11:50:45', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('dc6cedb5e5e0584507ead476adf0c4464db19d34', '2020-10-16 21:09:12', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('dc7685a49acd604e1f654024f0768a9a11ca79ad', '2020-10-09 21:11:48', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('dcc2aac19a3c3726ac9afd453bb2d5d5b8eecaf7', '2020-06-12 05:53:56', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('dcc5bb759de3018019281e0dababe6392467b8f7', '2020-05-31 20:33:02', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2248,8 +2551,10 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('dcf5a1483037521d15c674314630b9dd26216c6c', '2020-06-19 06:45:45', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('dcf94619b19f1227bd100498ae636e2aec5b4517', '2020-10-07 20:50:46', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('dcfd75a99086b5e1222317722c893db0999566a2', '2020-06-10 06:08:02', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('dd2741b50f5dad39734e456de9f8005e11c3c11d', '2020-11-29 22:41:09', 'INSERT', 'Menambahkan Data Sub Menu id : ab8dabb8c10d23ddc374a61708df51dab7218933, Deskripsi : Registrasi Pasien', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('dd31365d43ebb5315dcbc4192ba88ec77916c82b', '2020-06-07 21:59:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('dd592b37c20aa44a4e96215a179439f4c89026fa', '2020-06-02 23:49:53', 'READ', 'Melihat Master Satuan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('dd62a05350626f5e26633d4c4097359b792b7c24', '2020-10-11 15:34:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('ddb1d2d39bee49998460777908415b162fff9d38', '2020-09-26 21:17:54', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('ddc6d4fa44cd1a61403db81cc62a05c98d925a64', '2020-09-19 08:49:19', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('dde3fca84effb117393c113e1f03f07891a4d89e', '2020-06-19 22:51:05', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
@@ -2259,7 +2564,9 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ddf95419ab6794d4936c406632db13c6dca1dd23', '2020-06-11 21:15:37', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('de064f4b4aaef17c92097da8dfd4365464e15924', '2020-05-31 20:26:30', 'READ', 'Melihat Master Produk', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('de14065576fcb0c8c343a891972e140978927d2e', '2020-08-18 20:51:03', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('de1cbeeee6ae93e78e50c3312e6e221d8e12dd7d', '2020-10-20 16:39:27', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('de2154d516beeef81389d75e4afa3fe67f2c9592', '2020-08-15 18:52:38', 'DELETE', 'Menghapus Data User id : 5cac163cc03a75f0436882d59a3ba33c16c68399, Nama : Hari Priswanto', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('de23d0cbcaff67e6e3f2ffb9b94cb694c87d099e', '2020-10-16 21:03:21', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('de91d4e487f6e4de5b707eb703c5181daa0ea13b', '2020-06-12 05:52:30', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('de961f25a6f7cf87a352ffef243cb019002508c4', '2020-10-09 17:21:06', 'INSERT', 'Menambahkan Data Sub Menu id : e54d9e469ed391499a2bc216fe5d2b7ae6ba7231, Deskripsi : Penjualan', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.86.0.4240.75'),
 ('deb561dc91e3988dfd2c4ef7fc701d24cb52d23f', '2020-06-03 07:07:00', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2268,6 +2575,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('df27ba5927041285b94f9297248dcc9687553063', '2020-10-07 17:52:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('df28d3764ed11aea7cab05e94fb29fe1ca2419ca', '2020-06-11 21:32:58', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.97'),
 ('df3cc1f99ee4e85e9c1580b6f89e75d9f5dc4e1c', '2020-10-09 16:41:59', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('df507c1c51231d56e504369139a25da575667d0c', '2020-10-20 14:52:50', 'READ', 'Akses Menu Data Penanggung Jawab / Dokter', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('dfa58f909698267962a8ef56c18894ccf80f2df7', '2020-10-11 15:34:51', 'DELETE', 'Menghapus Data Menu id : b99905a00b0239959e8f18bc7960240f69a71fcd, Nama : Stock Opname', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('dfb6b9ecefe5d00f24f289be659d374ef908b5dd', '2020-09-19 19:54:14', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('dfd1e58c17ec41ab28210b0bbf6cc55cae960ea1', '2020-09-25 18:50:50', 'UPDATE', 'Merubah Data User id : , Nama : ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('dff9e74599d7c1f37f2eb4ebc5a17fd01246b46a', '2020-06-12 07:54:16', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
@@ -2279,6 +2588,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e06a448e47b1e9ae2721cc18a5e42932e6223d3f', '2020-10-09 22:03:34', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e072195f388b2523e563753a93beba6b687dbf6b', '2020-09-23 07:14:52', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('e0734d49f23f55b37c0ae0f6d68b026d2be944ec', '2020-06-02 08:26:51', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
+('e07718ddf41842fba640f061d628bc6d4900d3d5', '2020-10-29 21:52:01', 'UPDATE', 'Merubah Data Menu id : 2b937d3c539f1eecbfe718e09573edd0af4ca9a6, Nama : Pendaftaran', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('e07a9c400f1d5b55c85427b901c1a26b9ecc82cc', '2020-06-07 19:58:47', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e08b8d08d2997aa307015b9c5fb00e23896ffefc', '2020-10-07 22:56:44', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('e09985203a43bd10956a94ce48cdd67fcaf85dff', '2020-05-10 14:57:38', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
@@ -2288,6 +2598,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e100c1d28e5e3ef386af12d7c28aad75fad81e55', '2020-10-09 16:26:30', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e10bfcf1ea3099fcc62abe88ac9843abe674a6aa', '2020-06-11 21:33:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e11b9a9687f4db633976579ad8780678c76c1855', '2020-09-27 20:16:19', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
+('e12ebfe9110aedbc7937c152472533741128596c', '2020-10-20 16:06:30', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e13ee2349d5c478794121831b5bf54a5e7170489', '2020-06-20 06:56:31', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('e206d9187da2aa0527cb66dc7d127e7e0ac5a9e3', '2020-10-09 21:57:37', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e21995df2aab5f29c45b82fab425adfb38428bc6', '2020-05-31 15:57:33', 'INSERT', 'Menambahkan Data Produk id: 4837711350330705907893581 Nama: ', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2302,6 +2613,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e2e8a667a9dfafe4ad9eed50d7602268c28a5848', '2020-10-07 17:12:18', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('e2ee12ea8c614c9f3739e0ced418364405eed7be', '2020-05-31 18:17:10', 'UPDATE', 'Merubah Data User Administrator', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e2f4c612e452a76579655c50a00f38c6031ac3e2', '2020-10-09 19:50:30', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('e2fecfbb584f37b781a33f208611ed0d6deac2b1', '2020-11-02 20:39:10', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('e30aac72487427cd41f13f6f4b71b05a4ec3d4ac', '2020-10-07 20:50:57', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('e336d15220f38388986208dae13d1876816e3b45', '2020-10-09 16:24:48', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e338b1e5db69e30187b7c648e24492955549486f', '2020-06-01 20:03:51', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2309,6 +2621,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e34edb3b51bf1cc41ac14e78af5ce527b4a81583', '2020-06-01 16:04:58', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e35d97648237dc23a29dbfea9ff6bb2f9f58a5ae', '2020-10-09 21:55:54', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e389e0a918c0308a184c0722a85ce2a85e7b2c4f', '2020-06-08 06:56:46', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('e390cdbdbbcea3b9c1d90a1507ed3c65c890d038', '2020-10-29 21:59:44', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('e39340eb56792c51b413abca6344144cc180ba9b', '2020-06-04 18:24:04', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e39ea28ebbc49b2feeaf6197b770b6ff320bf0a8', '2020-05-10 14:20:26', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('e3bc48cfed7b4a1517aded9404966bbeb87ff25f', '2020-09-26 21:13:17', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
@@ -2325,14 +2638,20 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e4abc02f884ab952209bd49bafaff112a6cac51f', '2020-06-02 17:35:11', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Unknown', 'Mozilla Firefox v.76.0'),
 ('e4af3607cc40edbb4fc41dcaa6be89377dbb1836', '2020-06-07 21:15:37', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e4b8e624a46b648c793aedb1828924e01c3acb80', '2020-08-14 22:46:12', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('e4c3ed36086cef8119c66ed849a9b9561190bf22', '2020-11-30 00:21:53', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('e4c482e8b99c4d71a6266a2728b9351f2dc6adcd', '2020-06-25 20:40:25', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('e4d8fe6088c02bf710e90903a6a32f0b0cf685d4', '2020-10-20 16:07:58', 'DELETE', 'Menghapus Data Dokter Dr. Bilal', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e4dab735b17688a3c35ac77443e0c56b56f5be17', '2020-10-09 18:54:13', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('e4daee93054e80d67a1741834fa4b5bbaa897fa7', '2020-10-11 15:37:22', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('e4e5df4017097a166250c5e07a9c753e5ee1bc73', '2020-10-12 07:13:16', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e4f55707014570d2960ae800c7fe70f048c1a371', '2020-09-16 20:18:13', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('e50b24837b9241c88fad79da69f8d7f972276180', '2020-06-16 06:42:51', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('e51acce16c497c272ba72744e250a80e8660dcbe', '2020-10-12 07:40:43', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e51e1ff29531627deb04744d66a8ebb5f387bea7', '2020-06-11 07:17:58', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e5467f90cf80198722d63ca4eff91e4cee5f1f76', '2020-05-31 22:42:06', 'LOGOUT', 'Logout Dengan User ', 'A', '::1  -  Bilal', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e559825eecbf26166d79a5e18f77023764aed0c7', '2020-10-09 22:14:27', 'READ', 'Akses Menu Master Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e5678c8cac0a612c06bda6fef22cf7e840371786', '2020-10-07 22:56:59', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('e5931dd48205e36dbf03db8c50f74a3913fe92e4', '2020-10-16 21:09:48', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e5990ef56fa42084134b6c6884935f71e7df79cd', '2020-06-14 10:43:09', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e5a5dfc4eaa6df22f9b569ea6658b4bdd890bdae', '2020-10-07 22:57:16', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('e5a9e4960773b751975c912efe33ee4265bca317', '2020-06-01 11:52:44', 'UPDATE', 'Merubah Data User id : e71936705199dd3ea09a10dded7c5a4837316b1a, Nama : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2352,8 +2671,10 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e635e89cda648bb02b25e4df58234273179a528d', '2020-06-01 13:21:43', 'UPDATE', 'Merubah Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e63adc0e3441d70ac7320241ab5dd06c18c32f37', '2020-06-15 21:07:57', 'INSERT', 'Menambahkan Data Supplier id: 577444334644461 Nama: asdf', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e64402f0ee539334d42c9114d1d98227fa04641c', '2020-10-07 23:06:06', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('e67924aae5eeea1f3b722214aabb0afedc0a4f53', '2020-10-12 07:12:30', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e69c6d9d34b008e3d44021cd1d180215f8e6d089', '2020-10-09 16:47:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e6a77a55d26aec58d2786a269ef76ec9acbf8aed', '2020-10-09 20:59:59', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('e6b771dc6ebdf6f80eee0fc84a10cbafffa4725f', '2020-10-20 16:40:01', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e6dbc41943c03f2653552b04200880ac725e5132', '2020-06-03 00:05:42', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e6e88f179df20dcc956987dbd5de1822e70533b1', '2020-09-23 06:31:13', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('e6ecf30ae82c1ddd5209f1a7b2ff4ebaec338385', '2020-05-31 22:42:15', 'LOGIN', 'Login Dengan User Hari Priswanto', 'A', '::1  - BILAL', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2362,11 +2683,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e74876a9e2f3c152488b3516c01319e6607f4657', '2020-06-05 06:25:23', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e75d0f8ac20fdc4e322859f90993ac0b25c22f63', '2020-09-19 08:13:44', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('e77fcda5dd3997dfaa1b55cc0675a6d81c2d14cc', '2020-05-29 20:14:00', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
+('e7ab3f3333e55a29fd6002e615461066d1db8278', '2020-10-12 07:44:36', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e7b4b531693588ab92134d1ec7abdb28bedaa9f5', '2020-09-23 06:27:39', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('e7d831f16bd219df39e4c394e2edeef889baf9c0', '2020-06-01 13:43:10', 'UPDATE', 'Merubah Data Produk id: ef4c7de192ab780aced958cb2034096468d9b020 Nama: Acifar 400', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('e7d9b97099b5e8f122a759a6568d146639f50f1b', '2020-10-11 14:42:22', 'UPDATE', 'Merubah Data Menu id : 6b7b60a4cf730a1e162eb2de9f6a1125ff0feb7c, Nama : Dashboard', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e7eb738a1c2f8201305f1a1c85aee52fd842e7c7', '2020-06-13 06:16:23', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e7ef8b149050227c84cb6ad9e9c7fc6d850be021', '2020-10-07 22:46:49', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('e7f3383dbd2f363f4591d2cbd1e978fe58bbd105', '2020-06-08 22:02:06', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('e7fdab977e88d7463195928e845ef9332adf4fcc', '2020-10-20 16:43:17', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e821e4b564cda25d26f16792c37b5d46be291b6e', '2020-06-11 07:19:02', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e830aacd9ccb79fdecf8d8bb2055c7f67a7a60ae', '2020-06-04 23:36:40', 'INSERT', 'Menambahkan Data Produk id: 4634324443030036343337312 Nama: 1234567890', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e83c922e1ada2edb2bc2ef7418f12c62f5cffb8c', '2020-09-26 21:02:02', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
@@ -2374,6 +2698,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e8585a38b0d94931643e62bd98cc464150a9e964', '2020-10-09 21:41:33', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e874cfb74c67706f53920526c3497aa912f03666', '2020-06-07 20:05:57', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e88f65276bf1af184e9b63c0668baeb172d337ab', '2020-10-07 20:59:17', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('e8a97209a7444ed26fe0309d032eb170ecd9ce22', '2020-10-20 14:52:47', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e8b1aded2b8633b6627e7148b271e5b728f2db05', '2020-10-09 16:27:12', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e8b9e2a8035b0914e445d42a23fb91a471983e68', '2020-06-11 07:18:59', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('e8cf69916e6018caf51404169bc312aba548f7b9', '2020-06-03 00:11:14', 'READ', 'Melihat Data Penanggung Jawab', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2381,10 +2706,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('e8db61ccb476b3631660520ea6417ff4dd7131b6', '2020-06-01 13:43:21', 'RESTORE', 'Restore Data Produk id: a2c56b44679868ce5208590bf404cd791227defa Nama: Acdat Cream', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e8dcd62d7f5abe1811641d3c33c7a04c3407b37f', '2020-09-27 19:58:02', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('e8f7774a87f59d4486e277e71e34f13b692fe3e6', '2020-10-09 23:05:26', 'DELETE', 'Menghapus Data Kategori id: 007737277537335 Deskripsi: Kapsul', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('e909246ee1b1e0955c3831a831f0ef97f7501815', '2020-10-20 16:27:30', 'UPDATE', 'Perbarui Data Setting Dengan Kode 9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('e92197b6f4cc88448a69bd0403b02cebb2eeb6ab', '2020-10-09 22:15:04', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('e970b02734e982752b0005eea53c0eddab8c803e', '2020-08-16 12:45:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('e997f852d6cd64d68339ccf643aa64933f9c2aff', '2020-06-03 06:03:11', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('e9b11dfa7401560cf7ee01bd08c5c8217433adb6', '2020-06-01 11:33:20', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('e9b81d36a1a02839054ad43402a551ad28e253c1', '2020-10-11 15:34:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('e9be3ab48f4ced1223dda7ec84c413edee677436', '2020-06-18 00:02:48', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('ea14e2a24854aa533e939c772b0e5353bf94517e', '2020-06-21 09:06:49', 'READ', 'Akses Menu System Setting', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('ea491f08c159fe09f855a58d952e841038191573', '2020-06-14 10:41:06', 'CHECKOUT BUYING', 'Checkout Dengan Invoice buy-200614.00014', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -2403,6 +2730,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('eb6914798c88c8ccb653cd72a71c2968a54f3715', '2020-08-18 22:16:24', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('eb6ad2045a8739268a869ecec6ebddad75d26d2f', '2020-06-10 22:51:09', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('eb8a79df36d883d6429dd443487cfbca6644d652', '2020-06-13 05:58:02', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('eb8bbb3637a814535e72527d92afed668811b783', '2020-10-29 21:37:51', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('eb95ec863c38eb14847cb8b526ac6b948a009a78', '2020-11-29 22:48:26', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('eb9b300b1b939f721c05c68bda266404ebdf0985', '2020-07-03 19:40:08', 'LOGIN', 'Login Dengan User : Admin', 'A', '::1', 'Admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('eba1fd0f268886394ce0c3d4577c802fe59d0028', '2020-06-03 06:10:46', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ebb354d667944e22c19d9f62498c286ed2a8ed76', '2020-06-08 06:16:43', 'READ', 'Akses Menu Review Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2413,6 +2742,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ec1937cd13ac1377b248312de02d7e7807e876c7', '2020-06-06 16:49:27', 'READ', 'Akses Menu System User', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ec1a9ffc5435169197dea48f5e7af692027a23ec', '2020-06-18 08:32:08', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 10', 'Google Chrome v.83.0.4103.106'),
 ('ec1ba5b9545d32dff973c8d1b884a286da1049a3', '2020-06-03 00:04:27', 'READ', 'Melihat Master Kategori', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('ec4d806adb7dd0860761fa98efa1933395b8c068', '2020-10-25 22:14:42', 'LOGIN', 'Login Dengan User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('ec958bac1fd911452d71fffa68bee82572b80875', '2020-10-07 22:50:27', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('ecac759e91a0461fd9d1a046a2a850e487a622b9', '2020-06-07 21:48:08', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ecd5b86f732fe5e1ea039799358b630a68acba39', '2020-06-11 07:19:11', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -2422,10 +2752,12 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ed793168abc1f0734a9666c455030d51fac01b54', '2020-06-04 23:05:46', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ed79dfaeb3b249d0cfc9fae601cf60fa195dc445', '2020-06-07 21:40:41', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ed7a7356a0ff991e9475b7d276b419c0c2772ae8', '2020-06-14 10:52:55', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('ed9e828a5a672abc29e9e2eef86e00307c0b725a', '2020-11-20 19:48:27', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('edc0227cbcb091c20149bfd18df0f53b7468f4d6', '2020-06-07 08:30:31', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200607.00013', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('edc6af80a0c573e936cc1f7799ad9f40258c4970', '2020-06-08 18:37:04', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('edd13a9f0c13f8e8c5456efe385d83834fb8715b', '2020-10-07 22:50:22', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('eddf0974619002773a3ce3eba16d9902d2459a0f', '2020-06-11 07:19:24', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
+('ede9fe9f14afed7ab3c21c575d815b74e13ec38c', '2020-11-29 22:41:44', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('edf40441cc664c3b1be71e99398afc6beb114563', '2020-10-07 17:51:29', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('ee209f421f6c667c842274341680c8d85d86baae', '2020-05-13 22:51:17', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200513.00002', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('ee3e77a8971abd5ab262f4e570854f2907e07ad7', '2020-09-16 06:53:08', 'INSERT', 'Menambahkan Data Menu id : de42bf6a672faf1c0151ddd0578608f3eb968674, Deskripsi : menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
@@ -2437,6 +2769,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('eeb025e2a1e02e733b2e535f7c1488573c53849c', '2020-08-14 22:46:55', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('eeb3faf44693f4764f0bd7dc99576e7334edab8d', '2020-06-11 07:03:06', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('eebe8597a440e690699ada432a6938fc8c5e20ef', '2020-08-18 18:55:31', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
+('eedc7c9d8a03964ec7786128b4933492e5b69572', '2020-10-16 21:09:53', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('ef0f10def1c1e1d2da5f730679b7ec469529b071', '2020-10-09 16:47:34', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('ef17633a0571be9cef1dbb5eeb80ab054ed7709c', '2020-08-18 22:22:58', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.125'),
 ('ef34e2f9e4aa27814e23f2adda006923b302d606', '2020-10-09 16:47:31', 'INSERT', 'Menambahkan Data Sub Menu id : 7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8, Deskripsi : Log Aktifitas', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2445,7 +2778,8 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('ef4e4fdef3feaac06935227ebefaacf861b00d3f', '2020-06-18 00:02:02', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('ef55c89c55b853b8b03170cd23b0452e14e6712e', '2020-06-08 06:26:02', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('ef84cef3fb064d9aa3703fa50f44116e8bc2e45c', '2020-08-18 21:49:40', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
-('efcdf74f5e3443313da6dc32d6d89692600a3364', '2020-06-06 16:06:15', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('efcdf74f5e3443313da6dc32d6d89692600a3364', '2020-06-06 16:06:15', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61');
+INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
 ('efd5f0fcfb104e2f616aef39d2477c693b117759', '2020-06-06 16:38:11', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('efd97dc46070aabe94fb8499bf099b79a2953203', '2020-06-16 06:59:46', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('efe5ec3572154639856b440a0deaae4730c9a42d', '2020-10-09 23:02:40', 'READ', 'Akses Menu Data Customer', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2462,17 +2796,26 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('f1cc31fe76f5bc6cf8353a580f7149bea58cbee2', '2020-08-18 18:26:25', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('f20e8e93f80fbe4f7e084608b759b9a359a17654', '2020-10-07 17:20:30', 'UPDATE', 'Merubah Data Menu id : b5de6334cdd7b51a6d99a1423e3df5f852416610, Nama : Kategori', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('f210a3dadf92bd3a3b2ab1bd5312c039cd5fc388', '2020-10-07 17:00:45', 'INSERT', 'Menambahkan Data Sub Menu id : 6104a7e7ad22b936382efec15fe0a2ad4d30c5e5, Deskripsi : Pembelian', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('f24688d529ac4faa0b47bfd8024e82f2093d3111', '2020-10-29 21:59:43', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('f2480df9a28261a6b3409f4c4763ed966d15c814', '2020-06-01 13:00:14', 'READ', 'Melihat Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('f24e2aa60a19073cb655e3152b5e680df3bc573c', '2020-10-25 22:13:24', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('f27f46eb9530b71e4f668a8e97615c47e52ec913', '2020-10-11 14:17:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
+('f28422ab324159e37e9a15ca462eed57dd24e60c', '2020-10-25 22:24:41', 'UPDATE', 'Merubah Password User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('f2a9b9e4c6d8c5f0c753d5ffee4c336be0326974', '2020-10-09 17:08:45', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('f2e84090ba98447ee57e0054082d59a0670f5d2a', '2020-09-26 21:16:42', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
 ('f2f43a82603582a65df0986614b7e77addd48061', '2020-10-09 16:32:57', 'UPDATE', 'Merubah Data Menu id : 3b193d9c9b1f8e12d571cd3b4638e245d04e25dd, Nama : Laporan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('f3396abd2105268ef807dddbf434d94e64ee778a', '2020-06-04 23:16:38', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('f359a4628f56e6d17de3e8d90c9fefd7214a8679', '2020-11-19 21:11:26', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('f38b5238d8fce1f599077545a723f2c31e1fbdaf', '2020-11-19 21:15:07', 'LOGOUT', 'Logout Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
+('f395c3be0b8867cda5e650bdc2560c663044fff5', '2020-10-29 21:31:37', 'READ', 'Akses Menu System Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('f3b18c211cee699f82a83c02038dfc9740591dc4', '2020-06-11 22:13:05', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-200611.00034', 'A', '127.0.0.1', 'bilal', 'Windows 8.1', 'Mozilla Firefox v.76.0'),
 ('f3b33f682d8950b8ece2226bfd54b90343074a54', '2020-09-26 18:49:22', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('f3ca06ddfa8b3f4769da7f4427b05df9de6574a5', '2020-10-07 22:21:55', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
+('f3cc3b509ca8c08d1246fddf676c7d1168f9f0c2', '2020-10-12 07:09:05', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.121'),
 ('f3e9470043a42e5f15a6704c01313df775d8fac1', '2020-08-14 22:47:37', 'READ', 'Akses Menu System User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('f3f3c8601f159fcf956d7816f0932244a115f684', '2020-06-14 11:20:55', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('f3fe6bd2f72a367b7db5abb95a6935ef066856fb', '2020-10-09 16:36:55', 'UPDATE', 'Merubah Profile User : owner', 'A', '::1', 'owner', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('f41e91216a76d3979d555085d98002ff07a51f61', '2020-10-29 22:00:06', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('f4383965d95731b8f70c00519129a5ed6fd1e402', '2020-09-15 11:46:55', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('f44fc65da8454b3cb29ead492f40ea53561d7dfe', '2020-06-07 21:36:07', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f45932efd2bbcb801d62210f03c9b5f58cd6cfbd', '2020-05-31 06:44:43', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2493,6 +2836,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('f5e7d008117b9686073cc12d915e22a9dc45d2ed', '2020-06-01 11:30:23', 'UPDATE', 'Merubah Data User id : af7623bd0101b3cfbbe3b91e782b88763cb59419, Nama : tester', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f63b13e7d7fe81732c5ef9790abf09150f5e2117', '2020-06-07 07:54:07', 'STOCK OPNAME', 'Stock OPNAME Nama Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f63e2535d18f7340d0d260a9ebdaad23c2ea3e62', '2020-06-01 11:49:52', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
+('f6501fc45e04004ce3b242aed5e8e5b961eec924', '2020-10-11 14:17:53', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('f66586df7c11fd5a46920660d67236594e908b15', '2020-09-16 20:48:46', 'UPDATE', 'Merubah Data Menu id : 60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b, Nama : Setting', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.83'),
 ('f6a3c90ad75d0a7cf4575912690a3679b5bc9a38', '2020-06-03 00:06:54', 'READ', 'Melihat Data Customer', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f6b52a45afd697fc196167529d76f70f327a329f', '2020-06-27 11:43:51', 'READ', 'Akses Menu System User', 'A', '::1', 'anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
@@ -2502,12 +2846,14 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('f6d3b17b19d8a3532fe7401490ea2d1f7572eb41', '2020-10-07 22:57:28', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('f6db598baaaa60e0264c86d184a648b988659712', '2020-06-16 18:54:14', 'LOGIN', 'Login Dengan User : user', 'A', '::1', 'user', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
 ('f7287de9dbc069100055653dc37d1a60b5349a82', '2020-06-03 20:38:01', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
-('f75ed36ef6264ae8626d929db406192024e9cda8', '2020-09-23 07:16:33', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102');
-INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`, `log_status`, `ip_address`, `user_name`, `log_os`, `log_browser`) VALUES
+('f737c6ff8a929340a94206d0e70bb96677a8ded4', '2020-10-20 16:07:33', 'READ', 'Akses Menu Master supplier', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
+('f739cfd4e7cf232c352cd2b88ae0abb24b282a13', '2020-11-02 20:37:08', 'LOGIN', 'Login Dengan User : admin', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
+('f75ed36ef6264ae8626d929db406192024e9cda8', '2020-09-23 07:16:33', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('f78f4729aec7ffc905d1f316ba6379eeaf9aa95d', '2020-05-31 22:31:27', 'READ', 'Melihat setting User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f7b58f591d03da5c995b65d1cc0a21c04c4c6024', '2020-06-09 08:18:52', 'UPDATE', 'Merubah Profile User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f817bdaa976d43750a4c5e0dcc4cde83573f9263', '2020-06-03 07:20:37', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f823fa7d0874152d60d2b2216573ae87a065fc71', '2020-06-06 16:49:52', 'LOGIN', 'Login Dengan User : bilal', 'A', '::1', 'bilal', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('f826bbc6d7e572f76f5514263976304e0db97653', '2020-10-12 17:15:54', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('f83323798ea58db5863ecd0b4320aedab66475b9', '2020-10-09 23:07:26', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('f84ab2e1481472a7df45e3f2f5bec656bd8a4705', '2020-10-10 07:38:14', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('f857dd7a7da3f0417cd49d15809e5f5ca4b8f1eb', '2020-10-09 21:09:06', 'STOCK OPNAME', 'Stock OPNAME Acyclovir 400 ', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
@@ -2515,6 +2861,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('f88153994114fac562e2d075e58d2c5c71d424b9', '2020-06-21 06:07:00', 'READ', 'Akses Menu Master Produk', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('f8a0c36ae323b6ed919982bdfa87d3351ce3ab70', '2020-06-03 06:55:40', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('f8d560b014f1117dc21dd3f10b55f911aed373c8', '2020-10-09 17:24:55', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('f8d651b5ec28c59200cd6454fea93ac73dd22e0d', '2020-10-29 21:32:52', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201029.00055', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.86.0.4240.111'),
 ('f8e8f3f618a4e7b3cc84453f02aa8e08cc4d02d8', '2020-06-27 11:43:09', 'LOGOUT', 'Logout Dengan User : Anna', 'A', '::1', 'Anna', 'Windows 8.1', 'Google Chrome v.83.0.4103.116'),
 ('f904a6860a769a9836a31bc9d1b54736caf9b3d7', '2020-10-09 22:06:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('f90636eccfc7ce9193fcfd22d5b420204e76bf04', '2020-06-16 14:02:31', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -2545,21 +2892,26 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('fb514cf2e70d6682d426ccce2efd6fa7417a8c8f', '2020-08-17 19:52:16', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('fb5d716bf5ed517f7e718b4913a788a12622ecc5', '2020-06-18 08:28:14', 'LOGOUT', 'Logout Dengan User : harip', 'A', '::1', 'harip', 'Windows 10', 'Google Chrome v.83.0.4103.106'),
 ('fb7d79ae3a1ba4444c7939b1acd651a5cfdb1afd', '2020-06-17 22:33:22', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
+('fb9ed6aa4ba40230b6106a2ad2597946bf6113d7', '2020-11-19 21:13:24', 'CHECKOUT SELLING', 'Checkout Dengan Invoice sell-201119.00056', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('fba4999935fb54d1e82c0e2470c9d19621dfcf6a', '2020-06-03 07:24:14', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('fbc0fdedca3e1aad026df9d4051e0eb9c51b0969', '2020-08-18 18:55:58', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('fbc203f157256581296f2cdde9f841091dbb3875', '2020-06-06 16:30:44', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('fbe9fdb4bd9a005d1366a214b63c763da112af4a', '2020-11-30 06:34:19', 'READ', 'Akses Menu Transaksi Pembelian', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.87.0.4280.66'),
 ('fbf6413cf11caedcfa99f567482bfa6001809b96', '2020-06-01 11:13:34', 'READ', 'Melihat setting User', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('fbfbf813a0dbae89a6ac3238b518a036ee10003d', '2020-05-29 21:30:14', 'LOGOUT', 'Logout Dengan User Administrator', 'A', '::1  -  Bilal', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('fc3dec5de6e256632b0f7933d69c54b354ee4222', '2020-06-21 06:19:53', 'READ', 'Akses Menu Registrasi Pasien', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.106'),
 ('fc4da34d0bf19c242c251c0e32236b61d112e7ba', '2020-10-09 21:54:26', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
 ('fc5373449d2e9d2e2e68eb669af55f3627a05f36', '2020-10-09 18:53:58', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.86.0.4240.75'),
+('fc61bd69be0d0ccf87bbe9fbfbf77e0f8cbdb4d8', '2020-10-20 16:43:21', 'LOGIN', 'Login Dengan User : owner', 'A', '::1', 'owner', 'Windows 8.1', 'Google Chrome v.86.0.4240.75'),
 ('fc6326abfe7182507a75e93005fbd67c74a6a814', '2020-06-08 22:13:24', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Linux', 'Google Chrome v.83.0.4103.61'),
 ('fc6353b47ce3db29ab4f10d4f986c7cbe24e372e', '2020-10-07 22:49:14', 'UPDATE', 'Merubah Data Menu id : 52e6985df873d51c161bf54475bd9b644458d965, Nama : Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('fc666a76c1969987c8dab675efc2c45d9743a76d', '2020-09-27 21:15:40', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('fc7208cca0258cf14bb7db7845ac2e5134b22d11', '2020-06-04 18:50:43', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('fc87f2455cc0a7cc3065c0ce76f01fc8ae457cfd', '2020-06-07 21:36:13', 'READ', 'Akses Menu Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('fc96cfba9267ba9492740bd320a04a7c67bbabf9', '2020-09-26 21:31:49', 'READ', 'Akses Menu System Menu', 'A', '::1', 'admin', 'Linux', 'Google Chrome v.85.0.4183.102'),
+('fca576701b2209cb80cd7fcab0c7bc6e30420aaa', '2020-10-12 07:35:46', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('fcddf18ea0eb4982f9f71d16068a6f8c0ae47b38', '2020-05-20 20:24:06', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
+('fcf799e91235ccc861b8708c4f1e1c092c796d63', '2020-10-11 14:17:27', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('fd48811d7a1f137120562cdccab5308548332e07', '2020-06-03 07:05:16', 'READ', 'Akses Menu Stock Opname', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
 ('fd4fae87c84850d1502a8720a54d5bedb1a066ac', '2020-05-10 14:57:46', 'LOGIN', 'Login Dengan User Administrator', 'A', '::1  - BILAL', 'admin', 'Windows 8.1', 'Google Chrome v.81.0.4044.138'),
 ('fd69e6826366e6098cbfaa40180d88c07ea998db', '2020-06-11 20:33:01', 'LOGIN', 'Login Dengan User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.97'),
@@ -2568,6 +2920,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 ('fdd159af8490a4969411a02c265badb502ea5d75', '2020-09-27 20:50:51', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('fe1188b0ea6461354d8ee7120e69e2cdc93eb891', '2020-10-07 17:20:57', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 10', 'Google Chrome v.79.0.3945.130'),
 ('fe4790623aeace359244d181ca40ed0491762b6d', '2020-06-08 05:57:41', 'READ', 'Akses Menu Review Transaksi Penjualan', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
+('fe6272e70c48dc0aff5a221923a51c6afe5a3dd0', '2020-10-11 15:37:07', 'UPDATE', 'Merubah Data User id : bb2079f524623e781b2852a92f356ac73990e983, Nama : dokter', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.121'),
 ('fe75a15f71ca3f189507998d07c918ed0c3b4f4f', '2020-09-19 08:14:29', 'READ', 'Akses Menu System User', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.85.0.4183.102'),
 ('fe83779039bfa78d453faec022d0544731a1b12a', '2020-08-18 19:01:04', 'READ', 'Akses Menu System Department', 'A', '::1', 'admin', 'Windows 8.1', 'Google Chrome v.84.0.4147.105'),
 ('fec4a301d1960714663242776395a92dbcf8f50a', '2020-06-06 14:56:45', 'UPDATE', 'Merubah Password User : harip', 'A', '::1', 'harip', 'Windows 8.1', 'Google Chrome v.83.0.4103.61'),
@@ -2586,7 +2939,7 @@ INSERT INTO `log_activity` (`id_log`, `log_date`, `log_menu`, `log_description`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_buying_cart`
+-- Struktur dari tabel `tb_buying_cart`
 --
 
 CREATE TABLE `tb_buying_cart` (
@@ -2613,7 +2966,7 @@ CREATE TABLE `tb_buying_cart` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_buying_cart`
+-- Dumping data untuk tabel `tb_buying_cart`
 --
 
 INSERT INTO `tb_buying_cart` (`id_buying_cart`, `batch_code`, `product_code_relation`, `product_name`, `product_description`, `buying_price`, `buying_discount`, `buying_ppn`, `buying_qty`, `unit_code_relation`, `unit_description`, `category_code_relation`, `category_description`, `user_name`, `outlet_code_relation`, `ip_address`, `exp_date`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -2623,7 +2976,7 @@ INSERT INTO `tb_buying_cart` (`id_buying_cart`, `batch_code`, `product_code_rela
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_buying_payment`
+-- Struktur dari tabel `tb_buying_payment`
 --
 
 CREATE TABLE `tb_buying_payment` (
@@ -2651,12 +3004,14 @@ CREATE TABLE `tb_buying_payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_buying_payment`
+-- Dumping data untuk tabel `tb_buying_payment`
 --
 
 INSERT INTO `tb_buying_payment` (`id_buying_payment`, `invoice_number_relation`, `nominal_cash`, `nominal_discharge`, `nominal_credit`, `type_of_payment`, `total_paid`, `money_paid`, `refund`, `card_number`, `card_holder_name`, `note`, `transaction_code`, `transaction_description`, `user_code_relation`, `ip_address`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `bl_state`) VALUES
 ('16d631b35a5ef72e93fceb6c3e671c977731237d', 'buy-200613.00012', 25000, '', NULL, 'Tunai', 25000, 25000, NULL, '', '', 'Tidak Ada Catatan.', '', '', 'harip', '::1', '2020-06-13', '19:01:53', '2020-06-13 19:01:53', NULL, 'A'),
+('202df1449a0e64cf184589433f785701c5c1ddec', 'buy-201115.00021', 0, '', NULL, 'Tunai', 0, 0, NULL, '', '', '', '', '', 'admin', '::1', '2020-11-15', '07:09:23', '2020-11-15 07:09:23', NULL, 'A'),
 ('2153d8e150c9ad535a11563039e04d4e07ac8912', 'buy-200601.00003', 87000, '', NULL, 'Tunai', 87000, 87000, NULL, '', '', '', '', '', 'bilal', '::1', '2020-06-01', '19:32:02', '2020-06-01 19:32:02', NULL, 'A'),
+('2a5f2d06d19301aa48b03c5be1a682066c8c6daf', 'buy-201012.00018', 0, '', NULL, 'Tunai', 0, 0, NULL, '', '', '', '', '', 'admin', '::1', '2020-10-12', '17:13:42', '2020-10-12 17:13:42', NULL, 'A'),
 ('37cdd65fec92c8a703af127a3457c7e540cfdde3', 'buy-200608.00008', 232250, '', NULL, 'Tunai', 232250, 232250, NULL, '', '', '', '', '', 'harip', '::1', '2020-06-08', '18:28:30', '2020-06-08 18:28:30', NULL, 'A'),
 ('45a76572426d5107f5bdefc42fb2afc428b2c474', 'buy-200614.00013', 20000, '', NULL, 'Tunai', 20000, 20000, NULL, '', '', '', '', '', 'harip', '::1', '2020-06-14', '09:49:49', '2020-06-14 09:49:49', NULL, 'A'),
 ('5f4fae68e97ef291bdb13c7cfe85fe3f094b3176', 'buy-200614.00015', 9000, '', NULL, 'Tunai', 9000, 9000, NULL, '', '', '', '', '', 'harip', '::1', '2020-06-14', '10:41:06', '2020-06-14 10:41:06', NULL, 'A'),
@@ -2664,7 +3019,9 @@ INSERT INTO `tb_buying_payment` (`id_buying_payment`, `invoice_number_relation`,
 ('829dc10cb4bafc529e0de7e8d465063221da664a', 'buy-200602.00004', 49200, '', NULL, 'Tunai', 49200, 49200, NULL, '', '', '', '', '', 'user', '::1', '2020-06-02', '14:29:38', '2020-06-02 14:29:38', NULL, 'A'),
 ('861f69cad924ad59389a972cfdc4420542fcf6f6', 'buy-200613.00011', 639000, '', NULL, 'Tunai', 639000, 639000, NULL, '', '', 'apabila ada kesalahan penginputan silahkan datang kembali ke outlet atau kantor pusat kami untuk proses revisi kwitansi atau rincian pembelian.terima kasih. ', '', '', 'harip', '::1', '2020-06-13', '18:38:58', '2020-06-13 18:38:58', NULL, 'A'),
 ('86ee8bc5f654f8aeee2a218a293a80d7bb16d5ff', 'buy-200602.00007', 10000, '', NULL, 'Tunai', 10000, 10000, NULL, '', '', '', '', '', 'harip', '::1', '2020-06-02', '22:51:15', '2020-06-02 22:51:15', NULL, 'A'),
+('95ee2b28b47eb102330ebb554b5e97c5d4f02b45', 'buy-201012.00019', 0, '', NULL, 'Tunai', 0, 0, NULL, '', '', '', '', '', 'admin', '::1', '2020-10-12', '17:14:06', '2020-10-12 17:14:06', NULL, 'A'),
 ('9ecedadaa3bba1b3e5a2bb012335a13c0c067247', 'buy-200614.00016', 16800000, '', NULL, 'Tunai', 16800000, 16800000, NULL, '', '', 'Note Pembelian.', '', '', 'harip', '::1', '2020-06-14', '11:21:21', '2020-06-14 11:21:21', NULL, 'A'),
+('abebb9027a9bbc3e03a4f75ea2c48fdf017e97a6', 'buy-201016.00020', 0, '', NULL, 'Tunai', 0, 0, NULL, '', '', '', '', '', 'admin', '::1', '2020-10-16', '20:56:58', '2020-10-16 20:56:58', NULL, 'A'),
 ('aea387f7e0fce9eae2b9b47885a78d94e1ea3bf6', 'buy-201010.00017', 0, '', NULL, 'Tunai', 0, 0, NULL, '', '', '', '', '', 'admin', '::1', '2020-10-10', '11:23:13', '2020-10-10 11:23:13', NULL, 'A'),
 ('b0372df62d959774baa9e8da7a9525f4ce98a92f', 'buy-200612.00009', 90000, '', NULL, 'Tunai', 90000, 90000, NULL, '', '', '', '', '', 'bilal', '127.0.0.1', '2020-06-12', '08:01:43', '2020-06-12 08:01:43', NULL, 'A'),
 ('e227c8302ee7915e823ba9ead9f40e32ed51cf91', 'buy-200613.00010', 364000, '', NULL, 'Tunai', 364000, 364000, NULL, '', '', 'Tambah Stok', '', '', 'harip', '::1', '2020-06-13', '06:02:33', '2020-06-13 06:02:33', NULL, 'A'),
@@ -2677,7 +3034,7 @@ INSERT INTO `tb_buying_payment` (`id_buying_payment`, `invoice_number_relation`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_buying_transaction`
+-- Struktur dari tabel `tb_buying_transaction`
 --
 
 CREATE TABLE `tb_buying_transaction` (
@@ -2699,10 +3056,12 @@ CREATE TABLE `tb_buying_transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_buying_transaction`
+-- Dumping data untuk tabel `tb_buying_transaction`
 --
 
 INSERT INTO `tb_buying_transaction` (`id_buying_transaction`, `invoice_number`, `queue_number`, `supplier_code_relation`, `supplier_description`, `total_item`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `outlet_code_relation`, `user_code_relation`, `ip_address`, `note`, `bl_state`) VALUES
+('053ad3a43f3c53251fe60a2b801d1a3b6a461f5f', 'buy-201016.00020', '00001', 'sup.200602-4549', 'Hari Priswanto', 310, '2020-10-16', '20:56:58', '2020-10-16 20:56:58', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
+('0a1937974a8fcfe2c28da422c0a422d2db66ecdb', 'buy-201115.00021', '00001', '', '', 100, '2020-11-15', '07:09:23', '2020-11-15 07:09:23', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('227126a8e32217cb824d80aadf2a4b4e4efaf174', 'buy-200601.00002', '00002', '', '', 200, '2020-06-01', '18:52:38', '2020-06-01 18:52:38', NULL, 'apt-00001', 'bilal', '::1', '', 'A'),
 ('3c971bfacb42438b165ca1b720d35814b3ec9311', 'buy-200613.00012', '00012', 'sup.200602-4549', 'Hari Priswanto', 50, '2020-06-13', '19:01:53', '2020-06-13 19:01:53', NULL, 'apt-00001', 'harip', '::1', 'Tidak Ada Catatan.', 'A'),
 ('489eadb934e4b0f039f50c8bc0b4e83abce067e2', 'buy-200612.00009', '00009', '', '', 100, '2020-06-12', '08:01:43', '2020-06-12 08:01:43', NULL, 'apt-00001', 'bilal', '127.0.0.1', '', 'A'),
@@ -2716,16 +3075,18 @@ INSERT INTO `tb_buying_transaction` (`id_buying_transaction`, `invoice_number`, 
 ('75f759ceeae490314efda5e9e2a9aa802445d80d', 'buy-200614.00016', '00004', '', '', 12000, '2020-06-14', '11:21:21', '2020-06-14 11:21:21', NULL, 'apt-00001', 'harip', '::1', 'Note Pembelian.', 'A'),
 ('764837d8dff775f65c5e3a0c0ace121aa80796fc', 'buy-200614.00015', '00003', '', '', 10, '2020-06-14', '10:41:06', '2020-06-14 10:41:06', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('7991ba5a3757596f2716afe3e7f7f1aaa64c969b', 'buy-200602.00007', '00007', '', '', 20, '2020-06-02', '22:51:15', '2020-06-02 22:51:15', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('877f2b61a0077e299b366884d3fd5b5f02350f0d', 'buy-201012.00018', '00001', '', '', 10, '2020-10-12', '17:13:42', '2020-10-12 17:13:42', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('8ae99762ba5a09c5dd8ef609357337e5ea9f1300', 'buy-200602.00005', '00005', '', 'PT. Rumah Software', 598, '2020-06-02', '17:24:46', '2020-06-02 17:24:46', NULL, 'apt-00001', 'harip', '::1', 'Catatan.', 'A'),
 ('9c8a20da9dab48045024b0dc73c7f5f769bb4175', 'buy-200613.00010', '00010', 'sup.200602-4549', 'Hari Priswanto', 880, '2020-06-13', '06:02:33', '2020-06-13 06:02:33', NULL, 'apt-00001', 'harip', '::1', 'Tambah Stok', 'A'),
 ('bda9ce0f120caa38bb39ff2da5f4d9d8f94ae52e', 'buy-200608.00008', '00008', '', '', 521, '2020-06-08', '18:28:30', '2020-06-08 18:28:30', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('e19c0cea69c2d911e9b86d85895482d020d28069', 'buy-200601.00003', '00003', '', 'PT. Bilal Software', 300, '2020-06-01', '19:32:02', '2020-06-01 19:32:02', NULL, 'apt-00001', 'bilal', '::1', '', 'A'),
-('e60129e01b4cca6ecad170c4f5bcc13b2711c283', 'buy-200614.00013', '00001', 'sup.200607-2142', 'Supplier', 100, '2020-06-14', '09:49:49', '2020-06-14 09:49:49', NULL, 'apt-00001', 'harip', '::1', '', 'A');
+('e60129e01b4cca6ecad170c4f5bcc13b2711c283', 'buy-200614.00013', '00001', 'sup.200607-2142', 'Supplier', 100, '2020-06-14', '09:49:49', '2020-06-14 09:49:49', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('ed419be13b4b13e3cc801c5923186d3ae28e5118', 'buy-201012.00019', '00002', '', '', 1, '2020-10-12', '17:14:06', '2020-10-12 17:14:06', NULL, 'apt-00001', 'admin', '::1', '', 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_buying_transaction_detail`
+-- Struktur dari tabel `tb_buying_transaction_detail`
 --
 
 CREATE TABLE `tb_buying_transaction_detail` (
@@ -2753,7 +3114,7 @@ CREATE TABLE `tb_buying_transaction_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_buying_transaction_detail`
+-- Dumping data untuk tabel `tb_buying_transaction_detail`
 --
 
 INSERT INTO `tb_buying_transaction_detail` (`id_buying_transaction_detail`, `invoice_number_relation`, `product_code_relation`, `product_name`, `product_description`, `product_qty`, `unit_code_relation`, `unit_description`, `category_code_relation`, `category_description`, `id_transaction`, `transaction_description`, `buying_price`, `buying_discount`, `buying_ppn`, `expire_date`, `user_name`, `outlet_code_relation`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -2823,12 +3184,87 @@ INSERT INTO `tb_buying_transaction_detail` (`id_buying_transaction_detail`, `inv
 ('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-2206', 'Alvita', 'Alvita', 1000, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '0000-00-00', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
 ('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
 ('49ddfd87814e21578a227210d931e655b4e4f7e1', 'buy-201010.00017', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 1, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '13', 'BUYING', 120, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-10 11:23:13', NULL, 'A'),
-('49ddfd87814e21578a227210d931e655b4e4f7e1', 'buy-201010.00017', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '2020-10-10', 'admin', 'apt-00001', '2020-10-10 11:23:13', NULL, 'A');
+('49ddfd87814e21578a227210d931e655b4e4f7e1', 'buy-201010.00017', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '2020-10-10', 'admin', 'apt-00001', '2020-10-10 11:23:13', NULL, 'A'),
+('42476d81871b8e75639055301ccecd1e20476617', 'buy-200601.00001', 'prd.200330-0003', 'Aknil', 'Aknil', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '2021-06-09', 'bilal', 'apt-00001', '2020-06-01 16:24:41', NULL, 'A'),
+('42476d81871b8e75639055301ccecd1e20476617', 'buy-200601.00001', 'prd.200330-0502', 'Akita', 'Akita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2021-06-30', 'bilal', 'apt-00001', '2020-06-01 16:24:41', NULL, 'A'),
+('c4120c0caf54b1a8bc38e7570930a49ce0000ec1', 'buy-200601.00002', 'prd.200330-2206', 'Alvita', 'Alvita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2020-06-30', 'bilal', 'apt-00001', '2020-06-01 18:52:39', NULL, 'A'),
+('c4120c0caf54b1a8bc38e7570930a49ce0000ec1', 'buy-200601.00002', 'prd.200330-9904', 'Amobiotic', 'Amobiotic', 100, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 250, NULL, NULL, '2020-06-24', 'bilal', 'apt-00001', '2020-06-01 18:52:39', NULL, 'A'),
+('a3cc3feb2cd46f73795073577b2350251441b3af', 'buy-200601.00003', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 100, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '13', 'BUYING', 120, NULL, NULL, '2020-11-01', 'bilal', 'apt-00001', '2020-06-01 19:32:03', NULL, 'A'),
+('a3cc3feb2cd46f73795073577b2350251441b3af', 'buy-200601.00003', 'prd.200330-2220', 'Ondansetron', 'Ondansetron', 100, 'unit.200206-2833', 'Ampul', 'ctg.200301-1552', 'Injeksi', '13', 'BUYING', 500, NULL, NULL, '2020-10-07', 'bilal', 'apt-00001', '2020-06-01 19:32:03', NULL, 'A'),
+('a3cc3feb2cd46f73795073577b2350251441b3af', 'buy-200601.00003', 'prd.200330-6026', 'Bisoprolol Fumarate', 'Bisoprolol Fumarate', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 250, NULL, NULL, '2020-12-01', 'bilal', 'apt-00001', '2020-06-01 19:32:03', NULL, 'A'),
+('0ba354ba17d9f8423e9193526282865b3df77a58', 'buy-200602.00004', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 30, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '2020-10-08', 'user', 'apt-00001', '2020-06-02 14:29:38', NULL, 'A'),
+('0ba354ba17d9f8423e9193526282865b3df77a58', 'buy-200602.00004', 'prd.200330-2206', 'Alvita', 'Alvita', 12, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2021-06-03', 'user', 'apt-00001', '2020-06-02 14:29:38', NULL, 'A'),
+('0ba354ba17d9f8423e9193526282865b3df77a58', 'buy-200602.00004', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 12, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '2022-06-02', 'user', 'apt-00001', '2020-06-02 14:29:38', NULL, 'A'),
+('48c975ed8438168c95837b13fd22bec5f8e719ad', 'buy-200602.00005', 'prd.200330-4935', 'Blocand 8', 'Blocand 8', 500, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2020-12-01', 'harip', 'apt-00001', '2020-06-02 17:24:46', NULL, 'A'),
+('48c975ed8438168c95837b13fd22bec5f8e719ad', 'buy-200602.00005', 'prd.200330-2206', 'Alvita', 'Alvita', 88, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2020-10-21', 'harip', 'apt-00001', '2020-06-02 17:24:46', NULL, 'A'),
+('48c975ed8438168c95837b13fd22bec5f8e719ad', 'buy-200602.00005', 'prd.200330-0152', 'Aptor', 'Aptor', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2021-06-02', 'harip', 'apt-00001', '2020-06-02 17:24:46', NULL, 'A'),
+('b424ba55b5c75513a75e2dd5191620cfc37dd3ee', 'buy-200602.00006', 'prd.200330-0502', 'Akita', 'Akita', 30, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2021-06-02', 'harip', 'apt-00001', '2020-06-02 22:43:37', NULL, 'A'),
+('50302aeb04c30453ae7e7c174a5c22ae339e17df', 'buy-200602.00007', 'prd.200330-0152', 'Aptor', 'Aptor', 20, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2020-11-03', 'harip', 'apt-00001', '2020-06-02 22:51:16', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-0005', 'Acyclovir 400 ', 'Acyclovir 400 ', 100, 'unit.200206-0920', 'Box', 'ctg.200504-4487', 'Salep', '13', 'BUYING', 200, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-0003', 'Aknil', 'Aknil', 20, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '2021-06-10', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 20, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '13', 'BUYING', 200, NULL, NULL, '2021-06-02', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '2020-06-25', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-0002', 'Hufabion ', 'Hufabion ', 180, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 200, NULL, NULL, '2021-06-10', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('1239fee450b85ec5a49d426e41d24ff14c3d9d64', 'buy-200608.00008', 'prd.200330-9904', 'Amobiotic', 'Amobiotic', 101, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 250, NULL, NULL, '2021-06-17', 'harip', 'apt-00001', '2020-06-08 18:28:32', NULL, 'A'),
+('f4ebf5d9f46c9cbd14b06a65edb0a3b08731deb2', 'buy-200612.00009', 'prd.200604-4372', '1234567890', '1234567890', 100, 'unit.200208-0900', 'Pak', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 900, NULL, NULL, '1970-01-01', 'bilal', 'apt-00001', '2020-06-12 08:01:43', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-9904', 'Amobiotic', 'Amobiotic', 10, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 250, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-4935', 'Blocand 8', 'Blocand 8', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200604-3285', 'product tester lagi', 'product tester lagi', 10, 'unit.200206-2833', 'Ampul', 'ctg.200301-0310', 'Ampul', '13', 'BUYING', 100, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200605-7775', 'Nama Produk', 'Nama Produk', 10, 'unit.200301-0020', 'Botol', 'ctg.200301-0519', 'Oinment', '13', 'BUYING', 100, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200603-1747', 'tester 1', 'tester 1', 10, 'unit.200208-0900', 'Pak', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 250, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200604-6313', 'Tester', 'Tester', 10, 'unit.200301-0020', 'Botol', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-0502', 'Akita', 'Akita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '13', 'BUYING', 200, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-2220', 'Ondansetron', 'Ondansetron', 10, 'unit.200206-2833', 'Ampul', 'ctg.200301-1552', 'Injeksi', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-0003', 'Aknil', 'Aknil', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200602-5772', 'semen 3 Roda', 'semen 3 Roda', 10, 'unit.200206-2833', 'Ampul', 'ctg.200504-5087', 'Kaplet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-0005', 'Acyclovir 400 ', 'Acyclovir 400 ', 100, 'unit.200206-0920', 'Box', 'ctg.200504-4487', 'Salep', '13', 'BUYING', 200, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c1a70d5f0f14a988a78e565a4f2f4f5d4d19a0a6', 'buy-200613.00010', 'prd.200330-2206', 'Alvita', 'Alvita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 06:02:36', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0003', 'Aknil', 'Aknil', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0502', 'Akita', 'Akita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '2021-06-02', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-9904', 'Amobiotic', 'Amobiotic', 100, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 250, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '2022-06-09', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '13', 'BUYING', 200, NULL, NULL, '2022-06-02', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-3402', 'Avesco ', 'Avesco ', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 1000, NULL, NULL, '2021-06-10', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-2206', 'Alvita', 'Alvita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0152', 'Aptor', 'Aptor', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200604-4372', '1234567890', '1234567890', 100, 'unit.200208-0900', 'Pak', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 900, NULL, NULL, '2021-06-03', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-0005', 'Acyclovir 400 ', 'Acyclovir 400 ', 100, 'unit.200206-0920', 'Box', 'ctg.200504-4487', 'Salep', '13', 'BUYING', 200, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-7000', 'Arsinal', 'Arsinal', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 250, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('c69b1df6b474e7b00612cffd85dc2cc14bec359c', 'buy-200613.00011', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 100, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '13', 'BUYING', 120, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 18:39:01', NULL, 'A'),
+('016a0d574c36273cfc3d6dbe132af940a61cea75', 'buy-200613.00012', 'prd.200330-2206', 'Alvita', 'Alvita', 50, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-13 19:01:55', NULL, 'A'),
+('5291079ec72478a2bf2e735869e8a01598473dd9', 'buy-200614.00013', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '13', 'BUYING', 200, NULL, NULL, '2021-06-02', 'harip', 'apt-00001', '2020-06-14 09:49:49', NULL, 'A'),
+('52cb18fd451c0c5cf18cb56e25f3c48f015f4cf3', 'buy-200614.00014', 'prd.200604-4372', '1234567890', '1234567890', 10, 'unit.200208-0900', 'Pak', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 1000, NULL, NULL, '2021-06-03', 'harip', 'apt-00001', '2020-06-14 10:39:52', NULL, 'A'),
+('b9cb59d48fa9489a405fca046a5d26fbc0423587', 'buy-200614.00015', 'prd.200604-4372', '1234567890', '1234567890', 10, 'unit.200208-0900', 'Pak', 'ctg.200504-6131', 'Botol', '13', 'BUYING', 900, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-14 10:41:07', NULL, 'A'),
+('f943b6a1a3a3c0362b00580bd33a5d48e058e228', 'buy-200614.00016', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 12000, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '1970-01-01', 'harip', 'apt-00001', '2020-06-14 11:21:23', NULL, 'A'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-0005', 'Acyclovir 400 ', 'Acyclovir 400 ', 100, 'unit.200206-0920', 'Box', 'ctg.200504-4487', 'Salep', '13', 'BUYING', 200, NULL, NULL, '0000-00-00', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '13', 'BUYING', 200, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 1400, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-9904', 'Amobiotic', 'Amobiotic', 1, 'unit.200206-0920', 'Box', 'ctg.200301-5224', 'Kapsul', '13', 'BUYING', 250, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-0003', 'Aknil', 'Aknil', 1, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-3325', 'Zultrop', 'Zultrop', 9, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 90000, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-2206', 'Alvita', 'Alvita', 1000, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '0000-00-00', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('64b0e15f121de85c96a6022d73ff402131334004', 'buy-201007.00017', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-07 17:47:10', '20:16:26', 'D'),
+('49ddfd87814e21578a227210d931e655b4e4f7e1', 'buy-201010.00017', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 1, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '13', 'BUYING', 120, NULL, NULL, '1970-01-01', 'admin', 'apt-00001', '2020-10-10 11:23:13', NULL, 'A'),
+('49ddfd87814e21578a227210d931e655b4e4f7e1', 'buy-201010.00017', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '2020-10-10', 'admin', 'apt-00001', '2020-10-10 11:23:13', NULL, 'A'),
+('f237d7c3ff2c855a67a8a70a64572f47a853bca5', 'buy-201012.00018', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '2020-10-12', 'admin', 'apt-00001', '2020-10-12 17:13:43', NULL, 'A'),
+('5adcdd1ee33ab766f2f2fa883fb30cb9571107ad', 'buy-201012.00019', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '2020-10-12', 'admin', 'apt-00001', '2020-10-12 17:14:06', NULL, 'A'),
+('4f90fbaa6909f36ed6f71926a10841c626d7544f', 'buy-201016.00020', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '13', 'BUYING', 100, NULL, NULL, '2020-10-16', 'admin', 'apt-00001', '2020-10-16 20:56:59', NULL, 'A'),
+('4f90fbaa6909f36ed6f71926a10841c626d7544f', 'buy-201016.00020', 'prd.200330-2206', 'Alvita', 'Alvita', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 500, NULL, NULL, '2020-10-16', 'admin', 'apt-00001', '2020-10-16 20:56:59', NULL, 'A'),
+('4f90fbaa6909f36ed6f71926a10841c626d7544f', 'buy-201016.00020', '', '', '', 100, '', '', '', '', '13', 'BUYING', 250, NULL, NULL, '2020-10-16', 'admin', 'apt-00001', '2020-10-16 20:56:59', NULL, 'A'),
+('4f90fbaa6909f36ed6f71926a10841c626d7544f', 'buy-201016.00020', 'prd.200330-0003', 'Aknil', 'Aknil', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 350, NULL, NULL, '2020-10-16', 'admin', 'apt-00001', '2020-10-16 20:56:59', NULL, 'A'),
+('4f90fbaa6909f36ed6f71926a10841c626d7544f', 'buy-201016.00020', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 100, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '13', 'BUYING', 120, NULL, NULL, '2020-10-16', 'admin', 'apt-00001', '2020-10-16 20:56:59', NULL, 'A'),
+('645b3aa3f90b5f94bf813ca4b98d05d52f543fa2', 'buy-201115.00021', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 100, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '13', 'BUYING', 120, NULL, NULL, '2020-11-15', 'admin', 'apt-00001', '2020-11-15 07:09:23', NULL, 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_customer`
+-- Struktur dari tabel `tb_customer`
 --
 
 CREATE TABLE `tb_customer` (
@@ -2851,7 +3287,7 @@ CREATE TABLE `tb_customer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_customer`
+-- Dumping data untuk tabel `tb_customer`
 --
 
 INSERT INTO `tb_customer` (`id_customer`, `customer_code`, `full_name`, `customer_category`, `phone`, `age`, `address`, `email`, `gender`, `birthday`, `outlet_code_relation`, `ts_insert`, `ts_update`, `bl_state`, `mr`, `identity_number`) VALUES
@@ -2867,7 +3303,7 @@ INSERT INTO `tb_customer` (`id_customer`, `customer_code`, `full_name`, `custome
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_expire_date`
+-- Struktur dari tabel `tb_expire_date`
 --
 
 CREATE TABLE `tb_expire_date` (
@@ -2886,7 +3322,7 @@ CREATE TABLE `tb_expire_date` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_category`
+-- Struktur dari tabel `tb_master_category`
 --
 
 CREATE TABLE `tb_master_category` (
@@ -2898,7 +3334,7 @@ CREATE TABLE `tb_master_category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_category`
+-- Dumping data untuk tabel `tb_master_category`
 --
 
 INSERT INTO `tb_master_category` (`id_category`, `category_code`, `category_description`, `bl_state`, `outlet_code_relation`) VALUES
@@ -2930,7 +3366,7 @@ INSERT INTO `tb_master_category` (`id_category`, `category_code`, `category_desc
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_dokter`
+-- Struktur dari tabel `tb_master_dokter`
 --
 
 CREATE TABLE `tb_master_dokter` (
@@ -2948,20 +3384,20 @@ CREATE TABLE `tb_master_dokter` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_dokter`
+-- Dumping data untuk tabel `tb_master_dokter`
 --
 
 INSERT INTO `tb_master_dokter` (`id_dokter`, `dokter_code`, `dokter_type`, `dokter_name`, `dokter_address`, `dokter_email`, `dokter_phone`, `ts_insert`, `ts_update`, `bl_state`, `outlet_code_relation`) VALUES
 ('68df7f0828b69dc82b547beb57b7a6a8f25f7d87', 'dok.200606-062020', 'KLINIK', 'Dr. Harry Priswanto', 'Depok Bogor', '', '08129881237', '2020-06-06 22:31:20', NULL, 'D', 'apt-00001'),
-('a5446150e2302a81fbc7a1b2a4ce5a8afaf07ea4', 'dok.200513-066061', 'PRAKTEK', 'Dr. Bilal', 'Depok', '', '098108312', '2020-05-13 20:56:06', NULL, 'A', 'apt-00001'),
-('b38f9a46f8e30200d88b0196746b9f7f34b37167', 'dok.200513-888209', 'PRAKTEK', 'Dr. Bilal', 'Cibinong City', '', '09128123', '2020-05-13 20:55:25', NULL, 'A', 'apt-00001'),
-('ddfb3c43ca793351301552a0f8066c97d3c18e29', 'dok.200602-390374', 'PRAKTEK', 'Dr. Hari Priswanto, S.Prog, s.Cod', 'Depok Juanda', '', '01930123', '2020-06-02 07:08:30', NULL, 'A', 'apt-00001'),
+('a5446150e2302a81fbc7a1b2a4ce5a8afaf07ea4', 'dok.200513-066061', 'PRAKTEK', 'Dr. Bilal', 'Depok', '', '098108312', '2020-05-13 20:56:06', '2020-10-20 16:11:02', 'D', 'apt-00001'),
+('b38f9a46f8e30200d88b0196746b9f7f34b37167', 'dok.200513-888209', 'PRAKTEK', 'Dr. Bilal', 'Cibinong City', '', '08811719671', '2020-05-13 20:55:25', '2020-10-20 16:07:52', 'D', 'apt-00001'),
+('ddfb3c43ca793351301552a0f8066c97d3c18e29', 'dok.200602-390374', 'PRAKTEK', 'Dr. Hari Priswanto, S.Prog, s.Cod', 'Depok Juanda', '', '01930123', '2020-06-02 07:08:30', '2020-10-20 16:11:13', 'A', 'apt-00001'),
 ('df4487c32e39339fe1b72c68c47d404b666c5879', 'dok.200513-402420', 'KLINIK', 'Dr. Hari', 'Depok City', '', '021882198', '2020-05-13 20:53:55', NULL, 'D', 'apt-00001');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_htu`
+-- Struktur dari tabel `tb_master_htu`
 --
 
 CREATE TABLE `tb_master_htu` (
@@ -2975,7 +3411,7 @@ CREATE TABLE `tb_master_htu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_htu`
+-- Dumping data untuk tabel `tb_master_htu`
 --
 
 INSERT INTO `tb_master_htu` (`id_htu`, `htu_code`, `htu_description`, `htu_type`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -2990,7 +3426,7 @@ INSERT INTO `tb_master_htu` (`id_htu`, `htu_code`, `htu_description`, `htu_type`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_patient`
+-- Struktur dari tabel `tb_master_patient`
 --
 
 CREATE TABLE `tb_master_patient` (
@@ -3054,7 +3490,7 @@ CREATE TABLE `tb_master_patient` (
   `kondisi_saat_rujukan_masuk` varchar(250) DEFAULT NULL,
   `status_darurat` varchar(250) DEFAULT NULL,
   `tgl_masuk` date DEFAULT NULL,
-  `waktu_masuk` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `waktu_masuk` timestamp NOT NULL DEFAULT current_timestamp(),
   `nama_department` varchar(50) DEFAULT NULL,
   `kode_department` varchar(50) DEFAULT NULL,
   `id_department` varchar(50) DEFAULT NULL,
@@ -3079,8 +3515,8 @@ CREATE TABLE `tb_master_patient` (
   `kondisi_rujukan_keluar` varchar(250) DEFAULT NULL,
   `date_insert` date NOT NULL,
   `time_insert` time NOT NULL,
-  `ts_insert` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ts_update` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `ts_insert` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ts_update` timestamp NOT NULL DEFAULT current_timestamp(),
   `is_active` varchar(1) DEFAULT NULL,
   `ip_address` varchar(50) DEFAULT NULL,
   `user_name` varchar(50) DEFAULT NULL
@@ -3089,7 +3525,7 @@ CREATE TABLE `tb_master_patient` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_product`
+-- Struktur dari tabel `tb_master_product`
 --
 
 CREATE TABLE `tb_master_product` (
@@ -3114,7 +3550,7 @@ CREATE TABLE `tb_master_product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_product`
+-- Dumping data untuk tabel `tb_master_product`
 --
 
 INSERT INTO `tb_master_product` (`id_product`, `product_code`, `product_name`, `product_description`, `price_min`, `price_max`, `price_margin`, `buying_price`, `selling_price`, `category_code_relation`, `category_description_relation`, `unit_code_relation`, `unit_description_relation`, `stockable`, `outlet_code_relation`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -3331,7 +3767,7 @@ INSERT INTO `tb_master_product` (`id_product`, `product_code`, `product_name`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_product_medical`
+-- Struktur dari tabel `tb_master_product_medical`
 --
 
 CREATE TABLE `tb_master_product_medical` (
@@ -3373,7 +3809,7 @@ CREATE TABLE `tb_master_product_medical` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_stock`
+-- Struktur dari tabel `tb_master_stock`
 --
 
 CREATE TABLE `tb_master_stock` (
@@ -3392,14 +3828,14 @@ CREATE TABLE `tb_master_stock` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_stock`
+-- Dumping data untuk tabel `tb_master_stock`
 --
 
 INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`, `product_name_relation`, `product_stock`, `stockable`, `raw_material`, `expire_date`, `ts_insert`, `ts_update`, `bl_state`, `outlet_code_relation`) VALUES
 ('005018014105440', '', 'prd.200330-2485', 'Lecozink Syr', 100, '1', '', NULL, '2020-05-06 14:16:08', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('015841047489478', '', 'prd.200330-1003', 'Salbutamol 4', 100, '1', '', NULL, '2020-05-06 14:16:08', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('016017074904077', '', 'prd.200330-2312', 'Brainact', 100, '1', '', NULL, '2020-05-06 14:16:10', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('017810104413170', '', 'prd.200330-1020', 'Cecyl 200', 100, '1', '', NULL, '2020-05-06 14:16:07', '2020-10-10 07:37:42', 'A', 'apt-00001'),
+('017810104413170', '', 'prd.200330-1020', 'Cecyl 200', 100, '1', '', NULL, '2020-05-06 14:16:07', '2020-10-16 20:58:13', 'A', 'apt-00001'),
 ('029810698219516', '', 'prd.200330-2161', 'Superhoid', 150, '1', '', NULL, '2020-05-06 14:16:05', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('040128886160268', '', 'prd.200330-3525', 'Xiety', 100, '1', '', NULL, '2020-05-06 14:16:08', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('044941159496916', '', 'prd.200330-2201', 'Glikos', 100, '1', '', NULL, '2020-05-06 14:16:05', '2020-10-10 07:37:42', 'A', 'apt-00001'),
@@ -3410,7 +3846,7 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 ('089132919107970', '', 'prd.200604-3285', 'product tester lagi', 100, '1', '', '1970-01-01', '2020-06-05 07:11:08', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('097188916171841', '', 'prd.200330-5000', 'Vitamin B6/Pyridoxin Hcl', 100, '1', '', NULL, '2020-05-06 14:16:07', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('101017111064110', '', 'prd.200330-4003', 'Lidocain Inj', 100, '1', '', NULL, '2020-05-06 14:16:10', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('103336302311133', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 100, '1', '', '2020-12-01', '2020-05-06 14:16:11', '2020-10-10 07:37:43', 'A', 'apt-00001'),
+('103336302311133', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 80, '1', '', '2020-12-01', '2020-05-06 14:16:11', '2020-11-19 21:13:24', 'A', 'apt-00001'),
 ('104066009491019', '', 'prd.200330-2243', 'Bromifar', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('105641010152015', '', 'prd.200330-3403', 'Tocasid', 100, '1', '', NULL, '2020-05-06 14:16:05', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('106646624606611', '', 'prd.200330-9020', 'Selvim', 100, '1', '', NULL, '2020-05-06 14:16:12', '2020-10-10 07:37:43', 'A', 'apt-00001'),
@@ -3435,7 +3871,7 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 ('124111111648816', '', 'prd.200330-2260', 'Vitamin K', 100, '1', '', NULL, '2020-05-06 14:16:10', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('126741002070001', '', 'prd.200330-3967', 'Fargetix', 100, '1', '', NULL, '2020-05-06 14:16:07', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('131636111491111', '', 'prd.200330-0060', 'Dionicol', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('131966918177946', '', 'prd.200330-3402', 'Avesco ', 200, '1', '', '2021-06-10', '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
+('131966918177946', '', 'prd.200330-3402', 'Avesco ', 190, '1', '', '2021-06-10', '2020-05-06 14:16:13', '2020-10-29 21:32:52', 'A', 'apt-00001'),
 ('133941113390300', '', 'prd.200330-9100', 'Coredryl Syr', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('139113669661164', '', 'prd.200330-0601', 'Erbifin', 100, '1', '', NULL, '2020-05-06 14:16:11', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('141114116161034', '', 'prd.200330-6949', 'Winatin', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
@@ -3470,19 +3906,19 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 ('246221682668825', '', 'prd.200330-4935', 'Blocand 8', 100, '1', '', '1970-01-01', '2020-05-06 14:16:05', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('252122612212012', '', 'prd.200330-0902', 'Flasicox 15', 100, '1', '', NULL, '2020-05-06 14:16:06', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('261160169314612', '', 'prd.200330-2309', 'Erlamycetin EO', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:42', 'A', 'apt-00001'),
-('262171871838666', '', 'prd.200330-0003', 'Aknil', 0, '1', '', '1970-01-01', '2020-05-06 14:16:07', '2020-10-10 07:37:42', 'A', 'apt-00001'),
-('264582115668626', '', 'prd.200330-6311', 'Acifar Cream', 65, '1', '', '1970-01-01', '2020-05-06 14:16:06', '2020-10-10 07:37:42', 'A', 'apt-00001'),
+('262171871838666', '', 'prd.200330-0003', 'Aknil', 60, '1', '', '2020-10-16', '2020-05-06 14:16:07', '2020-11-24 21:05:12', 'A', 'apt-00001'),
+('264582115668626', '', 'prd.200330-6311', 'Acifar Cream', 60, '1', '', '2020-10-16', '2020-05-06 14:16:06', '2020-11-19 21:13:24', 'A', 'apt-00001'),
 ('293610191110221', '', 'prd.200330-1112', 'Fenolip 100', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:42', 'A', 'apt-00001'),
-('310133343134411', '', 'prd.200330-0124', 'Acdat Cream', 200, '1', '', '1970-01-01', '2020-05-06 14:16:11', '2020-10-10 07:37:43', 'A', 'apt-00001'),
+('310133343134411', '', 'prd.200330-0124', 'Acdat Cream', 90, '1', '', '1970-01-01', '2020-05-06 14:16:11', '2020-11-19 21:13:24', 'A', 'apt-00001'),
 ('314315131761811', '', 'prd.200330-9906', 'Nik Nak', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('314317131243732', '', 'prd.200330-9277', 'Erpamol F', 100, '1', '', NULL, '2020-05-06 14:16:12', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('314554011051111', '', 'prd.200330-0463', 'Acyclovir Cream', 10000, '1', '', '1970-01-01', '2020-05-06 14:16:14', '2020-10-10 07:37:43', 'A', 'apt-00001'),
+('314554011051111', '', 'prd.200330-0463', 'Acyclovir Cream', 9680, '1', '', '1970-01-01', '2020-05-06 14:16:14', '2020-11-24 21:05:12', 'A', 'apt-00001'),
 ('333239330900039', '', 'prd.200602-5772', 'semen 3 Roda', 100, '1', '', '1970-01-01', '2020-06-03 00:13:03', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('360367104660116', '', 'prd.200330-3996', 'Teosal', 100, '1', '', NULL, '2020-05-06 14:16:06', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('371313141939863', '', 'prd.200330-7023', 'Dionicol Syr', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('401014246822106', '', 'prd.200330-9006', 'Proris', 100, '1', '', NULL, '2020-05-06 14:16:06', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('406161665366463', '', 'prd.200330-6016', 'Prodermis cream ', 100, '1', '', NULL, '2020-05-06 14:16:07', '2020-10-10 07:37:42', 'A', 'apt-00001'),
-('410647113774016', '', 'prd.200330-2145', 'Acifar 400', 210, '1', '', '2020-10-10', '2020-05-06 14:16:14', '2020-10-10 11:23:13', 'A', 'apt-00001'),
+('410647113774016', '', 'prd.200330-2145', 'Acifar 400', 300, '1', '', '2020-11-15', '2020-05-06 14:16:14', '2020-11-15 07:09:23', 'A', 'apt-00001'),
 ('411076637066633', '', 'prd.200330-0032', 'Solinfec Cream', 100, '1', '', NULL, '2020-05-06 14:16:13', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('411810188550111', '', 'prd.200330-0300', 'Lexcomet', 100, '1', '', NULL, '2020-05-06 14:16:10', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('411861608811782', '', 'prd.200330-0023', 'Dermifar cream', 100, '1', '', NULL, '2020-05-06 14:16:12', '2020-10-10 07:37:43', 'A', 'apt-00001'),
@@ -3497,8 +3933,8 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 ('448166144443681', '', 'prd.200330-2440', 'Nexitra', 100, '1', '', NULL, '2020-05-06 14:16:08', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('448184166449664', '', 'prd.200330-9904', 'Amobiotic', 50, '1', '', '1970-01-01', '2020-05-06 14:16:04', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('461004640004449', '', 'prd.200330-0492', 'Hufagrif Forte', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:42', 'A', 'apt-00001'),
-('461645114143144', '', 'prd.200330-2206', 'Alvita', 140, '1', '', '0000-00-00', '2020-05-06 14:16:14', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('4634324443030036343337312', '', 'prd.200604-4372', '1234567890', 200, '1', '', '1970-01-01', '2020-06-04 23:36:40', '2020-10-10 07:37:42', 'A', 'apt-00001'),
+('461645114143144', '', 'prd.200330-2206', 'Alvita', 180, '1', '', '2020-10-16', '2020-05-06 14:16:14', '2020-11-24 21:05:12', 'A', 'apt-00001'),
+('4634324443030036343337312', '', 'prd.200604-4372', '1234567890', 0, '1', '', '1970-01-01', '2020-06-04 23:36:40', '2020-11-19 21:13:24', 'A', 'apt-00001'),
 ('464115615462666', '', 'prd.200330-3888', 'Farmoten 25', 100, '1', '', NULL, '2020-05-06 14:16:14', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('465265521412221', '', 'prd.200330-2264', 'Odanostin', 100, '1', '', NULL, '2020-05-06 14:16:15', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('470014951562427', '', 'prd.200330-6201', 'Interhistin', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:43', 'A', 'apt-00001'),
@@ -3534,7 +3970,7 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 ('654144640659091', '', 'prd.200330-9230', 'Hico Gel', 100, '1', '', NULL, '2020-05-06 14:16:06', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('661667086193931', '', 'prd.200330-0152', 'Aptor', 200, '1', '', '1970-01-01', '2020-05-06 14:16:09', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('663113123402111', '', 'prd.200330-1902', 'Hufalerzine Syr', 100, '1', '', NULL, '2020-05-06 14:16:10', '2020-10-10 07:37:43', 'A', 'apt-00001'),
-('664160146555512', '', 'prd.200330-4112', 'Andonex 60 Syr', 201, '1', '', '1970-01-01', '2020-05-06 14:16:05', '2020-10-10 11:23:13', 'A', 'apt-00001'),
+('664160146555512', '', 'prd.200330-4112', 'Andonex 60 Syr', 170, '1', '', '2020-10-16', '2020-05-06 14:16:05', '2020-11-24 21:05:12', 'A', 'apt-00001'),
 ('667144697984906', '', 'prd.200330-1404', 'Procetam 1200', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:43', 'A', 'apt-00001'),
 ('669008011800011', '', 'prd.200330-3046', 'Dobrizol', 100, '1', '', NULL, '2020-05-06 14:16:08', '2020-10-10 07:37:42', 'A', 'apt-00001'),
 ('671169660937064', '', 'prd.200330-9000', 'Helixime Syr', 100, '1', '', NULL, '2020-05-06 14:16:09', '2020-10-10 07:37:43', 'A', 'apt-00001'),
@@ -3597,7 +4033,7 @@ INSERT INTO `tb_master_stock` (`id_stock`, `batch_code`, `product_code_relation`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_stock_editor`
+-- Struktur dari tabel `tb_master_stock_editor`
 --
 
 CREATE TABLE `tb_master_stock_editor` (
@@ -3616,7 +4052,7 @@ CREATE TABLE `tb_master_stock_editor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_stock_editor`
+-- Dumping data untuk tabel `tb_master_stock_editor`
 --
 
 INSERT INTO `tb_master_stock_editor` (`id_stock`, `batch_code`, `product_code_relation`, `product_name_relation`, `product_stock`, `stockable`, `raw_material`, `expire_date`, `ts_insert`, `ts_update`, `bl_state`, `outlet_code_relation`) VALUES
@@ -3819,7 +4255,7 @@ INSERT INTO `tb_master_stock_editor` (`id_stock`, `batch_code`, `product_code_re
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_supplier`
+-- Struktur dari tabel `tb_master_supplier`
 --
 
 CREATE TABLE `tb_master_supplier` (
@@ -3838,7 +4274,7 @@ CREATE TABLE `tb_master_supplier` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_supplier`
+-- Dumping data untuk tabel `tb_master_supplier`
 --
 
 INSERT INTO `tb_master_supplier` (`id_supplier`, `supplier_code`, `supplier_type`, `supplier_name`, `supplier_address`, `supplier_email`, `supplier_phone`, `website`, `ts_insert`, `ts_update`, `bl_state`, `outlet_code_relation`) VALUES
@@ -3852,7 +4288,7 @@ INSERT INTO `tb_master_supplier` (`id_supplier`, `supplier_code`, `supplier_type
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_master_unit`
+-- Struktur dari tabel `tb_master_unit`
 --
 
 CREATE TABLE `tb_master_unit` (
@@ -3864,7 +4300,7 @@ CREATE TABLE `tb_master_unit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_master_unit`
+-- Dumping data untuk tabel `tb_master_unit`
 --
 
 INSERT INTO `tb_master_unit` (`id_unit`, `unit_code`, `unit_description`, `bl_state`, `outlet_code_relation`) VALUES
@@ -3883,7 +4319,7 @@ INSERT INTO `tb_master_unit` (`id_unit`, `unit_code`, `unit_description`, `bl_st
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_notification`
+-- Struktur dari tabel `tb_notification`
 --
 
 CREATE TABLE `tb_notification` (
@@ -3899,7 +4335,205 @@ CREATE TABLE `tb_notification` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_price`
+-- Struktur dari tabel `tb_patient_active`
+--
+
+CREATE TABLE `tb_patient_active` (
+  `id` varchar(50) DEFAULT NULL,
+  `mr` varchar(50) DEFAULT NULL,
+  `no_identitas` varchar(50) DEFAULT NULL,
+  `nama_lengkap` varchar(250) DEFAULT NULL,
+  `nama_keluarga` varchar(250) DEFAULT NULL,
+  `title` varchar(250) DEFAULT NULL,
+  `status` varchar(250) DEFAULT NULL,
+  `ket_gender` varchar(50) DEFAULT NULL,
+  `tempat_lhir` varchar(50) DEFAULT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `alamat_lengkap` varchar(250) DEFAULT NULL,
+  `no_rumah` varchar(50) DEFAULT NULL,
+  `blok` varchar(50) DEFAULT NULL,
+  `nama_desa` varchar(250) DEFAULT NULL,
+  `kode_desa` varchar(250) DEFAULT NULL,
+  `kecamatan` varchar(250) DEFAULT NULL,
+  `kabupaten` varchar(250) DEFAULT NULL,
+  `kode_kabupaten` varchar(250) DEFAULT NULL,
+  `provinsi` varchar(128) DEFAULT NULL,
+  `kode_provinsi` varchar(50) DEFAULT NULL,
+  `kota` varchar(50) DEFAULT NULL,
+  `kode_kota` varchar(50) DEFAULT NULL,
+  `kode_pos` varchar(10) DEFAULT NULL,
+  `no_hp` varchar(30) DEFAULT NULL,
+  `no_telp` varchar(30) DEFAULT NULL,
+  `email_pribadi` varchar(250) DEFAULT NULL,
+  `telp_kantor` varchar(250) DEFAULT NULL,
+  `ket_suku` varchar(50) DEFAULT NULL,
+  `kode_suku` varchar(50) DEFAULT NULL,
+  `ket_gelar_pendidikan` varchar(250) DEFAULT NULL,
+  `kode_gelar_pendidikan` varchar(50) DEFAULT NULL,
+  `ket_agama` varchar(50) DEFAULT NULL,
+  `kode_agama` varchar(50) DEFAULT NULL,
+  `ket_status_menikah` varchar(50) DEFAULT NULL,
+  `kode_status_menikah` varchar(50) DEFAULT NULL,
+  `nama_pasangan` varchar(250) DEFAULT NULL,
+  `golongan_darah` varchar(50) DEFAULT NULL,
+  `golongan_darah_resus` varchar(50) DEFAULT NULL,
+  `nama_perusahaan` varchar(128) DEFAULT NULL,
+  `kode_perusahaan` varchar(50) DEFAULT NULL,
+  `no_pegawai` varchar(50) DEFAULT NULL,
+  `department_pegawai` varchar(250) DEFAULT NULL,
+  `jabatan_pegawai` varchar(50) DEFAULT NULL,
+  `nama_asuransi` varchar(50) DEFAULT NULL,
+  `kode_asuransi` varchar(50) DEFAULT NULL,
+  `no_asuransi` varchar(50) DEFAULT NULL,
+  `berlaku_sampai` date DEFAULT NULL,
+  `kategori_cara_bayar` varchar(50) DEFAULT NULL,
+  `kode_kategori_cara_bayar` varchar(50) DEFAULT NULL,
+  `ket_tagihan` varchar(50) DEFAULT NULL,
+  `kode_tagihan` varchar(50) DEFAULT NULL,
+  `status_rujukan` int(11) DEFAULT NULL,
+  `referal_in_type` varchar(250) DEFAULT NULL,
+  `asal_rujukan` varchar(250) DEFAULT NULL,
+  `tgl_rujukan_masuk` date DEFAULT NULL,
+  `waktu_rujukan_masuk` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `diagnosa_saat_rujukan_masuk` varchar(250) DEFAULT NULL,
+  `kondisi_saat_rujukan_masuk` varchar(250) DEFAULT NULL,
+  `status_darurat` varchar(250) DEFAULT NULL,
+  `tgl_masuk` date DEFAULT NULL,
+  `waktu_masuk` timestamp NOT NULL DEFAULT current_timestamp(),
+  `nama_department` varchar(50) DEFAULT NULL,
+  `kode_department` varchar(50) DEFAULT NULL,
+  `id_department` varchar(50) DEFAULT NULL,
+  `no_antrian` smallint(6) DEFAULT NULL,
+  `nama_dokter` varchar(50) DEFAULT NULL,
+  `kode_dokter` varchar(50) DEFAULT NULL,
+  `id_dokter` varchar(50) DEFAULT NULL,
+  `ket_tipe_pasien` varchar(50) DEFAULT NULL,
+  `kode_tipe_pasien` varchar(50) DEFAULT NULL,
+  `id_tipe_pasien` varchar(50) DEFAULT NULL,
+  `ket_diagnose` varchar(250) DEFAULT NULL,
+  `icds_diagnose` varchar(250) DEFAULT NULL,
+  `kode_diagnose` varchar(250) DEFAULT NULL,
+  `tipe_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `tujuan_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `no_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `tgl_rujukan_keluar` date DEFAULT NULL,
+  `ket_diagnose_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `icds_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `kode_dpjp` varchar(250) DEFAULT NULL,
+  `id_dpjp` varchar(250) DEFAULT NULL,
+  `kondisi_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `date_insert` date NOT NULL,
+  `time_insert` time NOT NULL,
+  `ts_insert` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ts_update` timestamp NOT NULL DEFAULT current_timestamp(),
+  `is_active` varchar(1) DEFAULT NULL,
+  `ip_address` varchar(50) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_patient_history`
+--
+
+CREATE TABLE `tb_patient_history` (
+  `id` varchar(50) DEFAULT NULL,
+  `mr` varchar(50) DEFAULT NULL,
+  `no_identitas` varchar(50) DEFAULT NULL,
+  `nama_lengkap` varchar(250) DEFAULT NULL,
+  `nama_keluarga` varchar(250) DEFAULT NULL,
+  `title` varchar(250) DEFAULT NULL,
+  `status` varchar(250) DEFAULT NULL,
+  `ket_gender` varchar(50) DEFAULT NULL,
+  `tempat_lhir` varchar(50) DEFAULT NULL,
+  `tgl_lahir` date DEFAULT NULL,
+  `alamat_lengkap` varchar(250) DEFAULT NULL,
+  `no_rumah` varchar(50) DEFAULT NULL,
+  `blok` varchar(50) DEFAULT NULL,
+  `nama_desa` varchar(250) DEFAULT NULL,
+  `kode_desa` varchar(250) DEFAULT NULL,
+  `kecamatan` varchar(250) DEFAULT NULL,
+  `kabupaten` varchar(250) DEFAULT NULL,
+  `kode_kabupaten` varchar(250) DEFAULT NULL,
+  `provinsi` varchar(128) DEFAULT NULL,
+  `kode_provinsi` varchar(50) DEFAULT NULL,
+  `kota` varchar(50) DEFAULT NULL,
+  `kode_kota` varchar(50) DEFAULT NULL,
+  `kode_pos` varchar(10) DEFAULT NULL,
+  `no_hp` varchar(30) DEFAULT NULL,
+  `no_telp` varchar(30) DEFAULT NULL,
+  `email_pribadi` varchar(250) DEFAULT NULL,
+  `telp_kantor` varchar(250) DEFAULT NULL,
+  `ket_suku` varchar(50) DEFAULT NULL,
+  `kode_suku` varchar(50) DEFAULT NULL,
+  `ket_gelar_pendidikan` varchar(250) DEFAULT NULL,
+  `kode_gelar_pendidikan` varchar(50) DEFAULT NULL,
+  `ket_agama` varchar(50) DEFAULT NULL,
+  `kode_agama` varchar(50) DEFAULT NULL,
+  `ket_status_menikah` varchar(50) DEFAULT NULL,
+  `kode_status_menikah` varchar(50) DEFAULT NULL,
+  `nama_pasangan` varchar(250) DEFAULT NULL,
+  `golongan_darah` varchar(50) DEFAULT NULL,
+  `golongan_darah_resus` varchar(50) DEFAULT NULL,
+  `nama_perusahaan` varchar(128) DEFAULT NULL,
+  `kode_perusahaan` varchar(50) DEFAULT NULL,
+  `no_pegawai` varchar(50) DEFAULT NULL,
+  `department_pegawai` varchar(250) DEFAULT NULL,
+  `jabatan_pegawai` varchar(50) DEFAULT NULL,
+  `nama_asuransi` varchar(50) DEFAULT NULL,
+  `kode_asuransi` varchar(50) DEFAULT NULL,
+  `no_asuransi` varchar(50) DEFAULT NULL,
+  `berlaku_sampai` date DEFAULT NULL,
+  `kategori_cara_bayar` varchar(50) DEFAULT NULL,
+  `kode_kategori_cara_bayar` varchar(50) DEFAULT NULL,
+  `ket_tagihan` varchar(50) DEFAULT NULL,
+  `kode_tagihan` varchar(50) DEFAULT NULL,
+  `status_rujukan` int(11) DEFAULT NULL,
+  `referal_in_type` varchar(250) DEFAULT NULL,
+  `asal_rujukan` varchar(250) DEFAULT NULL,
+  `tgl_rujukan_masuk` date DEFAULT NULL,
+  `waktu_rujukan_masuk` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `diagnosa_saat_rujukan_masuk` varchar(250) DEFAULT NULL,
+  `kondisi_saat_rujukan_masuk` varchar(250) DEFAULT NULL,
+  `status_darurat` varchar(250) DEFAULT NULL,
+  `tgl_masuk` date DEFAULT NULL,
+  `waktu_masuk` timestamp NOT NULL DEFAULT current_timestamp(),
+  `nama_department` varchar(50) DEFAULT NULL,
+  `kode_department` varchar(50) DEFAULT NULL,
+  `id_department` varchar(50) DEFAULT NULL,
+  `no_antrian` smallint(6) DEFAULT NULL,
+  `nama_dokter` varchar(50) DEFAULT NULL,
+  `kode_dokter` varchar(50) DEFAULT NULL,
+  `id_dokter` varchar(50) DEFAULT NULL,
+  `ket_tipe_pasien` varchar(50) DEFAULT NULL,
+  `kode_tipe_pasien` varchar(50) DEFAULT NULL,
+  `id_tipe_pasien` varchar(50) DEFAULT NULL,
+  `ket_diagnose` varchar(250) DEFAULT NULL,
+  `icds_diagnose` varchar(250) DEFAULT NULL,
+  `kode_diagnose` varchar(250) DEFAULT NULL,
+  `tipe_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `tujuan_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `no_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `tgl_rujukan_keluar` date DEFAULT NULL,
+  `ket_diagnose_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `icds_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `kode_dpjp` varchar(250) DEFAULT NULL,
+  `id_dpjp` varchar(250) DEFAULT NULL,
+  `kondisi_rujukan_keluar` varchar(250) DEFAULT NULL,
+  `date_insert` date NOT NULL,
+  `time_insert` time NOT NULL,
+  `ts_insert` timestamp NOT NULL DEFAULT current_timestamp(),
+  `ts_update` timestamp NOT NULL DEFAULT current_timestamp(),
+  `is_active` varchar(1) DEFAULT NULL,
+  `ip_address` varchar(50) DEFAULT NULL,
+  `user_name` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_price`
 --
 
 CREATE TABLE `tb_price` (
@@ -3913,7 +4547,7 @@ CREATE TABLE `tb_price` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_selling_cart`
+-- Struktur dari tabel `tb_selling_cart`
 --
 
 CREATE TABLE `tb_selling_cart` (
@@ -3944,7 +4578,7 @@ CREATE TABLE `tb_selling_cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_selling_payment`
+-- Struktur dari tabel `tb_selling_payment`
 --
 
 CREATE TABLE `tb_selling_payment` (
@@ -3972,15 +4606,18 @@ CREATE TABLE `tb_selling_payment` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_selling_payment`
+-- Dumping data untuk tabel `tb_selling_payment`
 --
 
 INSERT INTO `tb_selling_payment` (`id_selling_payment`, `invoice_number_relation`, `type_of_payment`, `total_cash`, `total_debit`, `total_credit`, `total_paid`, `money_paid`, `refund`, `card_number`, `card_holder_name`, `note`, `transaction_code`, `transaction_description`, `user_code_relation`, `ip_address`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `bl_state`) VALUES
 ('002ca2da27eada7d1310b4185921964501ca7503', 'sell-200611.00029', 'Debit', 20000, NULL, NULL, 18500, 20000, 1500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-11', '06:54:46', '2020-06-11 06:54:46', NULL, 'A'),
 ('01b0a5a0d5fb73d394e43d116adfaa395bcec425', 'sell-200606.00007', 'Debit', 20000, NULL, NULL, 19000, 20000, 1000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-06', '00:00:00', '2020-06-06 15:55:16', NULL, 'A'),
+('0231e2d936be3282edfe5bd4c1884256ed1db65c', 'sell-201016.00051', 'Tunai', 20000, NULL, NULL, 18820, 20000, 1180, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-16', '20:59:37', '2020-10-16 20:59:37', NULL, 'A'),
+('08c2165c5f891c8da19404ee2deb012f26007f41', 'sell-201119.00056', 'Tunai', 250000, NULL, NULL, 222200, 250000, 27800, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('0ead6e2638d6453caba213a5c324527c8ed00bde', 'sell-200608.00023', 'Debit', 50000, NULL, NULL, 40700, 50000, 9300, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-08', '19:52:27', '2020-06-08 19:52:27', NULL, 'A'),
 ('0ebfa226ab7193a7141669f0b9144a00de6af6ae', 'sell-200606.00009', 'Credit', 20000, NULL, NULL, 14200, 20000, 5800, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-06', '16:12:43', '2020-06-06 16:12:43', NULL, 'A'),
 ('0fa380c99b2afb4992027139ca5018195afc84dc', 'sell-200617.00041', 'Tunai', 200000, NULL, NULL, 198500, 200000, 1500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'A'),
+('1784b25f6d05885fe25787e361366b5922c70c15', 'sell-201012.00049', 'Tunai', 160000, NULL, NULL, 154000, 160000, 6000, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-12', '07:34:43', '2020-10-12 07:34:43', NULL, 'A'),
 ('27590b0ef73c6891bf437141ca5f4d3e92cde7e4', 'sell-200625.00047', 'Tunai', 5000, NULL, NULL, 2000, 5000, 3000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-25', '21:11:26', '2020-06-25 21:11:26', NULL, 'A'),
 ('2ce3448f7ed9cf070e83e35612349d784cc75dc0', 'sell-200611.00030', 'Tunai', 50000, NULL, NULL, 48500, 50000, 1500, '', '', NULL, '12', 'SELLING', 'bilal', '::1', '2020-06-11', '06:57:35', '2020-06-11 06:57:35', NULL, 'A'),
 ('2d70f6220d7955ae1671f5de370e4d88481398c7', 'sell-200608.00017', 'Credit', 20000, NULL, NULL, 16000, 20000, 4000, '', '', NULL, '12', 'SELLING', 'user', '::1', '2020-06-08', '07:26:00', '2020-06-08 07:26:00', NULL, 'A'),
@@ -3989,20 +4626,26 @@ INSERT INTO `tb_selling_payment` (`id_selling_payment`, `invoice_number_relation
 ('35e7c8b99039dbb8dec22de803b4c7e9e1904dde', 'sell-200611.00035', 'Tunai', 11111, NULL, NULL, 5000, 11111, 6111, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-11', '23:29:56', '2020-06-11 23:29:56', NULL, 'A'),
 ('3a3f92ff63c54627b827525d6ac7cac92f41f3a7', 'sell-200608.00019', 'Tunai', 20000, NULL, NULL, 16000, 20000, 4000, '', '', NULL, '12', 'SELLING', 'user', '::1', '2020-06-08', '07:28:23', '2020-06-08 07:28:23', NULL, 'A'),
 ('412805443a26a8833c850e92cd510a60882c07bb', 'sell-200611.00034', 'Tunai', 150000, NULL, NULL, 140000, 150000, 10000, '', '', NULL, '12', 'SELLING', 'bilal', '127.0.0.1', '2020-06-11', '22:13:05', '2020-06-11 22:13:05', NULL, 'A'),
+('41b49151749da2690f8257b85ef2d1e07b747eb5', 'sell-201016.00052', 'Tunai', 150000, NULL, NULL, 145300, 150000, 4700, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
 ('426054dc0eb790b88e6e50e640f596810affbdb4', 'sell-200614.00040', 'Tunai', 15000, NULL, NULL, 12000, 15000, 3000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-14', '10:52:51', '2020-06-14 10:52:51', NULL, 'A'),
 ('49828ec078a2ed563d0c1b62651663fc6e02069a', 'sell-200606.00005', 'Tunai', 10000, NULL, NULL, 9500, 10000, 500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-06', '15:15:59', '2020-06-06 15:15:59', NULL, 'A'),
+('4e46786b28f8bd3d90ebaef4e66898c92dc71d8c', 'sell-201016.00053', 'Tunai', 15000, NULL, NULL, 14400, 15000, 600, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('5162e78790150b08becd0c72448ee51918df0cc0', 'sell-200612.00039', 'Tunai', 50000, NULL, NULL, 42500, 50000, 7500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-12', '08:00:36', '2020-06-12 08:00:36', NULL, 'A'),
 ('5473e4d7dae782cf603e1f003e1c9d320bdfe346', 'sell-200608.00021', 'Tunai', 45000, NULL, NULL, 41500, 45000, 3500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-08', '07:33:19', '2020-06-08 07:33:19', NULL, 'A'),
 ('5536fda49f8d420b1725118775de3965f5b264f3', 'sell-200612.00037', 'Tunai', 50000, NULL, NULL, 40000, 50000, 10000, '', '', NULL, '12', 'SELLING', 'bilal', '127.0.0.1', '2020-06-12', '06:28:13', '2020-06-12 06:28:13', NULL, 'A'),
 ('56496f66a11181a173a265956702dda55106ffdc', 'sell-200612.00038', 'Tunai', 10000, NULL, NULL, 5000, 10000, 5000, '', '', NULL, '12', 'SELLING', 'bilal', '127.0.0.1', '2020-06-12', '07:54:10', '2020-06-12 07:54:10', NULL, 'A'),
 ('5a835c206664c9c554a3426f1b5aeeeef94637e9', 'sell-200607.00015', 'Tunai', 240000, NULL, NULL, 236450, 240000, 3550, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
+('5be896255b89d96ec8acb5cb920d79a0aef0352c', 'sell-201012.00050', 'Tunai', 2000, NULL, NULL, 1900, 2000, 100, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-12', '17:24:47', '2020-10-12 17:24:47', NULL, 'A'),
 ('5feb20c27c98899873a9de50e072d32869abffa1', 'sell-200607.00012', 'Tunai', 400000, NULL, NULL, 358550, 400000, 41450, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('63d5378d505ecec329921b77ee31dc7e07a0fdf0', 'sell-200617.00044', 'Tunai', 220000, NULL, NULL, 216500, 220000, 3500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-03-06', '22:24:14', '2020-06-17 22:24:14', NULL, 'A'),
 ('794403342cb9917435e9b71df11887bd49ffd47e', 'sell-200606.00008', 'Tunai', 5000, NULL, NULL, 1000, 5000, 4000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-06', '16:06:31', '2020-06-06 16:06:31', NULL, 'A'),
+('7bf1c4a90c305b4f3d946560ea3515248cfa7b6e', 'sell-201020.00054', 'Tunai', 2000, NULL, NULL, 1400, 2000, 600, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-20', '16:02:50', '2020-10-20 16:02:50', NULL, 'A'),
 ('7de9253d7cdd73e8a3ed59d54f9e29a366277ff1', 'sell-200611.00033', 'Tunai', 30000, NULL, NULL, 29400, 30000, 600, '', '', NULL, '12', 'SELLING', 'bilal', '::1', '2020-06-11', '20:38:03', '2020-06-11 20:38:03', NULL, 'A'),
 ('83d2d28b3703b493ba84a8427f277c6de0521fd5', 'sell-200608.00022', 'Tunai', 200000, NULL, NULL, 168800, 200000, 31200, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-08', '19:40:44', '2020-06-08 19:40:44', '2020-06-08 20:00:28', 'D'),
+('861ae4b5e214497dc7a011d3654919a3c3fd2bcd', 'sell-201124.00057', 'Tunai', 25000, NULL, NULL, 23700, 25000, 1300, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'A'),
 ('86306e9d7fc6272fe4091260baaf78758b91c8c6', 'sell-200617.00043', 'Tunai', 1500000, NULL, NULL, 1411000, 1500000, 89000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-04-01', '22:20:42', '2020-06-17 22:20:42', NULL, 'A'),
 ('869204d8465111fd789f42fb56428bd3f25ea2ed', 'sell-200606.00006', 'Tunai', 10000, NULL, NULL, 9500, 10000, 500, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-06', '15:52:56', '2020-06-06 15:52:56', NULL, 'A'),
+('87e4ad7da9f80610fda9cd65ba8890bf4a588b93', 'sell-201029.00055', 'Tunai', 350000, NULL, NULL, 326800, 350000, 23200, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-29', '21:32:52', '2020-10-29 21:32:52', NULL, 'A'),
 ('8e45894455b73183965e64d9ab7fe562351a62d4', 'sell-200617.00042', 'Tunai', 215000, NULL, NULL, 213000, 215000, 2000, '', '', NULL, '12', 'SELLING', 'harip', '::1', '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'A'),
 ('8f2e189f5170d7f0ccc9ec2aa54e5d183b80f8a9', 'sell-201007.00048', 'Tunai', 15000, NULL, NULL, 15000, 15000, 0, '', '', NULL, '12', 'SELLING', 'admin', '::1', '2020-10-07', '22:55:43', '2020-10-07 22:55:43', '2020-10-07 22:56:31', 'D'),
 ('97a01f0532510ad8940db6e81a4842c485aad363', 'sell-200607.00014', 'Tunai', 160000, NULL, NULL, 159700, 160000, 300, '', '', NULL, '12', 'SELLING', '', '::1', '2020-06-07', '10:42:02', '2020-06-07 10:42:02', NULL, 'A'),
@@ -4028,7 +4671,7 @@ INSERT INTO `tb_selling_payment` (`id_selling_payment`, `invoice_number_relation
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_selling_transaction`
+-- Struktur dari tabel `tb_selling_transaction`
 --
 
 CREATE TABLE `tb_selling_transaction` (
@@ -4052,44 +4695,53 @@ CREATE TABLE `tb_selling_transaction` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_selling_transaction`
+-- Dumping data untuk tabel `tb_selling_transaction`
 --
 
 INSERT INTO `tb_selling_transaction` (`id_selling_transaction`, `invoice_number`, `queue_number`, `customer_code_relation`, `customer_description`, `dokter_code_relation`, `dokter_description`, `total_item`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `outlet_code_relation`, `user_code_relation`, `ip_address`, `note`, `bl_state`) VALUES
 ('0ad3311572a430cf7dae08331580d2c58ff76ed6', 'sell-200612.00037', '00037', '', '', '', '', 80, '2020-06-12', '06:28:13', '2020-06-12 06:28:13', NULL, 'apt-00001', 'bilal', '127.0.0.1', '', 'A'),
 ('10e2da0befc53a57c4a6bdcc2f28002005e93350', 'sell-200611.00032', '00032', '', '', '', '', 20, '2020-06-11', '07:14:42', '2020-06-11 07:14:42', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('16262cfe91eb49c29d21f778716c1f074ce8c2ca', 'sell-200608.00020', '00020', '', '', '', '', 80, '2020-06-08', '07:32:32', '2020-06-08 07:32:32', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('1a0d5cd8f241e25c262fc53082bbaa88bc1afb78', 'sell-201020.00054', '00054', '', '', '', '', 1, '2020-10-20', '16:02:50', '2020-10-20 16:02:50', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('1fd21279d7a0ae056af3fa6bb9dc2586f3298997', 'sell-200617.00043', '00043', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 1040, '2020-04-01', '22:20:42', '2020-06-17 22:20:42', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('1ffa234dfc64f81a1d12d3ab0f181d08fd659ad3', 'sell-200611.00030', '00030', '', 'Tester', '', 'D. Tester', 170, '2020-06-11', '06:57:35', '2020-06-11 06:57:35', NULL, 'apt-00001', 'bilal', '::1', '', 'A'),
 ('210194ca3919c0024f34a6429c2dffca6f2d641f', 'sell-200606.00010', '00010', '', '', '', '', 10, '2020-06-06', '16:13:22', '2020-06-06 16:13:22', '2020-06-06 16:15:18', 'apt-00001', 'harip', '::1', 'Note Baru ya ..\nterhapus setelah insert cart.', 'D'),
+('24c407b50c48d8de010b6dd78d2f87d546102c3f', 'sell-201016.00051', '00051', '', 'Hari Priswanto', '', 'Dr. Hari Priswanto, S.Prog, s.Cod', 31, '2020-10-16', '20:59:37', '2020-10-16 20:59:37', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('270ba08ab3a1212afddca9da49d472a5555c7b20', 'sell-200617.00041', '00041', 'Cst.200510-3025', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 240, '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('2ba59f7690574dc2cd6fbeec253447a7d484d79b', 'sell-200607.00015', '00015', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 231, '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('2bd55dbd77377f27dd8dc87bd743d1ad3d4c1732', 'sell-200617.00042', '00042', 'Cst.200513-4202', 'Bilal', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 370, '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('2f710f92bf3e7ef89d6c1c594690e98671da39cd', 'sell-201012.00050', '00050', '', '', '', 'Dr. Hari Priswanto, S.Prog, s.Cod', 2, '2020-10-12', '17:24:47', '2020-10-12 17:24:47', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('32074f4f3f8844b4998da3a99624582964c56cc3', 'sell-200606.00007', '00007', 'Cst.200510-1000', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 20, '2020-06-06', '00:00:00', '2020-06-06 15:55:16', NULL, 'apt-00001', 'harip', '::1', 'Note Baru.!', 'A'),
 ('3b8990448557a34963af19e3c2cd250d89685b3e', 'sell-200602.00004', '00004', 'Cst.200602-0800', 'Hari Priswano', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 120, '2020-06-02', '07:09:15', '2020-06-02 07:09:15', NULL, 'apt-00001', 'user', '::1', 'Tester Uji Coba.', 'A'),
+('3d650f76a47c829a3d2f79b5c6fa295887c47c5c', 'sell-201029.00055', '00055', 'Cst.200513-2020', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 208, '2020-10-29', '21:32:52', '2020-10-29 21:32:52', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('45f4206f653892f5f68861c697b3a14a734cb5f1', 'sell-200608.00018', '00018', '', '', '', '', 80, '2020-06-08', '07:26:51', '2020-06-08 07:26:51', NULL, 'apt-00001', 'user', '::1', '', 'A'),
 ('49ad3a05b8fc9f5ed8307a698d9e0a2b74e86d6d', 'sell-200611.00035', '00035', '', '', '', '', 10, '2020-06-11', '23:29:56', '2020-06-11 23:29:56', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('49b8690d0b04423589b220d80cc6d408dbd6e495', 'sell-201007.00048', '00048', '', '', '', '', 20, '2020-10-07', '22:55:43', '2020-10-07 22:55:43', '2020-10-07 22:56:31', 'apt-00001', 'admin', '::1', '', 'D'),
 ('4a52a3abb6b551fd4adfa4797b3f64ff4a968b9e', 'sell-200608.00019', '00019', '', '', '', '', 80, '2020-06-08', '07:28:23', '2020-06-08 07:28:23', NULL, 'apt-00001', 'user', '::1', '', 'A'),
 ('4deb9fc5dd6673330d4681cccbaf18c66ed267da', 'sell-200608.00027', '00027', '', 'Tester', '', 'Tester', 10, '2020-06-08', '20:16:59', '2020-06-08 20:16:59', NULL, 'apt-00001', 'user', '::1', '', 'A'),
+('534f82407a7d99074e543210d46a328be5427a31', 'sell-201012.00049', '00049', '', '', '', '', 110, '2020-10-12', '07:34:43', '2020-10-12 07:34:43', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('5ad02cffbc56c8f5988ae8a5b38f6504e1c8456a', 'sell-200608.00023', '00023', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 130, '2020-06-08', '19:52:27', '2020-06-08 19:52:27', NULL, 'apt-00001', 'harip', '::1', 'Note..', 'A'),
 ('65d228902a2ff887fbd2813fce60e3fc04f9518a', 'sell-200617.00044', '00044', 'Cst.200513-2020', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 390, '2020-03-06', '22:24:14', '2020-06-17 22:24:14', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('757df5786fdde6dbbeab1f479383ceca841f57f2', 'sell-200607.00014', '00014', '', '', '', '', 170, '2020-06-07', '10:42:02', '2020-06-07 10:42:02', NULL, 'apt-00001', '', '::1', '', 'A'),
 ('77ebbba966d056c7e4400c111eb69629da42398a', 'sell-200611.00036', '00036', '', '', '', '', 10, '2020-06-11', '23:32:43', '2020-06-11 23:32:43', NULL, 'apt-00001', 'bilal', '127.0.0.1', '', 'A'),
 ('787581d191b1c96fc9d72a8c025552be34fd5df2', 'sell-200617.00046', '00046', 'Cst.200513-4202', 'Bilal', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 900, '2020-05-15', '23:26:51', '2020-06-17 23:26:51', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('816ea31d377aefcaf4bbe38e1de19c3b31e415e4', 'sell-200608.00021', '00021', '', '', '', '', 100, '2020-06-08', '07:33:19', '2020-06-08 07:33:19', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('82d3cd17b98cb7299c00ad9fe1540ecd5d04a4b4', 'sell-201016.00053', '00053', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200513-888209', 'Dr. Bilal', 60, '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('8318d7405168ba9ba6af48c19f49b169bc387b13', 'sell-200608.00025', '00025', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 230, '2020-06-08', '19:55:15', '2020-06-08 19:55:15', '2020-06-08 19:56:37', 'apt-00001', 'harip', '::1', '', 'D'),
 ('832cbf4d499ff76e937bdb4aa2ec39a1fda0b52e', 'sell-200612.00038', '00038', '', '', '', '', 10, '2020-06-12', '07:54:10', '2020-06-12 07:54:10', NULL, 'apt-00001', 'bilal', '127.0.0.1', '', 'A'),
 ('891d32e788ea85d7f889d9c51e4719257b52e07d', 'sell-200607.00012', '00012', '', '', '', '', 1159, '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('8ce4cc642e84b9aec3093e02f8a0440e452de822', 'sell-201124.00057', '00057', 'Cst.200513-4202', 'Bilal', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 40, '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('8d0015869bd9d62f8b41a84ff5ab7457041bcc06', 'sell-200611.00033', '00033', 'Cst.200510-1000', 'Hari Priswanto', 'dok.200513-888209', 'Dr. Bilal', 245, '2020-06-11', '20:38:03', '2020-06-11 20:38:03', NULL, 'apt-00001', 'bilal', '::1', 'Note', 'A'),
 ('8dfaa71b26a8544d10a5f137b8e2100a690e5eb6', 'sell-200608.00016', '00016', '', '', '', '', 80, '2020-06-08', '07:25:09', '2020-06-08 07:25:09', NULL, 'apt-00001', 'user', '::1', '', 'A'),
 ('919611874b39abf9ecdb3341f47b4ee77bd1f496', 'sell-200606.00006', '00006', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 20, '2020-06-06', '15:52:56', '2020-06-06 15:52:56', NULL, 'apt-00001', 'harip', '::1', 'Catatan Baru', 'A'),
 ('97f92324d6473a0f1c9772ca53a8033bfbc674ab', 'sell-200606.00011', '00011', 'Cst.200510-1000', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 11, '2020-06-06', '16:17:07', '2020-06-06 16:17:07', NULL, 'apt-00001', 'harip', '::1', 'Note ', 'A'),
 ('9d752d6b41163109dd349bff80aaa0d66a53237c', 'sell-200625.00047', '00047', '', '', '', '', 20, '2020-06-25', '21:11:26', '2020-06-25 21:11:26', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
+('9ff59b9f35ea1f84bdaf09ce7389dc2f04d64234', 'sell-201119.00056', '00056', '', '', '', '', 250, '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('a69a23c924284dc08b02f05a09ce9407c3775101', 'sell-200608.00024', '00024', 'Cst.200529-2039', 'Hari Priswanto', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 130, '2020-06-08', '19:54:02', '2020-06-08 19:54:02', NULL, 'apt-00001', 'harip', '::1', 'Note..', 'A'),
 ('a73cd4fbcd809d0152e0e838cbecbf0a7a35549c', 'sell-200611.00031', '00031', '', 'aaq', '', '', 10, '2020-06-11', '07:05:40', '2020-06-11 07:05:40', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('af70463557b144a828ac488753a98ababe9ae352', 'sell-200607.00013', '00013', 'Cst.200510-3025', 'Hari Priswanto', 'dok.200513-402420', 'Dr. Hari', 20, '2020-06-07', '08:30:31', '2020-06-07 08:30:31', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('b01ea40b4f8db711e1cbcbfb134b186f8cc1d3b2', 'sell-200611.00034', '00034', '', 'Tester minus Stok', '', 'dr. minus Stok', 175, '2020-06-11', '22:13:05', '2020-06-11 22:13:05', NULL, 'apt-00001', 'bilal', '127.0.0.1', '', 'A'),
+('b74572bc6ae7595f42cea7dd584f19ee4f223498', 'sell-201016.00052', '00052', 'Cst.200513-4202', 'Bilal', 'dok.200602-390374', 'Dr. Hari Priswanto, S.Prog, s.Cod', 225, '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'apt-00001', 'admin', '::1', '', 'A'),
 ('bc068170e8510f418b5eb5d7875871746d772cd6', 'sell-200610.00028', '00028', '', '', '', '', 20, '2020-06-10', '07:39:51', '2020-06-10 07:39:51', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('c3460d3d8e63c3d2c31219bcefde6c4171dcaaa2', 'sell-200617.00045', '00045', '', '', '', '', 600, '2020-06-17', '23:00:29', '2020-06-17 23:00:29', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
 ('c46919d6bf8a9951800b554cb7d45b170423f569', 'sell-200611.00029', '00029', '', '', '', '', 20, '2020-06-11', '06:54:46', '2020-06-11 06:54:46', NULL, 'apt-00001', 'harip', '::1', '', 'A'),
@@ -4108,7 +4760,7 @@ INSERT INTO `tb_selling_transaction` (`id_selling_transaction`, `invoice_number`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_selling_transaction_detail`
+-- Struktur dari tabel `tb_selling_transaction_detail`
 --
 
 CREATE TABLE `tb_selling_transaction_detail` (
@@ -4136,7 +4788,7 @@ CREATE TABLE `tb_selling_transaction_detail` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_selling_transaction_detail`
+-- Dumping data untuk tabel `tb_selling_transaction_detail`
 --
 
 INSERT INTO `tb_selling_transaction_detail` (`id_selling_transaction_detail`, `invoice_number_relation`, `product_code_relation`, `product_name`, `product_description`, `product_qty`, `unit_code_relation`, `unit_description`, `category_code_relation`, `category_description`, `id_transaction`, `transaction_description`, `selling_price`, `selling_discount`, `selling_ppn`, `expire_date`, `user_code_relation`, `outlet_code_relation`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -4244,12 +4896,48 @@ INSERT INTO `tb_selling_transaction_detail` (`id_selling_transaction_detail`, `i
 ('4516c79092dd0824c05abd64ac80852dfbee144a', 'sell-200617.00046', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 900, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'harip', 'apt-00001', '2020-06-17 23:26:51', NULL, 'A'),
 ('c361addc5f2746f7e2ab7113c6f121e65114e173', 'sell-200625.00047', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 20, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'harip', 'apt-00001', '2020-06-25 21:11:26', NULL, 'A'),
 ('af8d6d7ded1d2b691eb4eb449c42efd7ad55809b', 'sell-201007.00048', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-07 22:55:43', '22:56:31', 'D'),
-('af8d6d7ded1d2b691eb4eb449c42efd7ad55809b', 'sell-201007.00048', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-07 22:55:43', '22:56:31', 'D');
+('af8d6d7ded1d2b691eb4eb449c42efd7ad55809b', 'sell-201007.00048', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-07 22:55:43', '22:56:31', 'D'),
+('ad0495905d64101aefecd5719879f515c303d843', 'sell-201012.00049', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 110, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-12 07:34:43', NULL, 'A'),
+('2691ea52abe515b2386a8160c33dd1ff7670c24e', 'sell-201012.00050', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-12 17:24:47', NULL, 'A'),
+('2691ea52abe515b2386a8160c33dd1ff7670c24e', 'sell-201012.00050', 'prd.200604-4372', '1234567890', '1234567890', 1, 'unit.200301-0020', 'Botol', 'ctg.200504-6131', 'Botol', '12', 'SELLING', 1800, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-12 17:24:47', NULL, 'A'),
+('5fce7389dbfd2bc6c29fe07ce0c6392afd43482e', 'sell-201016.00051', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 11, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 20:59:37', NULL, 'A'),
+('5fce7389dbfd2bc6c29fe07ce0c6392afd43482e', 'sell-201016.00051', 'prd.200330-0003', 'Aknil', 'Aknil', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 350, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 20:59:37', NULL, 'A'),
+('5fce7389dbfd2bc6c29fe07ce0c6392afd43482e', 'sell-201016.00051', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 20:59:37', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', 'prd.200330-2206', 'Alvita', 'Alvita', 40, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 500, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 90, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', '', '', '', 10, '', '', '', '', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 5, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 80, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('2de62e99d3c01cc4e5cf4e979ee5b0ce56d6ac98', 'sell-201016.00052', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '12', 'SELLING', 200, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:03:16', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-0003', 'Aknil', 'Aknil', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 350, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-2206', 'Alvita', 'Alvita', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 500, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-2145', 'Acifar 400', 'Acifar 400', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-6026', 'Bisoprolol Fumarate', 'Bisoprolol Fumarate', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('9bf3ffb75157d72aad18d37c6a1269c920687b53', 'sell-201016.00053', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 10, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-16 21:05:43', NULL, 'A'),
+('39f72c4eb5e02ed35a53e8b69ee0efd8cc355f3e', 'sell-201020.00054', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 1, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-20 16:02:50', NULL, 'A'),
+('be887132a1d1a9801fa30808f1a206a2ad934b3b', 'sell-201029.00055', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 99, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-29 21:32:52', NULL, 'A'),
+('be887132a1d1a9801fa30808f1a206a2ad934b3b', 'sell-201029.00055', 'prd.200604-4372', '1234567890', '1234567890', 99, 'unit.200301-0020', 'Botol', 'ctg.200504-6131', 'Botol', '12', 'SELLING', 1800, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-29 21:32:52', NULL, 'A'),
+('be887132a1d1a9801fa30808f1a206a2ad934b3b', 'sell-201029.00055', 'prd.200330-3402', 'Avesco ', 'Avesco ', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 1000, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-10-29 21:32:52', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-6311', 'Acifar Cream', 'Acifar Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 100, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 10, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', '', '', '', 10, '', '', '', '', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', '', '', '', 1, '', '', '', '', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-0003', 'Aknil', 'Aknil', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 350, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', '', '', '', 1, '', '', '', '', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-0124', 'Acdat Cream', 'Acdat Cream', 100, 'unit.200207-0050', 'Tube', 'ctg.200504-0062', 'Krim', '12', 'SELLING', 200, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200604-4372', '1234567890', '1234567890', 100, 'unit.200301-0020', 'Botol', 'ctg.200504-6131', 'Botol', '12', 'SELLING', 1800, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('deb6dc3225166a1e2f00ebd0b180c0e75984b928', 'sell-201119.00056', 'prd.200330-6026', 'Bisoprolol Fumarate', 'Bisoprolol Fumarate', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 250, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-19 21:13:24', NULL, 'A'),
+('c7965227532b93b3f79dd507a1cb82836309a9f9', 'sell-201124.00057', 'prd.200330-0463', 'Acyclovir Cream', 'Acyclovir Cream', 10, 'unit.200207-0050', 'Tube', 'ctg.200206-0642', 'Cream', '12', 'SELLING', 1400, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-24 21:05:12', NULL, 'A'),
+('c7965227532b93b3f79dd507a1cb82836309a9f9', 'sell-201124.00057', 'prd.200330-0003', 'Aknil', 'Aknil', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 350, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-24 21:05:12', NULL, 'A'),
+('c7965227532b93b3f79dd507a1cb82836309a9f9', 'sell-201124.00057', 'prd.200330-2206', 'Alvita', 'Alvita', 10, 'unit.200206-0920', 'Box', 'ctg.200206-3302', 'Tablet', '12', 'SELLING', 500, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-24 21:05:12', NULL, 'A'),
+('c7965227532b93b3f79dd507a1cb82836309a9f9', 'sell-201124.00057', 'prd.200330-4112', 'Andonex 60 Syr', 'Andonex 60 Syr', 10, 'unit.200504-3451', 'Fls', 'ctg.200301-0600', 'Syrup', '12', 'SELLING', 120, NULL, NULL, NULL, 'admin', 'apt-00001', '2020-11-24 21:05:12', NULL, 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_set_auto_execution`
+-- Struktur dari tabel `tb_set_auto_execution`
 --
 
 CREATE TABLE `tb_set_auto_execution` (
@@ -4268,7 +4956,7 @@ CREATE TABLE `tb_set_auto_execution` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_stock_history`
+-- Struktur dari tabel `tb_stock_history`
 --
 
 CREATE TABLE `tb_stock_history` (
@@ -4293,7 +4981,7 @@ CREATE TABLE `tb_stock_history` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_stock_history`
+-- Dumping data untuk tabel `tb_stock_history`
 --
 
 INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code_relation`, `product_name`, `stock_entry`, `stock_out`, `remaining_stock`, `transaction_code`, `transaction_description`, `user_name`, `outlet_code_relation`, `ip_address`, `note`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `bl_state`) VALUES
@@ -4307,6 +4995,7 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('021f1459457b1fb64017c6644d83f70314e5e90f', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 90, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:47:08', NULL, 'A'),
 ('03092306790900916320', '', 'prd.200330-9904', 'Amobiotic', 0, 1, 0, '14', 'CANCEL BUYING', 'admin', 'apt-00001', '::1', 'Stok Keluar Dari Retur/Batal Pembelian', '2020-10-07', '20:16:26', '2020-10-07 20:16:26', NULL, 'A'),
 ('053cc9e3914a5a4c5347205bcc28dac15f2ea04f', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 18, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
+('0615c3b67fc4d9c3d789cc01539aa7c8fcc46e78', '', 'prd.200330-6311', 'Acifar Cream', 0, 1, 75, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-12', '17:24:47', '2020-10-12 17:24:47', NULL, 'A'),
 ('073d2c08469c3f86d3dcd06ab8079ffade22f01f', '', 'prd.200330-0152', 'Aptor', 20, 0, 30, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '22:51:15', '2020-06-02 22:51:16', NULL, 'A'),
 ('07920cdf4b78a3df9db42590b55bd86f086066f6', '', 'prd.200330-0005', 'Acyclovir 400 ', 100, 0, 100, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
 ('094db209a5cfe93cf2d26dcd7d712fda9ea28522', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 0, 100, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-25', '20:40:18', '2020-06-25 20:40:18', NULL, 'A'),
@@ -4315,6 +5004,7 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('0d3a3156ea43be7fd909792ec15d56ff3796122f', '', 'prd.200330-0003', 'Aknil', 0, 100, 0, '12', 'SELLING', 'bilal', 'apt-00001', '127.0.0.1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '22:13:05', '2020-06-11 22:13:05', NULL, 'A'),
 ('0e4e6029b9d3e535b70fb675ef47be524186101a', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 10, 0, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '15:15:59', '2020-06-06 15:15:59', NULL, 'A'),
 ('0eee89e4f9f8307e22a2e6d60bd0fdc2313d730a', '', 'prd.200330-9904', 'Amobiotic', 0, 110, -110, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '19:55:15', '2020-06-08 19:55:15', NULL, 'A'),
+('0f560e8cb2ce58c6fc4619de02e10fb066a85b7a', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 10, 90, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('0f5c7056543f9728519ed53267dab327bd47ed46', '', 'prd.200330-0003', 'Aknil', 20, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-08', '18:28:30', '2020-06-08 18:28:31', NULL, 'A'),
 ('0f89365097b953be8727b94f59b7c7cb7ec1e7e5', '', 'prd.200330-0502', 'Akita', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:36', NULL, 'A'),
 ('0fe90015e1384a097e957d5e092fe46c5c7a2dbf', '', 'prd.200330-0124', 'Acdat Cream', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:38:59', NULL, 'A'),
@@ -4343,18 +5033,23 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('2c9a635c403e60695583cae5cff209c6881a2629', '', 'prd.200604-6313', 'Tester', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
 ('2d1950a9420d663e97ad627e30b6fbbab22d077e', '', 'prd.200330-9904', 'Amobiotic', 0, 200, 0, '12', 'SELLING', 'user', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '19:40:44', '2020-06-08 19:40:44', NULL, 'A'),
 ('2d1e761827b408117b7d6bc8c6bc0f233f245a67', '', 'prd.200330-0463', 'Acyclovir Cream', 30, 0, 100, '13', 'BUYING', 'user', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '14:29:38', '2020-06-02 14:29:38', NULL, 'A'),
+('2f0b6e487e737c98cb8a8af0dd100086b9978cbe', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 80, 9800, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
 ('300b6f81bca392e6c36afe0a1821dd2ee3aa723c', '', 'prd.200330-6311', 'Acifar Cream', 0, 700, 0, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('30613014131026463322', '', 'prd.200330-0124', 'Acdat Cream', 0, 1, 200, '14', 'CANCEL BUYING', 'admin', 'apt-00001', '::1', 'Stok Keluar Dari Retur/Batal Pembelian', '2020-10-07', '20:16:26', '2020-10-07 20:16:26', NULL, 'A'),
+('327d70460f39d27f69534c15c625148e63636737', '', 'prd.200604-4372', '1234567890', 0, 1, 199, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-12', '17:24:47', '2020-10-12 17:24:47', NULL, 'A'),
 ('32912c5407d4676d45afa75c474b344ef7b75732', '', 'prd.200604-4372', '1234567890', 10, 0, 210, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-14', '10:39:51', '2020-06-14 10:39:52', NULL, 'A'),
 ('34aacef26958f83c3f061f54b8412ea3b9fbc47f', '', 'prd.200604-4372', '1234567890', 0, 10, 200, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'A'),
 ('3656c6b177fe9e4d33c1f2f79d13f19cb54baaeb', '', 'prd.200330-0502', 'Akita', 0, 10, 100, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('365c79585bd3be6857265e73ca77ef2ede8381ff', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 170, '12', 'SELLING', 'user', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-02', '07:09:15', '2020-06-02 07:09:15', NULL, 'A'),
 ('39a997738f35b41fb3378dc8d255af14ec42f306', '', 'prd.200330-0003', 'Aknil', 0, 50, -10, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
+('3a2765b185e86fd16fd571dc28388e59f2dfd228', '', 'prd.200330-6311', 'Acifar Cream', 10, 0, 85, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-16', '20:56:58', '2020-10-16 20:56:59', NULL, 'A'),
 ('3a90ba527303f9abf9f4bbd2c61c1045f689cd7c', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 15, 75, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '07:14:42', '2020-06-11 07:14:42', NULL, 'A'),
 ('3af62bce79cc7a19b5ab0c5653ff7c97a58166a2', '', 'prd.200330-0003', 'Aknil', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '16:17:07', '2020-06-06 16:17:07', NULL, 'A'),
 ('3d71abfcd56de7200b6d25d761e060dd42d3d374', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '06:54:46', '2020-06-11 06:54:46', NULL, 'A'),
 ('3f96906c81dbb481d493d631a6d020dd988d0ebb', '', 'prd.200330-2145', 'Acifar 400', 0, 90, 0, '12', 'SELLING', 'user', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '19:40:44', '2020-06-08 19:40:44', NULL, 'A'),
+('4010b191db4e9e7fe29603a3ca5fbee8ae363595', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 9880, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '20:59:37', '2020-10-16 20:59:37', NULL, 'A'),
 ('419583662916f3c484b69b164d1e56a699b36dbb', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 160, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '15:15:59', '2020-06-06 15:15:59', NULL, 'A'),
+('42bda510b343db70afc829ebc7453fdf8cab244a', '', 'prd.200604-4372', '1234567890', 0, 100, 0, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('42c62cc5e04d839402b5d8c170332d57b5cc3fa0', '', 'prd.200330-2220', 'Ondansetron', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-01', '19:32:02', '2020-06-01 19:32:03', NULL, 'A'),
 ('4637a007a4a579b197f468e500d61f27a5f1b9c2', '', 'prd.200330-0002', 'Hufabion ', 0, 89, -89, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('46c70ded297f771166da521e39578a9d69003ecf', '', 'prd.200330-0502', 'Akita', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-01', '16:24:40', '2020-06-01 16:24:40', NULL, 'A'),
@@ -4362,21 +5057,27 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('4965e99b3d2efb7740314b5ce5954322f85d67b3', '', 'prd.200330-2312', 'Brainact', 0, 0, 100, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-25', '20:40:21', '2020-06-25 20:40:21', NULL, 'A'),
 ('4c0172772dd59c2a01c7ac09be892337b6b202e1', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 780, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '16:06:31', '2020-06-06 16:06:31', NULL, 'A'),
 ('4cc8eb2a15fed736d6edfd7c46f1b8de04bffc0a', '', 'prd.200330-4112', 'Andonex 60 Syr', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:39:01', NULL, 'A'),
+('4d6f6fe00f59bd592af19ac61a757ec0f9cbd770', '', 'prd.200330-0003', 'Aknil', 0, 10, 80, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('4d972c35b0e8e9e27b012af51a2749de2e45dd7f', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 40, -40, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
+('4e8481a7f622ae9d547d69a5caf85602ae3e929a', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 1, 9799, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-20', '16:02:50', '2020-10-20 16:02:50', NULL, 'A'),
 ('502f92b723bb75f9de1a4cdc1eebfd65ea2ea166', '', 'prd.200330-9904', 'Amobiotic', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-01', '18:52:38', '2020-06-01 18:52:38', NULL, 'A'),
 ('5109de6ded1b26c9bec813f3c38f459efb2d2ba2', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 900, 10000, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-15', '23:26:51', '2020-06-17 23:26:51', NULL, 'A'),
 ('523d72dfb0dc2622eed6eaf3c840acc57744a046', '', 'prd.200330-0152', 'Aptor', 10, 0, 10, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '17:24:46', '2020-06-02 17:24:46', NULL, 'A'),
 ('525965baa926a5def29a24cd001638a8c3316301', '', 'prd.200330-0002', 'Hufabion ', 180, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-08', '18:28:30', '2020-06-08 18:28:31', NULL, 'A'),
 ('525a36491745ea6c928c979fe8b6037dc7ed34a1', '', 'prd.200330-4935', 'Blocand 8', 10, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A'),
+('52f5c339f4b5b148aa76e0f5c51cc1067045e275', '', 'prd.200330-2206', 'Alvita', 0, 10, 190, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('53416873653447473797', '', 'prd.200604-4372', '1234567890', 10, 0, 0, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '19:56:37', '2020-06-08 19:56:37', NULL, 'A'),
 ('53f76c9f6db669fca04fbab9f763958f4da22f17', '', 'prd.200330-9904', 'Amobiotic', 0, 1, 99, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
 ('53f92e23effa493f338b20b3eb9f4e6eb90c99d6', '', 'prd.200604-4372', '1234567890', 0, 10, 210, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-14', '10:52:51', '2020-06-14 10:52:51', NULL, 'A'),
 ('54674f8b16118f767e887e40f63f905b637397db', '', 'prd.200330-2145', 'Acifar 400', 0, 100, 500, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('55bf6412c5954a1c8e020528a580bcfe4dba9908', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 80, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:51:17', NULL, 'A'),
+('564196adda5c304bd93080dbc1cc9cd1bbbc2049', '', 'prd.200330-0003', 'Aknil', 0, 10, 60, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'A'),
+('57a0aff405212b8d1a65527397a687d67c143791', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 10, 180, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('58379f9d08ed32bf8ff256fc8b32502851fc86c4', '', 'prd.200330-0005', 'Acyclovir 400 ', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '06:54:46', '2020-06-11 06:54:46', NULL, 'A'),
 ('58491456d437dd3ec1e0f1fabec114be298f96ad', '', 'prd.200330-3011', 'Hufadon Syr', 0, 0, 160, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-05', '07:19:16', '2020-06-05 07:19:16', NULL, 'A'),
 ('59429999871913589148', '', 'prd.200330-9904', 'Amobiotic', 110, 0, 0, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '19:56:37', '2020-06-08 19:56:37', NULL, 'A'),
 ('5a53897ae05897e0fbffe3bcef630eca25b4ebf3', '', 'prd.200330-2206', 'Alvita', 12, 0, 12, '13', 'BUYING', 'user', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '14:29:38', '2020-06-02 14:29:38', NULL, 'A'),
+('5ae5937191d52280bed6b7357ac97d25bff070f0', '', 'prd.200330-3402', 'Avesco ', 0, 10, 190, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-29', '21:32:52', '2020-10-29 21:32:52', NULL, 'A'),
 ('5d8e0b21bc125b9d13650882a468383d74459b9a', '', 'prd.200330-0005', 'Acyclovir 400 ', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A'),
 ('5e90930849ef245afac0babe252050b40c15dce3', '', 'prd.200330-3402', 'Avesco ', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:38:58', NULL, 'A'),
 ('5f4087b3cc9ce2a8e3455a10fefe98f64f9e8b90', '', 'prd.200330-2145', 'Acifar 400', 0, 5, 245, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '07:14:42', '2020-06-11 07:14:42', NULL, 'A'),
@@ -4385,10 +5086,13 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('61002620612112222226', '', 'prd.200330-0005', 'Acyclovir 400 ', 0, 100, 0, '14', 'CANCEL BUYING', 'admin', 'apt-00001', '::1', 'Stok Keluar Dari Retur/Batal Pembelian', '2020-10-07', '20:16:26', '2020-10-07 20:16:26', NULL, 'A'),
 ('61301681000186969965', '', 'prd.200330-2145', 'Acifar 400', 10, 0, 0, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '19:56:37', '2020-06-08 19:56:37', NULL, 'A'),
 ('61676637687316516315', '', 'prd.200330-0463', 'Acyclovir Cream', 10, 0, 80, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-06', '16:15:18', '2020-06-06 16:15:18', NULL, 'A'),
+('61fdd326a9c487bcd0c64a4878cac0bf9f098845', '', 'prd.200330-2206', 'Alvita', 100, 0, 240, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-16', '20:56:58', '2020-10-16 20:56:59', NULL, 'A'),
 ('62110050221211156526', '', 'prd.200330-2145', 'Acifar 400', 90, 0, 180, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '20:07:14', '2020-06-08 20:07:14', NULL, 'A'),
 ('6230bf569982731debdc180095460c8d8ef3837d', '', 'prd.200330-0003', 'Aknil', 1, 0, 1, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
+('65fac537302787478b3c9ecdd4411e6cc5e0a3e1', '', 'prd.200330-2206', 'Alvita', 0, 40, 200, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
 ('6646870ac236c21a68509349555b6255cfcbf3ca', '', 'prd.200330-2206', 'Alvita', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-01', '18:52:38', '2020-06-01 18:52:38', NULL, 'A'),
 ('66a320c8d48b00cd26cd1b56515c703dd9cbe17e', '', 'prd.200330-0152', 'Aptor', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:39:00', NULL, 'A'),
+('670db393e9375762fd3a38b108ede438809c1ec9', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 70, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('67575dd488bd1fd1b86a234a2fdf003dc8199d8b', '', 'prd.200330-2206', 'Alvita', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:39:00', NULL, 'A'),
 ('6786286ac3a7faee45cc8d6e47ba1df9a91d1aba', '', 'prd.200330-0463', 'Acyclovir Cream', 1, 0, 10001, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
 ('67ea5986997099e70814f7cbfb26a7c3ea3daba2', '', 'prd.200330-6311', 'Acifar Cream', 1, 0, 61, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
@@ -4402,7 +5106,9 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('6f7f3165899e512ff6391393684d62b72014dac5', '', 'prd.200330-0463', 'Acyclovir Cream', 12000, 0, 12200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-14', '11:21:21', '2020-06-14 11:21:23', NULL, 'A'),
 ('6f9b6d2f071ed1b6502197c84ea2c9d802818e38', '', 'prd.200330-4935', 'Blocand 8', 500, 0, 500, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '17:24:46', '2020-06-02 17:24:46', NULL, 'A'),
 ('70776700120067102706', '', 'prd.200330-2206', 'Alvita', 0, 1000, 140, '14', 'CANCEL BUYING', 'admin', 'apt-00001', '::1', 'Stok Keluar Dari Retur/Batal Pembelian', '2020-10-07', '20:16:26', '2020-10-07 20:16:26', NULL, 'A'),
+('70c9a47c151489df72e4969082cd5b93764ea4a8', '', 'prd.200330-2206', 'Alvita', 0, 10, 180, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'A'),
 ('70f8f1687382d93fe718309f351fc5ab2d6f708a', '', 'prd.200330-2206', 'Alvita', 1000, 0, 1140, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
+('71bbbc0569e49175927d3d4bb2f88db7bdf70a86', '', 'prd.200330-4112', 'Andonex 60 Syr', 100, 0, 301, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-16', '20:56:58', '2020-10-16 20:56:59', NULL, 'A'),
 ('71fc3d5fc9c4233de30e62bb545219aff26f6d64', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 110, 12090, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'A'),
 ('7226ebdfdc0454ecbda55f3218380574315e90b7', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 100, 11990, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'A'),
 ('725723d529dcce45c134935a128432437e634047', '', 'prd.200330-6311', 'Acifar Cream', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A'),
@@ -4418,6 +5124,8 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('7ae68b942a32c7878c13e953e4659e8e72c77848', '', 'prd.200330-0124', 'Acdat Cream', 0, 1, 158, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '16:17:07', '2020-06-06 16:17:07', NULL, 'A'),
 ('7d160546d7ed7ac41ddc9036d7777237c5d797c0', '', 'prd.200604-4372', '1234567890', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '08:30:31', '2020-06-07 08:30:31', NULL, 'A'),
 ('7d1672ec18905e42ae6c19619a3ea3c2f26996cc', '', 'prd.200604-3285', 'product tester lagi', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
+('7dbfc73d509785600dc20f2ee636f50c3a1d4824', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 11, 290, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '20:59:37', '2020-10-16 20:59:37', NULL, 'A'),
+('7ee93c9c491ec93c130d143d542680b0d9548613', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 10, 170, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'A'),
 ('7f662ab5eaf505930dd49b92a7f95e8ee304a586', '', 'prd.200330-6311', 'Acifar Cream', 0, 80, 0, '12', 'SELLING', 'bilal', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '06:57:35', '2020-06-11 06:57:35', NULL, 'A'),
 ('811309ca62b1ade29b82d87216e6ee4752ac8ac6', '', 'prd.200330-4935', 'Blocand 8', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
 ('81ba529802d231b7df0f34b2c2364aab6f39809e', '', 'prd.200330-3011', 'Hufadon Syr', 0, 60, 40, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
@@ -4434,9 +5142,12 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('86d0fe0101a6293c1f45031252f8b2d07231ddbf', '', 'prd.200330-2145', 'Acifar 400', 0, 10, 260, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-10', '07:39:51', '2020-06-10 07:39:51', NULL, 'A'),
 ('8b04602e892d93316d1077ae53b66ec780c83aca', '', 'prd.200330-0502', 'Akita', 0, 80, 0, '12', 'SELLING', 'bilal', 'apt-00001', '127.0.0.1', 'Stok Keluar Melalui Penjualan', '2020-06-12', '06:28:13', '2020-06-12 06:28:13', NULL, 'A'),
 ('8db24a09d036a1a30e93a5d4f8560dbcfff2f542', '', 'prd.200330-0732', 'Carbidu 0,75 Mg', 0, 0, 150, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-10-09', '21:12:38', '2020-10-09 21:12:38', NULL, 'A'),
+('8f6cc1e465d3eade74872e34146269fe360cfe47', '', 'prd.200330-2145', 'Acifar 400', 100, 0, 300, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-11-15', '07:09:23', '2020-11-15 07:09:23', NULL, 'A'),
 ('8f90684454d5e2affdc8cc0f7cf213a6fba38cd3', '', 'prd.200330-0002', 'Hufabion ', 0, 10, 189, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '15:52:56', '2020-06-06 15:52:56', NULL, 'A'),
+('9115d38a0779808426ab60e7119484704bf80ccb', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 9680, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-24', '21:05:12', '2020-11-24 21:05:12', NULL, 'A'),
 ('93246432230026104202', '', 'prd.200330-0003', 'Aknil', 0, 1, 0, '14', 'CANCEL BUYING', 'admin', 'apt-00001', '::1', 'Stok Keluar Dari Retur/Batal Pembelian', '2020-10-07', '20:16:26', '2020-10-07 20:16:26', NULL, 'A'),
 ('95796665660690169977', '', 'prd.200330-0124', 'Acdat Cream', 100, 0, 100, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '19:56:37', '2020-06-08 19:56:37', NULL, 'A'),
+('95fb3b72024c6ceb059f205debf50682ed3f2122', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 10, 9690, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('98611ec040c9226fc3c5a7b2d6fdaae3099f762d', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 180, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:54:10', NULL, 'A'),
 ('99559515100504155753', '', 'prd.200330-9904', 'Amobiotic', 200, 0, 400, '11', 'CANCEL SELLING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Retur/Batal Penjualan', '2020-06-08', '20:07:14', '2020-06-08 20:07:14', NULL, 'A'),
 ('9a01edb390e7e9500c6cf09b2036bd3c342cc3cf', '', 'prd.200330-0002', 'Hufabion ', 0, 10, 80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
@@ -4444,6 +5155,8 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('9ab616f7538c506477710050dc7bf6b0be40bb4b', '', 'prd.200330-0002', 'Acyclovir 400 ', 0, 0, 105, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-10-09', '21:09:06', '2020-10-09 21:09:06', NULL, 'A'),
 ('9bddf71043289412d00d66c574140af9d5d7f36f', '', 'prd.200330-0003', 'Aknil', 0, 10, 80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '07:33:19', '2020-06-08 07:33:19', NULL, 'A'),
 ('9dabecf42a0961430db0b62bbf84ae757eb719b9', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 100, 10900, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-03-06', '22:24:14', '2020-06-17 22:24:14', NULL, 'A'),
+('9e71fc75dec578ef3d6f35102103ff66a87d9f93', '', 'prd.200330-6311', 'Acifar Cream', 10, 0, 75, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-12', '17:13:42', '2020-10-12 17:13:43', NULL, 'A'),
+('9f0a8dc7b70e67bb9db5d1ebdceb6d0d33481b79', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 10, 190, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('a06b004f92c5c577e7c69241565a9acb99b8daa5', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 0, 200, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-10-09', '21:07:53', '2020-10-09 21:07:53', NULL, 'A'),
 ('a0c719a2b52c9fbac1400243df8c4eaca218e181', '', 'prd.200330-2145', 'Acifar 400', 0, 10, -10, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '19:55:15', '2020-06-08 19:55:15', NULL, 'A'),
 ('a1b244ea24680b15af5d86174805fa1fff37eac9', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 0, 100, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-07', '07:54:40', '2020-06-07 07:54:40', NULL, 'A'),
@@ -4453,7 +5166,9 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('aa79991c97b5905e595f0d188a8619784f23e9f4', '', 'prd.200330-1263', 'Genalten Cream', 0, 0, 60, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-05', '07:21:07', '2020-06-05 07:21:07', NULL, 'A'),
 ('ae4c3a692d81877fb9f809900a9b40eb17f0886e', '', 'prd.200330-0502', 'Akita', 0, 10, 110, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-06', '15:52:56', '2020-06-06 15:52:56', NULL, 'A'),
 ('aeee5ab713b7540405421b316679d1c5071f48b2', '', 'prd.200330-0002', 'Hufabion ', 0, 80, -80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '07:33:19', '2020-06-08 07:33:19', NULL, 'A'),
+('afa0e106da8b21b12fc16610700e97e53637ac85', '', 'prd.200330-1020', 'Cecyl 200', 0, 0, 100, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-10-16', '20:58:13', '2020-10-16 20:58:13', NULL, 'A'),
 ('b10d21fd889429f026b2e8e2c5931dba54bc8ecc', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-10', '07:39:51', '2020-06-10 07:39:51', NULL, 'A'),
+('b28edff078b345e6e6b8358ad24e5b9a5bf17db0', '', 'prd.200330-0124', 'Acdat Cream', 0, 100, 90, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('b4a55d0dd66f73b169f39dbb2cbcbe3a010f7772', '', 'prd.200330-2145', 'Acifar 400', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:38:59', NULL, 'A'),
 ('b4d8f4e1e2e99a3d5371d72579ee92fc36a88bed', '', 'prd.200330-0124', 'Acdat Cream', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A'),
 ('b4e7ecf41418d9ba18e0cff6692c3a4a4ad5d109', '', 'prd.200330-3325', 'Zultrop', 9, 0, 109, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-07', '17:47:10', '2020-10-07 17:47:10', NULL, 'A'),
@@ -4473,26 +5188,32 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('c5f0cb684d586fdf886416a8f800f357c9b55f20', '', 'prd.200330-2206', 'Alvita', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:35', NULL, 'A'),
 ('c6351735ced421b85d699d86381b9a764d8d30e5', '', 'prd.200330-0005', 'Acyclovir 400 ', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-08', '18:28:30', '2020-06-08 18:28:31', NULL, 'A'),
 ('c93f28ae738aae0124bb456f629b2b1d2c38a833', '', 'prd.200330-6311', 'Acifar Cream', 0, 20, 60, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-25', '21:11:26', '2020-06-25 21:11:26', NULL, 'A'),
+('c96e0a888149333b973a89a85fcea32f6708889c', '', 'prd.200330-0003', 'Aknil', 0, 10, 70, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('cae89463824a68255839d8b072ddd07d0de3606f', '', 'prd.200330-2206', 'Alvita', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
 ('ce52137d32452ba8229a970f35f6ecd4e2a1140f', '', 'prd.200330-4112', 'Andonex 60 Syr', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-01', '19:32:02', '2020-06-01 19:32:03', NULL, 'A'),
 ('ce6ee2a6be87cb7196b289647e956c428a2afdda', '', 'prd.200330-2206', 'Alvita', 0, 80, 0, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-12', '08:00:36', '2020-06-12 08:00:36', NULL, 'A'),
+('ceb986fc558e14d9ecc46ecf6c5b97aa42cbaf1d', '', 'prd.200330-0003', 'Aknil', 100, 0, 100, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-16', '20:56:58', '2020-10-16 20:56:59', NULL, 'A'),
 ('cf1b94bf140fb3fba058002d4319e5c0bb0f729f', '', 'prd.200330-0002', 'Hufabion ', 0, 80, 0, '12', 'SELLING', 'user', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '07:28:23', '2020-06-08 07:28:23', NULL, 'A'),
+('d0abbe4107b25124865b408a1b6e580096a7e2e9', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 60, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('d1a0d699461b75e8337808a7544e06a4a3dda67d', '', 'prd.200330-0502', 'Akita', 30, 0, 130, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-02', '22:43:37', '2020-06-02 22:43:37', NULL, 'A'),
 ('d1b5de581dd58c6d3d76c98b5d50987959dd4a28', '', 'prd.200330-0002', 'Hufabion ', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '08:30:31', '2020-06-07 08:30:31', NULL, 'A'),
 ('d21211b09f1304fb88101a40dc1833db75a2f860', '', 'prd.200330-0003', 'Aknil', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:38:59', NULL, 'A'),
 ('d317b345f0d2532db264a9d8e6c7a5c647715591', '', 'prd.200330-7000', 'Arsinal', 100, 0, 200, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:38:58', NULL, 'A'),
-('d32bbea56f906d3a0aa5ada40e84c9ec1a1151c2', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 0, 10, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-02', '18:46:26', '2020-06-02 18:46:26', NULL, 'A'),
+('d32bbea56f906d3a0aa5ada40e84c9ec1a1151c2', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 0, 10, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-02', '18:46:26', '2020-06-02 18:46:26', NULL, 'A');
+INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code_relation`, `product_name`, `stock_entry`, `stock_out`, `remaining_stock`, `transaction_code`, `transaction_description`, `user_name`, `outlet_code_relation`, `ip_address`, `note`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `bl_state`) VALUES
 ('d7d35c8c724608cdeff61fc227c2a82c8999dd68', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 0, 100, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-05-13', '21:30:24', '2020-05-13 21:30:24', NULL, 'A'),
 ('d86142b2159ec466c8a66ab67a2755e290f44906', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 50, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-07', '22:55:43', '2020-10-07 22:55:43', NULL, 'A'),
 ('d9cf88fac578ea4e8273e1a1040f74d3bb578198', '', 'prd.200604-6313', 'Tester', 0, 0, 50, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-05', '07:18:43', '2020-06-05 07:18:43', NULL, 'A'),
 ('d9e024308f471c47f2a13dbf6903ba11bc036876', '', 'prd.200330-4112', 'Andonex 60 Syr', 1, 0, 201, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-10', '11:23:13', '2020-10-10 11:23:13', NULL, 'A'),
 ('db46b089619537e6750b32b14a87d2c59e3d0a2d', '', 'prd.200330-0463', 'Acyclovir Cream', 100, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:35', NULL, 'A'),
 ('dcc876e7141ddb8a77bcb0220a6b7b022c6c57a5', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-08', '07:33:19', '2020-06-08 07:33:19', NULL, 'A'),
+('de407dfdda56518fa2499077e017f4f7ee6ff5e9', '', 'prd.200330-6311', 'Acifar Cream', 1, 0, 76, '13', 'BUYING', 'admin', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-10-12', '17:14:06', '2020-10-12 17:14:06', NULL, 'A'),
 ('de709823d93f27f1e2f1af96968605a4a0c0a9d5', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 190, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:47:08', NULL, 'A'),
 ('df815014946010463dcc7a02b9bc3cb9befc3cfd', '', 'prd.200330-2206', 'Alvita', 0, 10, 240, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'A'),
 ('dfec3b54957175a31f618bc638779c7cf593b779', '', 'prd.200330-9904', 'Amobiotic', 100, 0, 700, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '18:38:58', '2020-06-13 18:39:00', NULL, 'A'),
 ('e0e4b88d13cc3321388f49a36b6893d9d3796cf8', '', 'prd.200330-6311', 'Acifar Cream', 0, 10, 190, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'A'),
 ('e12b53fa7dfbe919334fd38792aff397998f356c', '', 'prd.200602-5772', 'semen 3 Roda', 0, 10, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '19:03:48', '2020-06-07 19:03:48', NULL, 'A'),
+('e1eb478c1f6eb92c06b3a0ec6d44fb07cc68aa68', '', 'prd.200330-2145', 'Acifar 400', 0, 10, 200, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:05:43', '2020-10-16 21:05:43', NULL, 'A'),
 ('e2151bcd3cf0f017be01161b26539108ea056b38', '', 'prd.200330-0124', 'Acdat Cream', 100, 0, 300, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-14', '09:49:49', '2020-06-14 09:49:49', NULL, 'A'),
 ('e25f2482b137152954f01d4b036adbf404e453a5', '', 'prd.200330-2145', 'Acifar 400', 0, 10, 890, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:54:10', NULL, 'A'),
 ('e296a7453a3853872e893af6625cd54e5a545ce6', '', 'prd.200603-7733', 'tester 2', 0, 0, 1209, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-05', '07:20:09', '2020-06-05 07:20:09', NULL, 'A'),
@@ -4505,14 +5226,21 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 ('ed8da05755e89017099237f9ef81164d9f9ef173', '', 'prd.200330-0003', 'Aknil', 0, 110, 90, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:49:16', '2020-06-17 20:49:16', NULL, 'A'),
 ('edf2e739bf3050e256e348608453f05a2196205e', '', 'prd.200330-7000', 'Arsinal', 0, 100, 100, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-03-06', '22:24:14', '2020-06-17 22:24:14', NULL, 'A'),
 ('eec654f6afb3b8c8e918763af98a85876ae0f73f', '', 'prd.200330-0124', 'Acdat Cream', 0, 100, 200, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-03-06', '22:24:14', '2020-06-17 22:24:14', NULL, 'A'),
+('ef9e0c58988fe33f9144ab007637dbbe804dfc9c', '', 'prd.200330-6311', 'Acifar Cream', 0, 5, 80, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
 ('efc1a92f30edd04a16e2c31a8a4e513de5d5c5dd', '', 'prd.200330-6311', 'Acifar Cream', 0, 100, 810, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-05-13', '00:00:00', '2020-05-13 22:47:08', NULL, 'A'),
+('efe22ae523df4ef8d4d42c98332c243a6ef88df6', '', 'prd.200330-6026', 'Bisoprolol Fumarate', 0, 10, 80, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-11-19', '21:13:24', '2020-11-19 21:13:24', NULL, 'A'),
 ('f10bc0d4622d9eeb01a32a925bc4c84e0a42bfc4', '', 'prd.200330-2206', 'Alvita', 0, 50, 190, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'A'),
 ('f2740e3ddc0ab5ffe79ddbd5f636f9f59e510360', '', 'prd.200604-4372', '1234567890', 0, 100, 290, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-07', '07:50:08', '2020-06-07 07:50:08', NULL, 'A'),
 ('f276a3116e30790af9856ea34c4faee962b7da54', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 990, 11000, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-04-01', '22:20:42', '2020-06-17 22:20:42', NULL, 'A'),
 ('f3a607ee8a4f381f622cef3ff4f53e41d6a7dda7', '', 'prd.200330-6311', 'Acifar Cream', 0, 0, 65, '10', 'STOCK OPNAME', 'admin', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-10-09', '21:10:36', '2020-10-09 21:10:36', NULL, 'A'),
 ('f3c0d20807aa9f176e2bb0d38061fcf4524a743a', '', 'testeer', 'Tester', 0, 0, 0, '10', 'STOCK OPNAME', 'harip', 'apt-00001', '::1', 'STOCK OPNAME RUTIN', '2020-06-04', '23:17:40', '2020-06-04 23:17:40', NULL, 'A'),
-('fb7c5300cbbc0d62acba7307faf0a67464d83651', '', 'prd.200604-6313', 'Tester', 10, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A');
-INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code_relation`, `product_name`, `stock_entry`, `stock_out`, `remaining_stock`, `transaction_code`, `transaction_description`, `user_name`, `outlet_code_relation`, `ip_address`, `note`, `date_insert`, `time_insert`, `ts_insert`, `ts_update`, `bl_state`) VALUES
+('f3d2c0ed5e8b32a21790b59fc2b7b6295343fdb8', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 99, 9700, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-29', '21:32:52', '2020-10-29 21:32:52', NULL, 'A'),
+('f42e821445139585dd1134f5f7ce576a81cbdc05', '', 'prd.200330-0124', 'Acdat Cream', 0, 10, 190, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
+('f549df8facc0e62af2ef5968938fed9cdd991f05', '', 'prd.200330-0463', 'Acyclovir Cream', 0, 110, 9890, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-12', '07:34:43', '2020-10-12 07:34:43', NULL, 'A'),
+('f5b8a3c1d9284c37646ca90d07a9708945b03fa5', '', 'prd.200604-4372', '1234567890', 0, 99, 100, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-29', '21:32:52', '2020-10-29 21:32:52', NULL, 'A'),
+('f963fce30ef1e194723bd63803fd8727bc7924fa', '', 'prd.200330-4112', 'Andonex 60 Syr', 0, 90, 200, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '21:03:16', '2020-10-16 21:03:16', NULL, 'A'),
+('f9de5f53e59f0b6e22891b224b1c27ddf47be026', '', 'prd.200330-0003', 'Aknil', 0, 10, 90, '12', 'SELLING', 'admin', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-10-16', '20:59:37', '2020-10-16 20:59:37', NULL, 'A'),
+('fb7c5300cbbc0d62acba7307faf0a67464d83651', '', 'prd.200604-6313', 'Tester', 10, 0, 100, '13', 'BUYING', 'harip', 'apt-00001', '::1', 'Stok Masuk Melalui Pembelian', '2020-06-13', '06:02:33', '2020-06-13 06:02:34', NULL, 'A'),
 ('fccf02afd2dd04cb70fd429272640d32b119cd4d', '', 'prd.200330-2145', 'Acifar 400', 0, 245, 0, '12', 'SELLING', 'bilal', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-11', '20:38:03', '2020-06-11 20:38:03', NULL, 'A'),
 ('fe69765a0074cbe600c83f8cceeec5fe9e5b1340', '', 'prd.200330-6311', 'Acifar Cream', 0, 110, 80, '12', 'SELLING', 'harip', 'apt-00001', '::1', 'Stok Keluar Melalui Penjualan', '2020-06-17', '20:50:29', '2020-06-17 20:50:29', NULL, 'A'),
 ('fe96457100078f04b3f424a516046ba7ded82a44', '', 'prd.200604-4372', '1234567890', 100, 0, 100, '13', 'BUYING', 'bilal', 'apt-00001', '127.0.0.1', 'Stok Masuk Melalui Pembelian', '2020-06-12', '08:01:43', '2020-06-12 08:01:43', NULL, 'A'),
@@ -4523,7 +5251,7 @@ INSERT INTO `tb_stock_history` (`id_stock`, `stock_code_relation`, `product_code
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_access_menu`
+-- Struktur dari tabel `tb_system_access_menu`
 --
 
 CREATE TABLE `tb_system_access_menu` (
@@ -4533,12 +5261,11 @@ CREATE TABLE `tb_system_access_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_access_menu`
+-- Dumping data untuk tabel `tb_system_access_menu`
 --
 
 INSERT INTO `tb_system_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 ('07a483da1a4dee661d4b91dfc86bc063acd44b04', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd'),
-('107276bef3e26f205c9673c9964f97343bcf321d', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6'),
 ('19360c36b6523cf7295c796842b1ad45c3e3039f', 'f2267be68639bd7770a1581fb56da721be026ea8', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd'),
 ('2cb56d74f56417993230a8b3d955c9d17e4ca947', '0d891b9a6f17b817fe7d4916e1c0ad078fe71e68', '52e6985df873d51c161bf54475bd9b644458d965'),
 ('2fba5d9514dbb78af06a3d921f9acfc17277d9bd', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6'),
@@ -4548,6 +5275,8 @@ INSERT INTO `tb_system_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 ('60e4defdaf2a14f764a772897eae76ab864dec0f', 'f5b75de1241ca88d5cb4e84ed8daa8145670139c', 'b99905a00b0239959e8f18bc7960240f69a71fcd'),
 ('63b045e1cddeaac94de52e231d097a53d7b0b358', 'f2267be68639bd7770a1581fb56da721be026ea8', '07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c'),
 ('63e8fa6c00e0a68d5bd0d12fda5d7b7c7824043a', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b'),
+('6d58639816467f63968c2d1e0e1e813c9cabb722', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '937dc5dafb8945ea921e119137869f2c40c0775e'),
+('81ce4149ffeb2799bdb6e17a0f52bf97963edd11', 'a4aa860568d8f21b0186474deabb08ddad702e86', '937dc5dafb8945ea921e119137869f2c40c0775e'),
 ('9b7d7b1612799948d631d60bb56ec4a1206ce33d', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', 'a15ff425b878ed8986abe7841fff41a7ff292abd'),
 ('9e697522c398df181c943c5c30d5fce4297417df', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c'),
 ('a2aecea62378b39873ba5ca753357f1ff27ec93f', 'a4aa860568d8f21b0186474deabb08ddad702e86', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6'),
@@ -4561,7 +5290,7 @@ INSERT INTO `tb_system_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_department`
+-- Struktur dari tabel `tb_system_department`
 --
 
 CREATE TABLE `tb_system_department` (
@@ -4576,7 +5305,7 @@ CREATE TABLE `tb_system_department` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_department`
+-- Dumping data untuk tabel `tb_system_department`
 --
 
 INSERT INTO `tb_system_department` (`id`, `department_code`, `department_description`, `module_directory`, `sort_field`, `ts_insert`, `ts_update`, `is_active`) VALUES
@@ -4586,7 +5315,7 @@ INSERT INTO `tb_system_department` (`id`, `department_code`, `department_descrip
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_desain`
+-- Struktur dari tabel `tb_system_desain`
 --
 
 CREATE TABLE `tb_system_desain` (
@@ -4599,7 +5328,7 @@ CREATE TABLE `tb_system_desain` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_menu`
+-- Struktur dari tabel `tb_system_menu`
 --
 
 CREATE TABLE `tb_system_menu` (
@@ -4616,24 +5345,24 @@ CREATE TABLE `tb_system_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_menu`
+-- Dumping data untuk tabel `tb_system_menu`
 --
 
 INSERT INTO `tb_system_menu` (`id`, `menu_code`, `menu_description`, `menu_url`, `menu_icon`, `sort_menu`, `type_menu`, `ts_insert`, `ts_update`, `is_active`) VALUES
 ('07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c', 'Owner', 'Owner', '', 'tachometer', 'dash-mn-01', 'side-bar', '2020-10-09 11:53:43', '2020-10-09 13:49:19', 'A'),
-('2b937d3c539f1eecbfe718e09573edd0af4ca9a6', 'pendaftaran', 'Pendaftaran', '', 'user-o', 'mn-001', 'side-bar', '2020-08-14 16:14:46', '2020-10-09 14:57:01', 'A'),
-('2db89696c0e19c6880973c24a555a1760508b18e', 'pembelian', 'Transaksi Pembelian', '', 'shopping-cart', 'mn-003', 'side-bar', '2020-10-07 09:59:39', '2020-10-09 14:56:39', 'A'),
+('2b937d3c539f1eecbfe718e09573edd0af4ca9a6', 'pendaftaran', 'Pendaftaran', '', 'user-o', 'mn-001', 'side-bar', '2020-08-14 16:14:46', '2020-10-29 14:53:12', 'D'),
+('2db89696c0e19c6880973c24a555a1760508b18e', 'Gudang', 'Gudang', '', 'shopping-cart', 'mn-003', 'side-bar', '2020-10-07 09:59:39', '2020-10-11 07:17:25', 'A'),
 ('38c888a5d7305620e1eaf769cac3d0bb7d521ff1', 'master-001', 'Master', '', 'tasks', 'msr-001', 'side-bar', '2020-09-27 13:00:26', '2020-09-27 13:14:06', 'D'),
 ('3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'laporan', 'Laporan', '-', 'file-o', 'mn-010', 'side-bar', '2020-10-09 09:32:34', '2020-10-09 14:56:50', 'A'),
 ('52e6985df873d51c161bf54475bd9b644458d965', 'kasir', 'Kasir', '', 'money', 'mn-004', 'side-bar', '2020-10-07 15:45:44', '2020-10-09 14:56:44', 'A'),
 ('60cc4c8b7f76ef75945bd47f0fe0c0ef032f417b', 'seting', 'Setting', '', 'cogs', 'top-menu-01', 'top-bar', '2020-08-15 01:38:28', '2020-10-09 14:56:55', 'A'),
-('b99905a00b0239959e8f18bc7960240f69a71fcd', 'so', 'Stock Opname', '-', 'archive', 'mn-002', 'side-bar', '2020-10-09 14:04:57', NULL, 'A'),
+('937dc5dafb8945ea921e119137869f2c40c0775e', 'reg', 'Registrasi', 'reg-patient', 'user-md', 'mn-001', 'side-bar', '2020-11-29 15:40:23', NULL, 'A'),
 ('e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'mstr', 'Master', '', 'tasks', 'mn-002', 'side-bar', '2020-09-27 14:16:10', '2020-10-09 14:56:25', 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_setting`
+-- Struktur dari tabel `tb_system_setting`
 --
 
 CREATE TABLE `tb_system_setting` (
@@ -4654,16 +5383,16 @@ CREATE TABLE `tb_system_setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_setting`
+-- Dumping data untuk tabel `tb_system_setting`
 --
 
 INSERT INTO `tb_system_setting` (`id_system`, `system_title`, `system_header`, `system_dashboard_text`, `system_owner`, `system_instansi_name`, `system_phone`, `system_address`, `system_email`, `system_url`, `system_outlet_code`, `system_footer_struct`, `paper_size`, `id_transaction`) VALUES
-('9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'Apotek Bilal Sehat', 'Sistem Apotek ', 'Selamat Datang Di Sistem Informasi Manajemen Penjualan Apotek', 'Hari Priswanto', 'Apotek Bilal Sehat', '-', 'Perum. Pondok Widyatama Indah Bloke E 1A', '-', '-', 'apt-00001', 'Semoga Lekas Sembuh', NULL, '1');
+('9be8499f802f4cc042e2dd741ddfc1c116a069e9', 'Bilal Health Clinic', 'Bilal Health Clinic', 'Selamat Datang Di Sistem Informasi Manajemen Bilal Health Clinic', 'M. Bilal Abdillah', 'Bilal Health Clinic', '-', 'Perum. Pondok Widyatama Indah Blok E 1A', '-', '-', 'apt-00001', 'Semoga Lekas Sembuh', NULL, '1');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_sub_menu`
+-- Struktur dari tabel `tb_system_sub_menu`
 --
 
 CREATE TABLE `tb_system_sub_menu` (
@@ -4681,7 +5410,7 @@ CREATE TABLE `tb_system_sub_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_sub_menu`
+-- Dumping data untuk tabel `tb_system_sub_menu`
 --
 
 INSERT INTO `tb_system_sub_menu` (`id`, `menu_id`, `sub_menu_code`, `sub_menu_description`, `sub_menu_url`, `sub_menu_icon`, `sub_menu_sort`, `module_directory`, `ts_insert`, `ts_update`, `is_active`) VALUES
@@ -4691,24 +5420,25 @@ INSERT INTO `tb_system_sub_menu` (`id`, `menu_id`, `sub_menu_code`, `sub_menu_de
 ('52fd6ad5a9772aedba9ed68fec59d9ca5191b31f', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6', 'Review Data', 'Review Data', 'review-registrasi-patient', 'fa-fw fa fa-user-circle-o', 'sm-02', '', '2020-08-14 16:47:20', NULL, 'A'),
 ('558d06368b288daefd75c0bb1bce9359fc2e0c88', 'e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'product', 'Produk', 'product', 'bars', 'master-001', '', '2020-09-27 14:22:55', '2020-10-09 15:11:20', 'A'),
 ('6104a7e7ad22b936382efec15fe0a2ad4d30c5e5', '2db89696c0e19c6880973c24a555a1760508b18e', 'pembelian', 'Pembelian', 'pembelian', 'fa-fw fa fa-cart-plus', 'pembelian-001', '', '2020-10-07 10:00:45', '2020-10-09 10:25:06', 'A'),
-('6b7b60a4cf730a1e162eb2de9f6a1125ff0feb7c', '07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c', 'dash', 'Dashboard', 'dashboard', 'pie-chart', 'dash-001', '', '2020-10-09 13:47:27', NULL, 'A'),
-('7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'log', 'Log Aktifitas', 'aktifitas', 'blind', 'laporan-005', '', '2020-10-09 09:47:31', '2020-10-09 10:33:26', 'A'),
+('6b7b60a4cf730a1e162eb2de9f6a1125ff0feb7c', '07013e8b47bfcd1a79a5db61d0cc04a51e5a0c0c', 'dash', 'Dashboard', 'dashboard', 'pie-chart', 'dash-001', '', '2020-10-09 13:47:27', '2020-10-11 07:42:22', 'A'),
+('7a1981ce6f4d8cdefcff20cdff4dc1984457f5e8', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'log', 'Log Aktifitas', 'aktifitas', 'blind', 'laporan-005', '', '2020-10-09 09:47:31', '2020-10-29 14:54:34', 'A'),
 ('9816f2104440b86ea27c861ea38427885764ed7a', 'e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'supplier', 'Supplier', 'supplier', 'user-secret', 'master-004', '', '2020-10-09 15:09:34', NULL, 'A'),
 ('9a2312007c42fa50b6123080d04c8e296b3c093e', '52e6985df873d51c161bf54475bd9b644458d965', 'transaksi-penjualan', 'Penjualan', 'penjualan', 'shopping-cart', 'penjualan-02', '', '2020-10-07 15:46:25', '2020-10-07 15:48:15', 'A'),
 ('9b594a1eae491557939cd3a289d15dc936d04625', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6', 'daftar', 'Pasien Baru', 'pendaftaran', 'users', 'pendaftaran-001', '', '2020-10-09 09:28:08', '2020-10-09 10:25:37', 'A'),
-('a58a9701d5543d725625bdd75d61829ca4bb2dd9', 'b99905a00b0239959e8f18bc7960240f69a71fcd', 'so-bulan', 'Stock Opname Bulanan', 'stok-opname', 'archive', 'so-001', '', '2020-10-09 14:06:10', NULL, 'A'),
+('a58a9701d5543d725625bdd75d61829ca4bb2dd9', '2db89696c0e19c6880973c24a555a1760508b18e', 'so-bulan', 'Stock Opname Bulanan', 'stok-opname', 'archive', 'so-001', '', '2020-10-09 14:06:10', '2020-10-11 07:42:35', 'A'),
+('ab8dabb8c10d23ddc374a61708df51dab7218933', '937dc5dafb8945ea921e119137869f2c40c0775e', 'reg', 'Registrasi Pasien', 'reg-patient', 'user-md', 'reg-001', '', '2020-11-29 15:41:09', NULL, 'A'),
 ('b5de6334cdd7b51a6d99a1423e3df5f852416610', 'e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'category', 'Kategori', 'category', 'th-list', 'master-002', '', '2020-10-07 09:56:45', '2020-10-09 15:11:44', 'A'),
 ('b7ee482b18b5cb63ea9e39fa17d4978bc0d8543b', 'e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'dokter', 'Dokter', 'dokter', 'user-md', 'master-006', '', '2020-10-09 15:10:45', NULL, 'A'),
 ('d752fd6ba1174c7c41657ea32c40c2b1657e2d61', '2db89696c0e19c6880973c24a555a1760508b18e', 'review-pembelian', 'Review Pembelian', 'review-pembelian', 'list', 'pembelian-002', '', '2020-10-07 10:22:57', '2020-10-10 00:39:23', 'A'),
 ('d8af8273752870f54799a0999b93292ca5786328', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'pembelian', 'Pembelian', 'laporan-pembelian', 'shopping-cart', 'laporan-003', '', '2020-10-09 10:31:33', NULL, 'A'),
 ('dd276d17ec831ba2e3f71116d9c87ab1a9080205', 'e6cddfe8862e682a95f97cc8a36fed2158a5d64f', 'customer', 'Customer', 'customer', 'users', 'master-005', '', '2020-10-09 15:10:16', NULL, 'A'),
-('e54d9e469ed391499a2bc216fe5d2b7ae6ba7231', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'laporan-penjualan', 'Penjualan', 'laporan-penjualan', 'shopping-cart', 'laporan-002', '', '2020-10-09 10:21:06', '2020-10-09 10:30:18', 'A'),
+('e54d9e469ed391499a2bc216fe5d2b7ae6ba7231', '3b193d9c9b1f8e12d571cd3b4638e245d04e25dd', 'laporan-penjualan', 'Penjualan', 'laporan-penjualan', 'shopping-cart', 'laporan-002', '', '2020-10-09 10:21:06', '2020-10-29 14:57:42', 'A'),
 ('fe28d98fadc7023dff255135cd9708df9d347fac', '2b937d3c539f1eecbfe718e09573edd0af4ca9a6', 'Tambah Data', 'Tambah Data', 'registrasi-patient', 'fa-fw fa fa-user-circle-o', 'sm-01', '', '2020-08-14 16:46:29', NULL, 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_user`
+-- Struktur dari tabel `tb_system_user`
 --
 
 CREATE TABLE `tb_system_user` (
@@ -4728,7 +5458,7 @@ CREATE TABLE `tb_system_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_user`
+-- Dumping data untuk tabel `tb_system_user`
 --
 
 INSERT INTO `tb_system_user` (`id_user`, `user_name`, `user_password`, `user_full_name`, `user_address`, `user_email`, `user_phone`, `user_gender`, `user_birthday`, `access_level`, `ts_insert`, `ts_update`, `is_active`) VALUES
@@ -4742,16 +5472,16 @@ INSERT INTO `tb_system_user` (`id_user`, `user_name`, `user_password`, `user_ful
 ('61b6d74d24b885aa05fff7dad587828b1d40456d', 'username', 'password', 'asdf', 'Alamat', 'asdf@gmail.com', 'asdf', 1, '0000-00-00', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', '2020-10-08 10:30:32', NULL, 'D'),
 ('686d3524fc5b125dc0f833997ab7a425e55f5f8f', 'asdf', NULL, 'asdf', 'asdf', 'asdf', 'asdf', 1, '0000-00-00', 'a4aa860568d8f21b0186474deabb08ddad702e86', '2020-10-08 20:35:06', NULL, 'D'),
 ('68ce8e6d7b673dac04286818139f96e27120859d', 'username hari', 'password', 'Nama Hari', 'alamat hari', 'email hari', '0981203', 1, '0000-00-00', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '2020-10-08 10:15:54', NULL, 'A'),
-('9d145d1699d910cb72d6528a396564da6b835e60', 'owner', 'owner', 'Owner', 'Bogor', 'owner@gmail.com', '081', 1, '2020-10-09', 'f2267be68639bd7770a1581fb56da721be026ea8', '2020-10-09 09:34:20', NULL, 'A'),
+('9d145d1699d910cb72d6528a396564da6b835e60', 'owner', 'owner', 'Owner', 'Bogor', 'owner@gmail.com', '08811719671', 1, '2020-10-09', 'f2267be68639bd7770a1581fb56da721be026ea8', '2020-10-09 09:34:20', NULL, 'A'),
 ('a02c20c3a41c8cc8aa11a8856450d7dc4fc6654e', 'asdf', 'password', 'Nama', 'asdf', 'Email', '0981023', 1, '0000-00-00', 'a4aa860568d8f21b0186474deabb08ddad702e86', '2020-10-08 11:14:42', NULL, 'D'),
-('bb2079f524623e781b2852a92f356ac73990e983', 'dokter', '6702', 'Dr. Hari P', '', '', '081239012', 1, '2020-09-26', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', '2020-09-26 14:44:02', '2020-10-09 22:56:48', 'A'),
+('bb2079f524623e781b2852a92f356ac73990e983', 'dokter', '6702', 'Dr. Hari P', '', '', '081239012', 1, '2020-09-26', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', '2020-09-26 14:44:02', '2020-10-11 08:37:06', 'A'),
 ('d853b25efde60ca2fed22f1cc8fdafde525821ed', 'users', 'password', 'lengkap', 'alamat', 'sdfg.com', '0910239', 2, '0000-00-00', '7356ad8ff16a306de349be7e6d8cc8a039a59a42', '2020-10-08 11:16:42', NULL, 'D'),
 ('e71936705199dd3ea09a10dded7c5a4837316b1a', 'admin', 'admin', 'Hari Priswanto', 'Jl. Raya Dadi kusmayadi', '', '08811719671', 1, '1992-03-30', 'd0a991aa178b5cd98aa930da07fa9d3c892e8d70', '2020-05-31 14:37:49', '2020-10-07 15:42:59', 'A');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_system_user_role`
+-- Struktur dari tabel `tb_system_user_role`
 --
 
 CREATE TABLE `tb_system_user_role` (
@@ -4764,13 +5494,13 @@ CREATE TABLE `tb_system_user_role` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_system_user_role`
+-- Dumping data untuk tabel `tb_system_user_role`
 --
 
 INSERT INTO `tb_system_user_role` (`id`, `role_code`, `role_description`, `ts_insert`, `ts_update`, `is_active`) VALUES
 ('0d891b9a6f17b817fe7d4916e1c0ad078fe71e68', 'kasir', 'Kasir', '2020-10-09 14:03:25', NULL, 'A'),
 ('7356ad8ff16a306de349be7e6d8cc8a039a59a42', 'Dr', 'Dokter', '2020-10-07 15:22:11', '2020-10-07 15:22:11', 'A'),
-('a4aa860568d8f21b0186474deabb08ddad702e86', 'adm', 'Admin', '2020-10-09 14:45:49', '2020-10-09 14:45:49', 'A'),
+('a4aa860568d8f21b0186474deabb08ddad702e86', 'adm', 'Admins', '2020-10-29 14:33:56', '2020-10-29 14:33:56', 'A'),
 ('d0a991aa178b5cd98aa930da07fa9d3c892e8d70', 'sys_adm', 'System Admin', '2020-09-26 14:41:55', '2020-09-26 14:41:55', 'A'),
 ('f2267be68639bd7770a1581fb56da721be026ea8', 'owner', 'Owner', '2020-10-09 09:31:45', NULL, 'A'),
 ('f5b75de1241ca88d5cb4e84ed8daa8145670139c', 'gudang', 'Gudang', '2020-10-09 14:03:50', NULL, 'A');
@@ -4778,7 +5508,7 @@ INSERT INTO `tb_system_user_role` (`id`, `role_code`, `role_description`, `ts_in
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
@@ -4796,7 +5526,7 @@ CREATE TABLE `tb_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
 INSERT INTO `tb_user` (`id_user`, `user_name`, `password`, `full_name`, `address`, `email`, `phone`, `gender`, `birthday`, `access_level`, `is_active`) VALUES
@@ -4812,191 +5542,191 @@ INSERT INTO `tb_user` (`id_user`, `user_name`, `password`, `full_name`, `address
 --
 
 --
--- Indexes for table `log_activity`
+-- Indeks untuk tabel `log_activity`
 --
 ALTER TABLE `log_activity`
   ADD PRIMARY KEY (`id_log`);
 
 --
--- Indexes for table `tb_buying_cart`
+-- Indeks untuk tabel `tb_buying_cart`
 --
 ALTER TABLE `tb_buying_cart`
   ADD PRIMARY KEY (`id_buying_cart`);
 
 --
--- Indexes for table `tb_buying_payment`
+-- Indeks untuk tabel `tb_buying_payment`
 --
 ALTER TABLE `tb_buying_payment`
   ADD PRIMARY KEY (`id_buying_payment`);
 
 --
--- Indexes for table `tb_buying_transaction`
+-- Indeks untuk tabel `tb_buying_transaction`
 --
 ALTER TABLE `tb_buying_transaction`
   ADD PRIMARY KEY (`id_buying_transaction`);
 
 --
--- Indexes for table `tb_customer`
+-- Indeks untuk tabel `tb_customer`
 --
 ALTER TABLE `tb_customer`
   ADD PRIMARY KEY (`id_customer`);
 
 --
--- Indexes for table `tb_master_category`
+-- Indeks untuk tabel `tb_master_category`
 --
 ALTER TABLE `tb_master_category`
   ADD PRIMARY KEY (`id_category`);
 
 --
--- Indexes for table `tb_master_dokter`
+-- Indeks untuk tabel `tb_master_dokter`
 --
 ALTER TABLE `tb_master_dokter`
   ADD PRIMARY KEY (`id_dokter`);
 
 --
--- Indexes for table `tb_master_htu`
+-- Indeks untuk tabel `tb_master_htu`
 --
 ALTER TABLE `tb_master_htu`
   ADD PRIMARY KEY (`id_htu`);
 
 --
--- Indexes for table `tb_master_product`
+-- Indeks untuk tabel `tb_master_product`
 --
 ALTER TABLE `tb_master_product`
   ADD PRIMARY KEY (`id_product`);
 
 --
--- Indexes for table `tb_master_product_medical`
+-- Indeks untuk tabel `tb_master_product_medical`
 --
 ALTER TABLE `tb_master_product_medical`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_master_stock`
+-- Indeks untuk tabel `tb_master_stock`
 --
 ALTER TABLE `tb_master_stock`
   ADD PRIMARY KEY (`id_stock`);
 
 --
--- Indexes for table `tb_master_stock_editor`
+-- Indeks untuk tabel `tb_master_stock_editor`
 --
 ALTER TABLE `tb_master_stock_editor`
   ADD PRIMARY KEY (`id_stock`);
 
 --
--- Indexes for table `tb_master_supplier`
+-- Indeks untuk tabel `tb_master_supplier`
 --
 ALTER TABLE `tb_master_supplier`
   ADD PRIMARY KEY (`id_supplier`);
 
 --
--- Indexes for table `tb_master_unit`
+-- Indeks untuk tabel `tb_master_unit`
 --
 ALTER TABLE `tb_master_unit`
   ADD PRIMARY KEY (`id_unit`);
 
 --
--- Indexes for table `tb_notification`
+-- Indeks untuk tabel `tb_notification`
 --
 ALTER TABLE `tb_notification`
   ADD PRIMARY KEY (`id_notification`);
 
 --
--- Indexes for table `tb_price`
+-- Indeks untuk tabel `tb_price`
 --
 ALTER TABLE `tb_price`
   ADD PRIMARY KEY (`id_price`);
 
 --
--- Indexes for table `tb_selling_cart`
+-- Indeks untuk tabel `tb_selling_cart`
 --
 ALTER TABLE `tb_selling_cart`
   ADD PRIMARY KEY (`id_selling_cart`);
 
 --
--- Indexes for table `tb_selling_payment`
+-- Indeks untuk tabel `tb_selling_payment`
 --
 ALTER TABLE `tb_selling_payment`
   ADD PRIMARY KEY (`id_selling_payment`);
 
 --
--- Indexes for table `tb_selling_transaction`
+-- Indeks untuk tabel `tb_selling_transaction`
 --
 ALTER TABLE `tb_selling_transaction`
   ADD PRIMARY KEY (`id_selling_transaction`);
 
 --
--- Indexes for table `tb_set_auto_execution`
+-- Indeks untuk tabel `tb_set_auto_execution`
 --
 ALTER TABLE `tb_set_auto_execution`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_stock_history`
+-- Indeks untuk tabel `tb_stock_history`
 --
 ALTER TABLE `tb_stock_history`
   ADD PRIMARY KEY (`id_stock`);
 
 --
--- Indexes for table `tb_system_access_menu`
+-- Indeks untuk tabel `tb_system_access_menu`
 --
 ALTER TABLE `tb_system_access_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_system_department`
+-- Indeks untuk tabel `tb_system_department`
 --
 ALTER TABLE `tb_system_department`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_system_desain`
+-- Indeks untuk tabel `tb_system_desain`
 --
 ALTER TABLE `tb_system_desain`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_system_menu`
+-- Indeks untuk tabel `tb_system_menu`
 --
 ALTER TABLE `tb_system_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_system_setting`
+-- Indeks untuk tabel `tb_system_setting`
 --
 ALTER TABLE `tb_system_setting`
   ADD PRIMARY KEY (`id_system`);
 
 --
--- Indexes for table `tb_system_sub_menu`
+-- Indeks untuk tabel `tb_system_sub_menu`
 --
 ALTER TABLE `tb_system_sub_menu`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_system_user`
+-- Indeks untuk tabel `tb_system_user`
 --
 ALTER TABLE `tb_system_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `tb_system_user_role`
+-- Indeks untuk tabel `tb_system_user_role`
 --
 ALTER TABLE `tb_system_user_role`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
