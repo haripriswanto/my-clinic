@@ -14,23 +14,24 @@
                     </div> -->
 
                     <div class="form-group col-md-2 pull-right">
-                        <button type="button" class="btn btn-success"><span class="fa fa-save"></span> Simpan</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"><span class="fa fa-history"></span> Batal</button>
+                        <button type="button" class="btn btn-success" id="buttonSave"><span class="fa fa-save"></span> Simpan</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close" id="buttonCancel"><span class="fa fa-history"></span> Batal</button>
                     </div>
 
                     <!-- Form Pasien -->
                     <div class="input-group" >
                         <input type="text" class="form-control" id="no_mr" name="no_mr"data-toggle="tooltip" data-placement="bottom" title="No MR" placeholder="No MR">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" id="patientSearch" name="patientSearch" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
+                            <button type="button" class="btn btn-default" id="buttonPencarianMr" name="buttonPencarianMr" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
                             <span class="fa fa-search"></span>      
                             </button> 
                         </span>
                     </div>
+
                     <div class="input-group" >
                         <input type="text" class="form-control" id="nik" name="nik"data-toggle="tooltip" data-placement="bottom" title="NIK" placeholder="NIK">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" id="patientSearch" name="patientSearch" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
+                            <button type="button" class="btn btn-default" id="buttonPencarianNik" name="buttonPencarianNik" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
                             <span class="fa fa-search"></span>      
                             </button> 
                         </span>
@@ -38,7 +39,7 @@
                     <div class="input-group" >
                         <input type="text" class="form-control" id="no_kartu" name="no_kartu"data-toggle="tooltip" data-placement="bottom" title="No Kartu" placeholder="No Kartu">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" id="patientSearch" name="patientSearch" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
+                            <button type="button" class="btn btn-default" id="buttonPencarianNoKartu" name="buttonPencarianNoKartu" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Pasien">
                             <span class="fa fa-search"></span>      
                             </button> 
                         </span>
@@ -73,7 +74,7 @@
                         <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" title="tgl Lahir" placeholder="tgl Lahir" style="width: 80%: margin-right:1em;">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" id="Umur" name="Umur" title="Umur" placeholder="Umur" style="width: 80%: margin-right:1em;">
+                        <input type="number" class="form-control" id="umur" name="umur" title="Umur" placeholder="Umur" style="width: 80%: margin-right:1em;">
                     </div>
 
                     <div class="clearfix"><br></div> <!-- Enter -->
@@ -85,27 +86,24 @@
                             </button> 
                         </span>
                     </div>
-
                     <div class="form-group">
-                        <input type="text" class="form-control" id="No. Rumah" name="No. Rumah" title="No. Rumah" placeholder="No. Rumah">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="RT" name="RT" title="RT" placeholder="RT">
+                        <input type="text" class="form-control" id="no_rumah" name="no_rumah" title="No. Rumah" placeholder="No. Rumah">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="RW" name="RW" title="RW" placeholder="RW">
+                        <input type="text" class="form-control" id="rt" name="rt" title="RT" placeholder="RT">
                     </div>
-
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="rw" name="rw" title="RW" placeholder="RW">
+                    </div>
                     <div class="clearfix"><br></div> <!-- Enter -->
                     <div class="form-group">
-                        <input type="text" class="form-control" id="Kel/Desa" name="Kel/Desa" title="Kel/Desa" placeholder="Kel/Desa">
+                        <input type="text" class="form-control" id="desa" name="desa" title="Kel/Desa" placeholder="Kel/Desa">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="kecamatan" name="kecamatan" title="kecamatan" placeholder="kecamatan">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="Kabupaten" name="Kabupaten" title="Kabupaten" placeholder="Kabupaten">
+                        <input type="text" class="form-control" id="kabupaten" name="kabupaten" title="Kabupaten" placeholder="Kabupaten">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="provinsi" name="provinsi" title="provinsi" placeholder="provinsi">
@@ -116,7 +114,6 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="kode_pos" name="kode_pos" title="kode_pos" placeholder="kode_pos">
                     </div>
-
                     <div class="clearfix"><br></div> <!-- Enter -->
                     <div class="form-group">
                         <input type="text" class="form-control" id="telp" name="telp" title="telp" placeholder="telp">
@@ -180,7 +177,7 @@
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="nama_pasangan" name="nama_pasangan" title="Nama Pasangan" placeholder="Nama Pasangan">
-                    </div>
+                    </div>                    
 
                     <div class="clearfix"><br></div> <!-- Enter -->
                     <div class="form-group">
@@ -193,7 +190,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="asal" name="asal" title="Asal Rujukan" placeholder="Asal Rujukan">
+                        <input type="text" class="form-control" id="nama_asal_rujukan" name="nama_asal_rujukan" title="Asal Rujukan" placeholder="Asal Rujukan">
                     </div>
                     <div class="form-group">
                         <input type="text" class="form-control" id="no_rujukan" name="no_rujukan" title="No. Rujukan" placeholder="No. Rujukan">
@@ -218,13 +215,13 @@
                         <input type="text" class="form-control" id="nama_penanggung" name="nama_penanggung" title="Nama Penanggung" placeholder="Nama Penanggung">
                     </div>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="no_SEP" name="no_SEP" title="SEP" placeholder="SEP">
+                        <input type="text" class="form-control" id="no_sep" name="no_sep" title="SEP" placeholder="SEP">
                     </div>
 
                     <div class="input-group" >
-                        <input type="text" class="form-control" id="layanan_poli" name="layanan_poli" title="Layanan Poli/Ranap" placeholder="Layanan Poli/Ranap" style="width: 280%: margin-right:1em;">
+                        <input type="text" class="form-control" id="pilih_layanan" name="pilih_layanan" title="Layanan Poli/Ranap" placeholder="Layanan Poli/Ranap" style="width: 280%: margin-right:1em;">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" id="pencarianDepartment" name="pencarianDepartment" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Poli">
+                            <button type="button" class="btn btn-default" id="buttonPencarianLayanan" name="buttonPencarianLayanan" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Poli">
                             <span class="fa fa-search"></span>      
                             </button> 
                         </span>
@@ -232,18 +229,67 @@
                     <div class="input-group" >
                         <input type="text" class="form-control" id="pilih_dokter" name="pilih_dokter" title="Pilih Dokter" placeholder="Pilih Dokter" style="width: 280%: margin-right:1em;">
                         <span class="input-group-btn">
-                            <button type="button" class="btn btn-default" id="pencarianDokter" name="pencarianDokter" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Dokter">
+                            <button type="button" class="btn btn-default" id="buttonPencarianDokter" name="buttonPencarianDokter" data-toggle="modal" data-target="#" data-placement="bottom" title="Pencarian Dokter">
                             <span class="fa fa-search"></span>      
                             </button> 
                         </span>
                     </div>
-
-                    <!-- <div class="clearfix"><br></div> Enter
-                    <div><hr></div> -->
-
-
                 </div>
             </div>
-            <!-- <div class="clearfix"><hr></div> -->
         </div>
     </div>
+
+    <script type="text/javascript">
+        
+        var no_mr = $('#no_mr');
+        var nama_lengkap = $('#nama_lengkap');
+        var title = $('#title');
+        var gender = $('#gender');
+        var tempat_lahir = $('#tempat_lahir');
+        var tgl_lahir = $('#tgl_lahir');
+        var umur = $('#umur');
+        var alamat_lengkap = $('#alamat_lengkap');
+        var no_rumah = $('#no_rumah');
+        var rt = $('#rt');
+        var rw = $('#rw');
+        var desa = $('#desa');
+        var kecamatan = $('#kecamatan');
+        var kabupaten = $('#kabupaten');
+        var provinsi = $('#provinsi');
+        var negara = $('#negara');
+        var kode_pos = $('#kode_pos');
+        var telp = $('#telp');
+        var hp = $('#hp');
+        var pendidikan = $('#pendidikan');
+        var pekerjaan = $('#pekerjaan');
+        var suku = $('#suku');
+        var agama = $('#agama');
+        var status_nikah = $('#status_nikah');
+        var nama_pasangan = $('#nama_pasangan');
+        var asal_rujukan = $('#asal_rujukan');
+        var nama_asal_rujukan = $('#nama_asal_rujukan');
+        var no_rujukan = $('#no_rujukan');
+        var tgl_rujukan = $('#tgl_rujukan');
+        var diagnose = $('#diagnose');
+        var cara_bayar = $('#cara_bayar');
+        var nama_penanggung = $('#nama_penanggung');
+        var no_sep = $('#no_sep');
+        var pilih_layanan = $('#pilih_layanan');
+        var buttonPencarianLayanan = $('#buttonPencarianLayanan');
+        var pilih_dokter = $('#pilih_dokter');
+        var buttonPencarianDokter = $('#buttonPencarianDokter');
+        var buttonPencarianMr = $('#buttonPencarianMr');
+        var buttonPencarianNik = $('#buttonPencarianNik');
+        var buttonPencarianNoKartu = $('#buttonPencarianNoKartu');
+
+
+          no_mr.keyup(function(e) {
+            if(e.keyCode == 13) {
+              if (no_mr.val() == '') {
+                toastr['error']("MR Harus Di Isi!", "Warning!");
+                no_mr.focus();
+              }else {nama_lengkap.focus();}
+            }
+          });
+
+    </script>
