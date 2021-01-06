@@ -33,7 +33,7 @@ if (!empty($_SESSION['login'])) {
 			echo "<script>
 					closeForm();
 					loadDataUser();
-					$.notify('Berhasil perbarui Data User ".$edit_username." ', 'success');
+					toastr['success']('Berhasil perbarui Data User ".$edit_username." ', 'success');
 				</script>";
 		}
 	}
